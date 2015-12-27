@@ -1,5 +1,5 @@
 # AndoridLearningNote
-
+http://www.jcodecraeer.com/a/anzhuokaifa/Android_Studio/2015/0227/2502.html
 使用Gradle发布项目到JCenter仓库
 
 原文：使用Gradle发布项目到JCenter仓库 
