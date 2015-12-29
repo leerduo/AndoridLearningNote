@@ -1,2 +1,3 @@
 # AndoridLearningNote
 记录Android学习中遇到的问题
+yanbin9296@gmail.com
