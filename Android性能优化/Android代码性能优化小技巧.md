@@ -1,0 +1,525 @@
+
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Android Training - 代码性能优化小技巧 - 胡凯</title>
+  <meta name="author" content="HuKai">
+
+  
+  <meta name="description" content="Performance Tips 这篇文章主要介绍一些小细节的优化技巧，虽然这些小技巧不能较大幅度的提升应用性能，但是恰当的运用这些小技巧并发生累积效应的时候，对于整个App的性能提升还是有不小作用的。通常来说，选择合适的算法与数据结构会是你首要考虑的因素，在这篇文章中不会涉及这方面的知识点。 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://hukai.me/android-training-performance-tips/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+  <!--
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  -->
+  <link href="/atom.xml" rel="alternate" title="胡凯" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<!--Mark by @Kesen-->
+<!-- <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css"> -->
+
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-37679268-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+
+
+</head>
+
+<body   class="no-sidebar"  >
+  <header role="banner"><hgroup>
+  <h1><a href="/">胡凯</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:hukai.me" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/android-training-course-in-chinese/index.html">Android Training in Chinese</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Android Training - 代码性能优化小技巧</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-06T18:27:00+08:00" pubdate data-updated="true">Apr 6<span>th</span>, 2013</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h2>Performance Tips</h2>
+
+<p>这篇文章主要介绍一些小细节的优化技巧，虽然这些小技巧不能较大幅度的提升应用性能，但是恰当的运用这些小技巧并发生累积效应的时候，对于整个App的性能提升还是有不小作用的。通常来说，选择合适的算法与数据结构会是你首要考虑的因素，在这篇文章中不会涉及这方面的知识点。你应该使用这篇文章中的小技巧作为平时写代码的习惯，这样能够提升代码的效率。</p>
+
+<p>通常来说，高效的代码需要满足下面两个原则：</p>
+
+<ul>
+<li>不要做冗余的工作</li>
+<li>尽量避免执行过多的内存分配操作</li>
+</ul>
+
+
+<p>在优化App时其中一个难点就是让App能在各种型号的设备上运行。不同版本的虚拟机在不同的处理器上会有不同的运行速度。你甚至不能简单的认为“设备X的速度是设备Y的F倍”，然后还用这种倍数关系去推测其他设备。另外，在模拟器上的运行速度和在实际设备上的速度没有半点关系。同样，设备有没有JIT也对运行速度有重大影响：在有JIT情况下的最优化代码不一定在没有JIT的情况下也是最优的。</p>
+
+<p>为了确保App在各设备上都能良好运行，就要确保你的代码在不同档次的设备上都尽可能的优化。</p>
+
+<h2>避免创建不必要的对象</h2>
+
+<!-- more -->
+
+
+<p>创建对象从来不是免费的。<strong>Generational GC</strong>可以使临时对象的分配变得廉价一些，但是执行分配内存总是比不执行分配操作更昂贵。</p>
+
+<p>随着你在App中分配更多的对象，你可能需要强制gc，而gc操作会给用户体验带来一点点卡顿。虽然从Android 2.3开始，引入了并发gc，它可以帮助你显著提升gc的效率，减轻卡顿，但毕竟不必要的内存分配操作还是应该尽量避免。</p>
+
+<p>因此请尽量避免创建不必要的对象，有下面一些例子来说明这个问题：</p>
+
+<ul>
+<li>如果你需要返回一个String对象，并且你知道它最终会需要连接到一个<code>StringBuffer</code>，请修改你的函数实现方式，避免直接进行连接操作，应该采用创建一个临时对象来做字符串的拼接这个操作。</li>
+<li>当从已经存在的数据集中抽取出String的时候，尝试返回原数据的substring对象，而不是创建一个重复的对象。使用substring的方式，你将会得到一个新的String对象，但是这个string对象是和原string共享内部<code>char[]</code>空间的。</li>
+</ul>
+
+
+<p>一个稍微激进点的做法是把所有多维的数据分解成一维的数组:</p>
+
+<ul>
+<li>一组int数据要比一组Integer对象要好很多。可以得知，两组一维数组要比一个二维数组更加的有效率。同样的，这个道理可以推广至其他原始数据类型。</li>
+<li>如果你需要实现一个数组用来存放(Foo,Bar)的对象，记住使用Foo[]与Bar[]要比(Foo,Bar)好很多。(例外的是，为了某些好的API的设计，可以适当做一些妥协。但是在自己的代码内部，你应该多多使用分解后的容易）。</li>
+</ul>
+
+
+<p>通常来说，需要避免创建更多的临时对象。更少的对象意味者更少的gc动作，gc会对用户体验有比较直接的影响。</p>
+
+<h2>选择Static而不是Virtual</h2>
+
+<p>如果你不需要访问一个对象的值，请保证这个方法是static类型的，这样方法调用将快15%-20%。这是一个好的习惯，因为你可以从方法声明中得知调用无法改变这个对象的状态。</p>
+
+<h2>常量声明为Static Final</h2>
+
+<p>考虑下面这种声明的方式</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">static</span> <span class="kt">int</span> <span class="n">intVal</span> <span class="o">=</span> <span class="mi">42</span><span class="o">;</span>
+</span><span class='line'><span class="kd">static</span> <span class="n">String</span> <span class="n">strVal</span> <span class="o">=</span> <span class="s">&quot;Hello, world!&quot;</span><span class="o">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>编译器会使用一个初始化类的函数<clinit>，然后当类第一次被使用的时候执行。这个函数将42存入<code>intVal</code>，还从class文件的常量表中提取了<code>strVal</code>的引用。当之后使用<code>intVal</code>或<code>strVal</code>的时候，他们会直接被查询到。</p>
+
+<p>我们可以用<code>final</code>关键字来优化：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">intVal</span> <span class="o">=</span> <span class="mi">42</span><span class="o">;</span>
+</span><span class='line'><span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">strVal</span> <span class="o">=</span> <span class="s">&quot;Hello, world!&quot;</span><span class="o">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>这时再也不需要上面的<clinit>方法了，因为final声明的常量进入了静态dex文件的域初始化部分。调用<code>intVal</code>的代码会直接使用42，调用<code>strVal</code>的代码也会使用一个相对廉价的“字符串常量”指令，而不是查表。</p>
+
+<blockquote><p><strong>Notes：</strong>这个优化方法只对原始类型和String类型有效，而不是任意引用类型。不过，在必要时使用<code>static final</code>是个很好的习惯。</p></blockquote>
+
+<h2>避免内部的Getters/Setters</h2>
+
+<p>像C++等native language，通常使用getters(i = getCount())而不是直接访问变量(i = mCount)。这是编写C++的一种优秀习惯，而且通常也被其他面向对象的语言所采用，例如C#与Java，因为编译器通常会做inline访问，而且你需要限制或者调试变量，你可以在任何时候在getter/setter里面添加代码。</p>
+
+<p>然而，在Android上，这不是一个好的写法。虚函数的调用比起直接访问变量要耗费更多。在面向对象编程中，将getter和setting暴露给公用接口是合理的，但在类内部应该仅仅使用域直接访问。</p>
+
+<p>在没有JIT(Just In Time Compiler)时，直接访问变量的速度是调用getter的3倍。有JIT时，直接访问变量的速度是通过getter访问的7倍。</p>
+
+<p>请注意，如果你使用<a href="http://developer.android.com/tools/help/proguard.html">ProGuard</a>，你可以获得同样的效果，因为ProGuard可以为你inline accessors.</p>
+
+<h2>使用增强的For循环</h2>
+
+<p>增强的For循环（也被称为 for-each 循环）可以被用在实现了 Iterable 接口的 collections 以及数组上。使用collection的时候，Iterator会被分配，用于for-each调用<code>hasNext()</code>和<code>next()</code>方法。使用ArrayList时，手写的计数式for循环会快3倍（不管有没有JIT），但是对于其他collection，增强的for-each循环写法会和迭代器写法的效率一样。</p>
+
+<p>请比较下面三种循环的方法：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">static</span> <span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">mSplat</span><span class="o">;</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">Foo</span><span class="o">[]</span> <span class="n">mArray</span> <span class="o">=</span> <span class="o">...</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kt">void</span> <span class="nf">zero</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+</span><span class='line'>    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">mArray</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="o">++</span><span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">sum</span> <span class="o">+=</span> <span class="n">mArray</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">mSplat</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kt">void</span> <span class="nf">one</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+</span><span class='line'>    <span class="n">Foo</span><span class="o">[]</span> <span class="n">localArray</span> <span class="o">=</span> <span class="n">mArray</span><span class="o">;</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">len</span> <span class="o">=</span> <span class="n">localArray</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="o">;</span> <span class="o">++</span><span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">sum</span> <span class="o">+=</span> <span class="n">localArray</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">mSplat</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kt">void</span> <span class="nf">two</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>    <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+</span><span class='line'>    <span class="k">for</span> <span class="o">(</span><span class="n">Foo</span> <span class="n">a</span> <span class="o">:</span> <span class="n">mArray</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">sum</span> <span class="o">+=</span> <span class="n">a</span><span class="o">.</span><span class="na">mSplat</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>zero()是最慢的，因为JIT没有办法对它进行优化。</li>
+<li>one()稍微快些。</li>
+<li>two() 在没有做JIT时是最快的，可是如果经过JIT之后，与方法one()是差不多一样快的。它使用了增强的循环方法for-each。</li>
+</ul>
+
+
+<p>所以请尽量使用for-each的方法，但是对于ArrayList，请使用方法one()。</p>
+
+<blockquote><p><strong>Tips：</strong>你还可以参考 Josh Bloch 的 《Effective Java》这本书的第46条</p></blockquote>
+
+<h2>使用包级访问而不是内部类的私有访问</h2>
+
+<p>参考下面一段代码</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+</span><span class='line'>    <span class="kd">private</span> <span class="kd">class</span> <span class="nc">Inner</span> <span class="o">{</span>
+</span><span class='line'>        <span class="kt">void</span> <span class="nf">stuff</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">Foo</span><span class="o">.</span><span class="na">this</span><span class="o">.</span><span class="na">doStuff</span><span class="o">(</span><span class="n">Foo</span><span class="o">.</span><span class="na">this</span><span class="o">.</span><span class="na">mValue</span><span class="o">);</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">private</span> <span class="kt">int</span> <span class="n">mValue</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">Inner</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Inner</span><span class="o">();</span>
+</span><span class='line'>        <span class="n">mValue</span> <span class="o">=</span> <span class="mi">27</span><span class="o">;</span>
+</span><span class='line'>        <span class="n">in</span><span class="o">.</span><span class="na">stuff</span><span class="o">();</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">doStuff</span><span class="o">(</span><span class="kt">int</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Value is &quot;</span> <span class="o">+</span> <span class="n">value</span><span class="o">);</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>这里重要的是，我们定义了一个私有的内部类（<code>Foo$Inner</code>），它直接访问了外部类中的私有方法以及私有成员对象。这是合法的，这段代码也会如同预期一样打印出&#8221;Value is 27&#8221;。</p>
+
+<p>问题是，VM因为<code>Foo</code>和<code>Foo$Inner</code>是不同的类，会认为在<code>Foo$Inner</code>中直接访问<code>Foo</code>类的私有成员是不合法的。即使Java语言允许内部类访问外部类的私有成员。为了去除这种差异，编译器会产生一些仿造函数：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="cm">/*package*/</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">Foo</span><span class="o">.</span><span class="na">access</span><span class="n">$100</span><span class="o">(</span><span class="n">Foo</span> <span class="n">foo</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">foo</span><span class="o">.</span><span class="na">mValue</span><span class="o">;</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'><span class="cm">/*package*/</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">Foo</span><span class="o">.</span><span class="na">access</span><span class="n">$200</span><span class="o">(</span><span class="n">Foo</span> <span class="n">foo</span><span class="o">,</span> <span class="kt">int</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>    <span class="n">foo</span><span class="o">.</span><span class="na">doStuff</span><span class="o">(</span><span class="n">value</span><span class="o">);</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>每当内部类需要访问外部类中的mValue成员或需要调用doStuff()函数时，它都会调用这些静态方法。这意味着，上面的代码可以归结为，通过accessor函数来访问成员变量。早些时候我们说过，通过accessor会比直接访问域要慢。所以，这是一个特定语言用法造成性能降低的例子。</p>
+
+<p>如果你正在性能热区（hotspot:高频率、重复执行的代码段）使用像这样的代码，你可以把内部类需要访问的域和方法声明为包级访问，而不是私有访问权限。不幸的是，这意味着在相同包中的其他类也可以直接访问这些域，所以在公开的API中你不能这样做。</p>
+
+<h2>避免使用float类型</h2>
+
+<p>Android系统中float类型的数据存取速度是int类型的一半，尽量优先采用int类型。</p>
+
+<p>就速度而言，现代硬件上，float 和 double 的速度是一样的。空间而言，double 是两倍float的大小。在空间不是问题的情况下，你应该使用 double 。</p>
+
+<p>同样，对于整型，有些处理器实现了硬件几倍的乘法，但是没有除法。这时，整型的除法和取余是在软件内部实现的，这在你使用哈希表或大量计算操作时要考虑到。</p>
+
+<h2>使用库函数</h2>
+
+<p>除了那些常见的让你多使用自带库函数的理由以外，记得系统函数有时可以替代第三方库，并且还有汇编级别的优化，他们通常比带有JIT的Java编译出来的代码更高效。典型的例子是：Android API 中的 <code>String.indexOf()</code>，Dalvik出于内联性能考虑将其替换。同样 <code>System.arraycopy()</code>函数也被替换，这样的性能在Nexus One测试，比手写的for循环并使用JIT还快9倍。</p>
+
+<blockquote><p><strong>Tips：</strong>参见 Josh Bloch 的 《Effective Java》这本书的第47条</p></blockquote>
+
+<h2>谨慎使用native函数</h2>
+
+<p>结合Android NDK使用native代码开发，并不总是比Java直接开发的效率更好的。Java转native代码是有代价的，而且JIT不能在这种情况下做优化。如果你在native代码中分配资源（比如native堆上的内存，文件描述符等等），这会对收集这些资源造成巨大的困难。你同时也需要为各种架构重新编译代码（而不是依赖JIT）。你甚至对已同样架构的设备都需要编译多个版本：为G1的ARM架构编译的版本不能完全使用Nexus One上ARM架构的优势，反之亦然。</p>
+
+<p>Native 代码是在你已经有本地代码，想把它移植到Android平台时有优势，而不是为了优化已有的Android Java代码使用。</p>
+
+<p>如果你要使用JNI,请学习<a href="http://developer.android.com/guide/practices/jni.html">JNI Tips</a></p>
+
+<blockquote><p><strong>Tips：</strong>参见 Josh Bloch 的 《Effective Java》这本书的第54条</p></blockquote>
+
+<h2>关于性能的误区</h2>
+
+<p>在没有JIT的设备上，使用一种确切的数据类型确实要比抽象的数据类型速度要更有效率（例如，调用<code>HashMap map</code>要比调用<code>Map map</code>效率更高）。有误传效率要高一倍，实际上只是6%左右。而且，在JIT之后，他们直接并没有大多差异。</p>
+
+<p>在没有JIT的设备上，读取缓存域比直接读取实际数据大概快20%。有JIT时，域读取和本地读取基本无差。所以优化并不值得除非你觉得能让你的代码更易读（这对 final, static, static final 域同样适用）。</p>
+
+<h2>关于测量</h2>
+
+<p>在优化之前，你应该确定你遇到了性能问题。你应该确保你能够准确测量出现在的性能，否则你也不会知道优化是否真的有效。</p>
+
+<p>本章节中所有的技巧都需要Benchmark（基准测试）的支持。Benchmark可以在 <a href="http://code.google.com/p/dalvik/source/browse/#svn/trunk/benchmarks">code.google.com &#8220;dalvik&#8221; project</a> 中找到</p>
+
+<p>Benchmark是基于Java版本的 <a href="http://code.google.com/p/caliper/">Caliper</a> microbenchmarking框架开发的。Microbenchmarking很难做准确，所以Caliper帮你完成这部分工作，甚至还帮你测了你没想到需要测量的部分（因为，VM帮你管理了代码优化，你很难知道这部分优化有多大效果）。我们强烈推荐使用Caliper来做你的基准微测工作。</p>
+
+<p>我们也可以用<a href="http://developer.android.com/tools/debugging/debugging-tracing.html">Traceview</a> 来测量，但是测量的数据是没有经过JIT优化的，所以实际的效果应该是要比测量的数据稍微好些。</p>
+
+<p>关于如何测量与调试，还可以参考下面两篇文章：</p>
+
+<ul>
+<li><a href="http://developer.android.com/tools/debugging/debugging-tracing.html">Profiling with Traceview and dmtracedump</a></li>
+<li><a href="http://developer.android.com/tools/debugging/systrace.html">Analysing Display and Performance with Systrace</a></li>
+</ul>
+
+
+<hr />
+
+<p><strong>文章学习自http://developer.android.com/guide/components/processes-and-threads.html</strong><br/>
+<strong>转载请注明出自<a href="http:://kesenhoo.github.com">http://kesenhoo.github.com</a>，谢谢</strong></p>
+</div>
+
+
+  <footer>
+    <p><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="" title="" type="image/png"><br>
+    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享许可协议</a>：本站作品由<a href="http://hukai.me" target="_blank">HuKai</a>创作，采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。
+    <br>
+    如果你觉得这篇文章对你有帮助，请点击下面的分享链接，你还可以选择扫描二维码进行打赏，承诺所有打赏都会用于公益!
+    <img src="/images/pay2me.jpg" alt=""/>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">HuKai</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-06T18:27:00+08:00" pubdate data-updated="true">Apr 6<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/android/'>Android</a>, <a class='category' href='/blog/categories/android-performance/'>Android:Performance</a>, <a class='category' href='/blog/categories/android-training/'>Android:Training</a>
+  
+</span>
+
+
+    </p>
+    
+    
+      <div class="sharing">
+  
+  
+  
+  
+	<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32">
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_googleplus"></a>
+	<a class="jiathis_button_renren"></a>
+	<a class="jiathis_button_linkedin"></a>
+	<a class="jiathis_button_douban"></a>
+	<a href="http://www.jiathis.com/share?uid=1723296" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config = {data_track_clickback:'true'};
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1342501457879302" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+  
+  
+</div>
+
+    
+    <br></br>
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/android-notes-process-and-thread/" title="Previous Post: Android Notes(03) - Process and Thread">&laquo; Android Notes(03) - Process and Thread</a>
+      
+      
+        <a class="basic-alignment right" href="/android-notes-intent-and-intentFilter/" title="Next Post: Android Notes(04) - Intents and Intent Filters">Android Notes(04) - Intents and Intent Filters &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+
+</div>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - HuKai -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a> - 本站作品采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可.</span> 
+  
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'kesenhoo';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://hukai.me/android-training-performance-tips/';
+        var disqus_url = 'http://hukai.me/android-training-performance-tips/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
