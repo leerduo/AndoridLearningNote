@@ -136,3 +136,61 @@ public class TestView extends View{
 经测试可以很准确的判断 touch触摸点是否在上边绘制的不规则图形内，搞绘图的小伙伴们赶紧拿去开心的玩耍吧！哈哈
 
 总结：技术是个不断积累的过程，对一个平台的熟悉程度决定了你的实现能力和快速解决问题的能力。万能的百度当然可以 但是也要有人去摸索分享出来 大家才能收益，感谢大神的分享精神 原文地址：http://blog.csdn.net/havakey/article/details/6649553 
+
+
+
+
+
+
+首先介绍Region类
+Region，中文意思即区域的意思，它表示的是canvas图层上的某一块封闭的区域。
+[java] view plaincopy
+/**构造方法*/  
+ public Region()  //创建一个空的区域  
+ public Region(Region region) //拷贝一个region的范围  
+ public Region(Rect r)  //创建一个矩形的区域  
+ public Region(int left, int top, int right, int bottom) //创建一个矩形的区域  
+  
+/**一系列set方法，这些set方法，和上面构造方法形式差不多*/  
+ public void setEmpty() {  
+ public boolean set(Region region)   
+ public boolean set(Rect r)   
+ public boolean set(int left, int top, int right, int bottom)   
+ /*往一个Region中添加一个Path只有这种方法，参数clip代表这个整个Region的区域，在在里面裁剪出path范围的区域*/  
+ public boolean setPath(Path path, Region clip) //用指定的Path和裁剪范围构建一个区域  
+  
+/**几个判断方法*/  
+public native boolean isEmpty();//判断该区域是否为空  
+public native boolean isRect(); //是否是一个矩阵  
+public native boolean isComplex();//是否是多个矩阵组合  
+  
+  
+/**一系列的getBound方法，返回一个Region的边界*/  
+public Rect getBounds()   
+public boolean getBounds(Rect r)   
+public Path getBoundaryPath()   
+public boolean getBoundaryPath(Path path)   
+  
+  
+/**一系列的判断是否包含某点 和是否相交*/  
+public native boolean contains(int x, int y);//是否包含某点  
+public boolean quickContains(Rect r)   //是否包含某矩阵  
+public native boolean quickContains(int left, int top, int right,  
+                                        int bottom) //是否没有包含某矩阵  
+ public boolean quickReject(Rect r) //是否没和该矩阵相交  
+ public native boolean quickReject(int left, int top, int right, int bottom); //是否没和该矩阵相交  
+ public native boolean quickReject(Region rgn);  //是否没和该矩阵相交  
+  
+/**几个平移变换的方法*/  
+public void translate(int dx, int dy)   
+public native void translate(int dx, int dy, Region dst);  
+public void scale(float scale) //hide  
+public native void scale(float scale, Region dst);//hide  
+  
+  
+/**一系列组合的方法*/  
+public final boolean union(Rect r)   
+public boolean op(Rect r, Op op) {  
+public boolean op(int left, int top, int right, int bottom, Op op)   
+public boolean op(Region region, Op op)   
+public boolean op(Rect rect, Region region, Op op)   
