@@ -1,0 +1,272 @@
+{
+  "chosen_specs": [],
+  "specs": [
+    {
+      "code": "shape",
+      "name": "形状",
+      "arguments": [
+        {
+          "code": "round",
+          "name": "圆形",
+          "goods_ids": [
+            51,
+            49,
+            46
+          ]
+        },
+        {
+          "code": "square",
+          "name": "方形",
+          "goods_ids": [
+            54,
+            50,
+            48
+          ]
+        }
+      ]
+    },
+    {
+      "code": "quan",
+      "name": "盒数",
+      "arguments": [
+        {
+          "code": "single",
+          "name": "单盒",
+          "goods_ids": [
+            54,
+            51,
+            48
+          ]
+        },
+        {
+          "code": "double",
+          "name": "双盒",
+          "goods_ids": [
+            50,
+            49,
+            46
+          ]
+        }
+      ]
+    },
+    {
+      "code": "taste",
+      "name": "口味",
+      "arguments": [
+        {
+          "code": "mugua",
+          "name": "木瓜",
+          "goods_ids": [
+            48,
+            46
+          ]
+        },
+        {
+          "code": " berry",
+          "name": "草莓",
+          "goods_ids": [
+            54,
+            51,
+            50,
+            49
+          ]
+        }
+      ]
+    }
+  ],
+  "option_goods": [
+    {
+      "id": 54,
+      "type": "Goods",
+      "slug": "bh_icecream_model",
+      "title": "【超模25】全营养套餐",
+      "base_price": "0.01",
+      "market_price": "10.0",
+      "thumb_photo_url": "http://up.boohee.cn/house/u/shop/bh_sm_h_pack/app/thumb.jpg?imageView/2/w/96/h/96",
+      "big_photo_url": "http://up.boohee.cn/house/u/shop/bh_sm_h_pack/app/thumb.jpg?imageView/2/w/608/h/344",
+      "a_photo_url": null,
+      "b_photo_url": null,
+      "c_photo_url": "http://up.boohee.cn/house/u/shop/bh_sm_h_pack/app/thumb.jpg",
+      "all_thumb_photo_urls": [],
+      "all_big_photo_urls": [],
+      "square_photo_urls": [
+        "http://up.boohee.cn/house/u/shop/bh_sm_h_pack/slider/s1_v1.jpg?imageView/2/w/640/h/640"
+      ],
+      "weight": "0.3",
+      "need_carriage": true,
+      "category_id": 2,
+      "category_name": "装备",
+      "state": "on_sale",
+      "state_text": "已上架",
+      "description": "",
+      "month_quantity": 5,
+      "unit_name": "件"
+    },
+    {
+      "id": 51,
+      "type": "Goods",
+      "slug": "bh_drink_sm25_s_200",
+      "title": "超模25全营养代餐2盒组（5口味尝鲜装）",
+      "base_price": "99.0",
+      "market_price": "140.0",
+      "thumb_photo_url": "http://up.boohee.cn/house/u/shop/bh_drink_sm25_s_200_2/app/thumb_v2.jpg?imageView/2/w/96/h/96",
+      "big_photo_url": "http://up.boohee.cn/house/u/shop/bh_drink_sm25_s_200_2/app/thumb_v2.jpg?imageView/2/w/608/h/344",
+      "a_photo_url": "http://up.boohee.cn/house/u/shop/bh_redbean_drink/cover1.jpg?imageView/3/w/640/h/1",
+      "b_photo_url": "http://up.boohee.cn/house/u/shop/bh_redbean_drink/cover1.jpg?imageView/3/w/640/h/1",
+      "c_photo_url": "http://up.boohee.cn/house/u/shop/bh_drink_sm25_s_200_2/app/thumb_v2.jpg",
+      "all_thumb_photo_urls": [
+        "http://up.boohee.cn/house/u/shop/bh_redbean_drink/cover1.jpg?imageView/3/w/640/h/1?imageView/2/w/96/h/96"
+      ],
+      "all_big_photo_urls": [
+        "http://up.boohee.cn/house/u/shop/bh_redbean_drink/cover1.jpg?imageView/3/w/640/h/1?imageView/2/w/608/h/344"
+      ],
+      "square_photo_urls": [
+        "http://up.boohee.cn/house/u/shop/bh_drink_sm25_s_200_2/slider/s1.jpg?imageView/2/w/640/h/640"
+      ],
+      "weight": "0.8",
+      "need_carriage": true,
+      "category_id": 1,
+      "category_name": "食品",
+      "state": "on_sale",
+      "state_text": "已上架",
+      "description": "<div class=\"main_panel\">\r\n<div class=\"goods_details\">\r\n<a id=\"desc\" name=\"desc\"></a>\r\n        <figure class=\"widescreen\">\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_redbean_drink/p_1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_redbean_drink/p_2.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_redbean_drink/p_3.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_redbean_drink/p_4_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_redbean_drink/p_5.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_redbean_drink/p_6.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_redbean_drink/p_7.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_redbean_drink/p_8.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_redbean_drink/p_9.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_redbean_drink/p_10.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_redbean_drink/p_11.jpg?imageView/3/w/640/h/1\"/>   \r\n                <img src=\"http://up.boohee.cn/house/u/shop/bh_redbean_drink/p_12.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_redbean_drink/p_13.jpg?imageView/3/w/640/h/1\"/>\r\n        </figure>\r\n\r\n\r\n<h2 class=\"yellow-light\" id=\"food\">薄荷红绿灯<b>黄灯食物</b></h2>\r\n<table class=\"nutrition-panel\" cellspacing=\"0\" cellpadding=\"0\">\r\n   <tr>\r\n      <td class=\"illus\" rowspan=\"4\"><img src=\"http://up.boohee.cn/house/u/shop/bh_redbean_drink/thumb_v2.jpg\"></td>\r\n       <td><b>热量：107kcal/150ml</b></td>\r\n    </tr>   \r\n<tr>  \r\n <td class=\"yellow-light\">脂肪：2.6g/150ml</td>\r\n    </tr>\r\n    <tr>\r\n <td class=\"non-light\">糖：——</td>\r\n    </tr>\r\n    <tr>\r\n <td class=\"green-light\">钠：30mg/150ml</td>\r\n    </tr>\r\n   \r\n</table>\r\n\r\n<p style=\"margin:-50px 0 0 0;\"><a id=\"package\" name=\"package\" style=\"line-height:50px;visibility:hidden\">包装信息</a></p>\r\n\r\n<h2>包装信息</h2>\r\n\r\n<ul>\r\n<li>【产品名称】红豆豆乳</li>\r\n<li>【产品配料】大豆、葡萄糖、红豆粉、白砂糖</li>\r\n<li>【规格】400g（25g*16袋）</li>\r\n<li>【生产日期】2015.03.19</li>\r\n<li>【保质期】12个月</li>\r\n<li>【保存方法】阴凉、干燥、常温贮藏</li>\r\n<li> * 出于食品安全卫生考虑，本商品不支持7天无理由退换货。</li>\r\n</ul>\r\n\r\n<h2 style=\"height:auto;\"> 购物金额满99全国包邮（除新疆、西藏地区） <br />购物金额满199元新疆、西藏地区包邮</h2>\r\n<p>委托快递：中通、申通，指定或发其他快递请备注。<br />*包邮仅限普通快递，发顺丰、EMS请联系在线客服补差价：400-110-0690</p>\r\n</div></div>",
+      "month_quantity": 2,
+      "unit_name": "盒"
+    },
+    {
+      "id": 50,
+      "type": "Goods",
+      "slug": "bh_drink_sm25_420",
+      "title": "【减肥代餐】超模25全营养代餐",
+      "base_price": "99.0",
+      "market_price": "99.0",
+      "thumb_photo_url": "http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/thumb.jpg?imageView/2/w/96/h/96",
+      "big_photo_url": "http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/thumb.jpg?imageView/2/w/608/h/344",
+      "a_photo_url": "http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/ad1.jpg?imageView/3/w/640/h/1",
+      "b_photo_url": "http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/ad1.jpg?imageView/3/w/640/h/1",
+      "c_photo_url": "http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/1_v1.jpg?imageView/3/w/640/h/1",
+      "all_thumb_photo_urls": [
+        "http://up.boohee.cn/house/u/shop/bh_drink_sm25_231/cover1_v3.jpg?imageView/3/w/640/h/1?imageView/2/w/96/h/96"
+      ],
+      "all_big_photo_urls": [
+        "http://up.boohee.cn/house/u/shop/bh_drink_sm25_231/cover1_v3.jpg?imageView/3/w/640/h/1?imageView/2/w/608/h/344"
+      ],
+      "square_photo_urls": [
+        "http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/1_v1.jpg?imageView/2/w/640/h/640",
+        "http://up.boohee.cn/house/u/shop/slider/2/sm25_v1.jpg?imageView/2/w/640/h/640",
+        "http://up.boohee.cn/house/u/shop/slider/4/sm25.jpg?imageView/2/w/640/h/640",
+        "http://up.boohee.cn/house/u/shop/slider/changjing2/sm25.jpg?imageView/2/w/640/h/640",
+        "http://up.boohee.cn/house/u/shop/slider/slider3/sm25.jpg?imageView/2/w/640/h/640"
+      ],
+      "weight": "0.5",
+      "need_carriage": true,
+      "category_id": 1,
+      "category_name": "食品",
+      "state": "on_sale",
+      "state_text": "已上架",
+      "description": "\r\n<div style=\"color:#fff;text-align:justify;margin-bottom:16px;background:#ffa401;padding:10px;line-height:1.5;\">\r\n<div style=\"padding-bottom:10px;border-bottom:1px dotted #fff;margin-bottom:10px;font-size:16px;\">\r\n<p>很抱歉，超模25全营养代餐本次预售已全部售罄，我们为给您带来的不便深感歉意。</p>\r\n<p>缺货期间，我们每周会增加一次《薄荷·健康减肥公开课》，由薄荷首席减重顾问Peter老师为您提供更多专业减重指导，还有机会得到Peter老师的一对一指导喔。</p>\r\n<p>上课方式：下载CCtalk手机客户端或PC客户端，进入“职场兴趣”课程版块，预约并参加公开课。</p>\r\n<p style=\"margin-bottom:0;\">开课时间：每周二、周四，<br/>19:00-19:45，欢迎您参加！</p></div>\r\n<p style=\"margin-bottom:0;\">预售商品将于4月7日—4月12日按订购顺序发货。（由于订单量较大，顺序靠后的订单发货时间较晚，请您谅解，最迟4月12日我们将发出所有商品。）</p></div>\r\n<h2>预售说明：</h2>\r\n<ul>\r\n<li>A、4月1日16点前的订单：分两次发货，在售商品按时发货，预售商品到货后发货；</li>\r\n<li>B、4月1日16点后的订单：合并发货，所有商品在预售商品到货后再发出。</li>\r\n</ul>\r\n<p>如有疑问，请联系薄荷在线客服。</p>\r\n<section class=\"details goods-details widescreen\">\r\n<a id=\"desc\" name=\"desc\"></a>\r\n        <figure>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p1_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p2_v3.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p3_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p4_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p5_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p6_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p7_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p8_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p9_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p10_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p11_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p12_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p13_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p14_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p15_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p16_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p17_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p18_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p19_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p20_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p21_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p22_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p23_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p24_v2.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p25_v2.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p26_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p27_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p28_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p29_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p30_v1.jpg?imageView/3/w/640/h/1\"/>\r\n            <img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/p31_v1.jpg?imageView/3/w/640/h/1\"/>\r\n        </figure>\r\n</section>\r\n\r\n\r\n<h2 class=\"green-light\" id=\"food\">薄荷红绿灯<b>绿灯食物</b></h2>\r\n<table class=\"nutrition-panel\" cellspacing=\"0\" cellpadding=\"0\">\r\n<tr>\r\n      <td class=\"illus\" rowspan=\"4\"><img src=\"http://up.boohee.cn/house/u/shop/bh_drink_sm25_420/thumb.jpg\"></td>\r\n       <td><b>热量：100kcal/30g</b></td>\r\n    </tr> \r\n <tr>  \r\n <td>蛋白质：9.7g/30g</td>\r\n    </tr>\r\n<tr>  \r\n <td class=\"green-light\">膳食纤维：2.9g/30g</td>\r\n    </tr>\r\n    <tr>\r\n <td class=\"green-light\">钠：58mg/30g</td>\r\n    </tr>\r\n </table>\r\n\r\n<p style=\"margin:-50px 0 0 0;\"><a id=\"package\" name=\"package\" style=\"line-height:50px;visibility:hidden\">包装信息</a></p>\r\n\r\n<h2>包装信息</h2>\r\n\r\n<ul>\r\n<li>【产品名称】超模25全营养代餐粉</li>\r\n<li>【配料】牛奶浓缩蛋白、全脂奶粉、大豆分离蛋白、抗性糊精（水溶性膳食纤维）、棕榈油粉（Fabuless DE）、白砂糖、魔芋粉、麦芽糖醇、混合矿物质（碳酸氢钙、碳酸镁、碳酸钙、乳酸亚铁、硫酸锌）、混合维生素（维生素C、维生素E、烟酰胺、维生素A、泛酸钙、叶酸、维生素B12、维生素B6、维生素B1、维生素B2、维生素B3）</li>\r\n<li>【过敏提示】含有乳制品和大豆</li>\r\n<li>【规格】14袋/盒（420g）</li>\r\n<li>【贮藏方法】请储存于阴凉干燥处。</li> \r\n<li>【生产日期】最新批次</li>\r\n<li>【保质期】12个月</li>\r\n<li>【食品生产许可证编号】QS311806010061</li>\r\n<li>【产品标准号】GB/T 29602</li>\r\n<li>* 出于食品安全卫生考虑，本商品不支持7天无理由退换货。</li>\r\n</ul>\r\n\r\n<h2>一餐超模25所含的25种营养素</h2>\r\n<p>碳水化合物，蛋白质，脂肪，维生素A，维生素B1，维生素B2，维生素B6，维生素B12，维生素C，维生素D，维生素E，烟酸，泛酸，叶酸，钙，镁，锌，铁，磷、类胡萝卜素，亚油酸，α－亚麻酸，可溶性膳食纤维，不可溶性膳食纤维，钠</p>\r\n\r\n<h2 style=\"height:auto;\"> 购物金额满99全国包邮（除新疆、西藏地区） <br />购物金额满199元新疆、西藏地区包邮</h2>\r\n<p>委托快递：圆通、申通、韵达，指定或发其他快递请备注。<br />*包邮仅限普通快递，发顺丰、EMS请联系在线客服补差价：400-110-0690</p>",
+      "month_quantity": 3,
+      "unit_name": "盒"
+    },
+    {
+      "id": 49,
+      "type": "Goods",
+      "slug": "bh_latte_drink",
+      "title": "【提高代谢】咖啡豆乳(16袋/盒)",
+      "base_price": "28.0",
+      "market_price": "28.0",
+      "thumb_photo_url": "http://up.boohee.cn/house/u/shop/bh_latte_drink/thumb_v1.jpg?imageView/2/w/96/h/96",
+      "big_photo_url": "http://up.boohee.cn/house/u/shop/bh_latte_drink/thumb_v1.jpg?imageView/2/w/608/h/344",
+      "a_photo_url": "http://up.boohee.cn/house/u/shop/bh_latte_drink/cover1.jpg?imageView/3/w/640/h/1",
+      "b_photo_url": "http://up.boohee.cn/house/u/shop/bh_latte_drink/cover1.jpg?imageView/3/w/640/h/1",
+      "c_photo_url": "http://up.boohee.cn/house/u/shop/slider/1_v1/coffee.jpg?imageView/3/w/640/h/1",
+      "all_thumb_photo_urls": [
+        "http://up.boohee.cn/house/u/shop/bh_latte_drink/cover1.jpg?imageView/3/w/640/h/1?imageView/2/w/96/h/96"
+      ],
+      "all_big_photo_urls": [
+        "http://up.boohee.cn/house/u/shop/bh_latte_drink/cover1.jpg?imageView/3/w/640/h/1?imageView/2/w/608/h/344"
+      ],
+      "square_photo_urls": [
+        "http://up.boohee.cn/house/u/shop/slider/1_v1/coffee.jpg?imageView/2/w/640/h/640",
+        "http://up.boohee.cn/house/u/shop/slider/2/coffee.jpg?imageView/2/w/640/h/640",
+        "http://up.boohee.cn/house/u/shop/slider/changjing2/coffee.jpg?imageView/2/w/640/h/640",
+        "http://up.boohee.cn/house/u/shop/slider/slider3/coffee.jpg?imageView/2/w/640/h/640"
+      ],
+      "weight": "0.5",
+      "need_carriage": false,
+      "category_id": 2,
+      "category_name": "装备",
+      "state": "not_sale",
+      "state_text": "补货中",
+      "description": "",
+      "month_quantity": 2,
+      "unit_name": "盒"
+    },
+    {
+      "id": 48,
+      "type": "Goods",
+      "slug": "bh_oats_circle",
+      "title": "【减脂55%】薄荷 低脂燕麦圈 (6袋/盒)",
+      "base_price": "28.0",
+      "market_price": "28.0",
+      "thumb_photo_url": "http://up.boohee.cn/house/u/shop/bh_oats_circle/thumb.jpg?imageView/2/w/96/h/96",
+      "big_photo_url": "http://up.boohee.cn/house/u/shop/bh_oats_circle/thumb.jpg?imageView/2/w/608/h/344",
+      "a_photo_url": "http://up.boohee.cn/house/u/shop/bh_oats_circle/ad1.jpg?imageView/3/w/640/h/1",
+      "b_photo_url": "http://up.boohee.cn/house/u/shop/bh_oats_circle/ad1.jpg?imageView/3/w/640/h/1",
+      "c_photo_url": "http://up.boohee.cn/house/u/shop/slider/1_v1/oats.jpg?imageView/3/w/640/h/1",
+      "all_thumb_photo_urls": [
+        "http://up.boohee.cn/house/u/shop/bh_oats_circle/cover1_v1.jpg?imageView/3/w/640/h/1?imageView/2/w/96/h/96"
+      ],
+      "all_big_photo_urls": [
+        "http://up.boohee.cn/house/u/shop/bh_oats_circle/cover1_v1.jpg?imageView/3/w/640/h/1?imageView/2/w/608/h/344"
+      ],
+      "square_photo_urls": [
+        "http://up.boohee.cn/house/u/shop/slider/1_v1/oats.jpg?imageView/2/w/640/h/640",
+        "http://up.boohee.cn/house/u/shop/slider/2/oats.jpg?imageView/2/w/640/h/640",
+        "http://up.boohee.cn/house/u/shop/slider/3/oats.jpg?imageView/2/w/640/h/640",
+        "http://up.boohee.cn/house/u/shop/slider/changjing2/oats.jpg?imageView/2/w/640/h/640",
+        "http://up.boohee.cn/house/u/shop/slider/slider3/oats.jpg?imageView/2/w/640/h/640"
+      ],
+      "weight": "0.2",
+      "need_carriage": true,
+      "category_id": 2,
+      "category_name": "装备",
+      "state": "not_sale",
+      "state_text": "补货中",
+      "description": "\r\n<section class=\"details goods-details widescreen\">\r\n<a id=\"desc\" name=\"desc\"></a>\r\n\t\t<figure>\r\n\t\t\t<img src=\"http://up.boohee.cn/house/u/shop/bh_oats_circle/p1_v1.jpg?imageView/3/w/640/h/1\"/>\r\n\t\t\t<img src=\"http://up.boohee.cn/house/u/shop/bh_oats_circle/p2_v1.jpg?imageView/3/w/640/h/1\"/>\r\n\t\t\t<img src=\"http://up.boohee.cn/house/u/shop/bh_oats_circle/p3_v1.jpg?imageView/3/w/640/h/1\"/>\r\n\t\t\t<img src=\"http://up.boohee.cn/house/u/shop/bh_oats_circle/p4_v1.jpg?imageView/3/w/640/h/1\"/>\r\n\t\t\t<img src=\"http://up.boohee.cn/house/u/shop/bh_oats_circle/p5_v1.jpg?imageView/3/w/640/h/1\"/>\r\n\t\t\t<img src=\"http://up.boohee.cn/house/u/shop/bh_oats_circle/p6_v1.jpg?imageView/3/w/640/h/1\"/>\r\n\t\t\t<img src=\"http://up.boohee.cn/house/u/shop/bh_oats_circle/p7_v1.jpg?imageView/3/w/640/h/1\"/>\r\n\t\t\t<img src=\"http://up.boohee.cn/house/u/shop/bh_oats_circle/p8_v1.jpg?imageView/3/w/640/h/1\"/>\r\n\t\t\t<img src=\"http://up.boohee.cn/house/u/shop/bh_oats_circle/p9_v1.jpg?imageView/3/w/640/h/1\"/>\r\n\t\t\t<img src=\"http://up.boohee.cn/house/u/shop/bh_oats_circle/p10_v1.jpg?imageView/3/w/640/h/1\"/>\r\n\t\t\t<img src=\"http://up.boohee.cn/house/u/shop/bh_oats_circle/p11_v1.jpg?imageView/3/w/640/h/1\"/>\r\n\t\t\t<img src=\"http://up.boohee.cn/house/u/shop/bh_oats_circle/p12_v1.jpg?imageView/3/w/640/h/1\"/>\r\n\t\t\t<img src=\"http://up.boohee.cn/house/u/shop/bh_oats_circle/p13_v1.jpg?imageView/3/w/640/h/1\"/>\r\n\t\t\t<img src=\"http://up.boohee.cn/house/u/shop/bh_oats_circle/p14_v1.jpg?imageView/3/w/640/h/1\"/>\r\n\t\t\t<img src=\"http://up.boohee.cn/house/u/shop/bh_oats_circle/p15_v1.jpg?imageView/3/w/640/h/1\"/>\r\n\t\t\t<img src=\"http://up.boohee.cn/house/u/shop/bh_oats_circle/p16_v1.jpg?imageView/3/w/640/h/1\"/>\r\n</figure>\r\n</section>\r\n\r\n\r\n<h2 class=\"green-light\" id=\"food\">薄荷红绿灯<b>绿灯食物</b></h2>\r\n<table class=\"nutrition-panel\" cellspacing=\"0\" cellpadding=\"0\">\r\n   <tr>\r\n      <td class=\"illus\" rowspan=\"4\"><img src=\"http://up.boohee.cn/house/u/shop/bh_oats_circle/thumb.jpg\"></td>\r\n       <td><b>热量：113kcal/30g</b></td>\r\n    </tr>     \r\n<tr>\r\n <td class=\"green-light\">脂肪：0.3g/30g</td>\r\n    </tr>\r\n    <tr>\r\n <td class=\"non-light\">糖：——</td>\r\n    </tr>\r\n    <tr>\r\n <td class=\"green-light\">钠：10mg/30g</td>\r\n    </tr>\r\n   \r\n  </table>\r\n\r\n<p style=\"margin:-50px 0 0 0;\"><a id=\"package\" name=\"package\" style=\"line-height:50px;visibility:hidden\">包装信息</a></p>\r\n<h2>包装信息</h2>\r\n\r\n<ul>\r\n<li>【产品名称】薄荷轻卡早餐燕麦圈</li>\r\n<li>【规格】180g（30g×6袋）</li>\r\n<li>【配料】燕麦粉、大麦粉、小麦粉、玉米粉、 大米、小麦淀粉、白砂糖、维生素A 、维生素D</li>\r\n<li>【生产日期】2015.01.10</li>\r\n<li>【保质期】12个月</li>\r\n<li>【贮藏条件】阴凉、干燥、密封</li>\r\n<li>【过敏提示】本品含有麸质</li>\r\n<li>* 出于食品安全卫生考虑，本商品不支持7天无理由退换货。</li>\r\n</ul>\r\n\r\n<h2 style=\"height:auto;\"> 购物金额满99全国包邮（除新疆、西藏地区） <br />购物金额满199元新疆、西藏地区包邮</h2>\r\n<p>委托快递：中通、申通，指定或发其他快递请备注。<br />*包邮仅限普通快递，发顺丰、EMS请联系在线客服补差价：400-110-0690</p>",
+      "month_quantity": 0,
+      "unit_name": ""
+    },
+    {
+      "id": 46,
+      "type": "PackageGoods",
+      "slug": "milk_power",
+      "title": "酸奶机+算奶粉",
+      "base_price": "0.01",
+      "market_price": "156.0",
+      "thumb_photo_url": "http://house.boohee.cn/ux/nokch_core_newtea_30_3/thumb.jpg?imageView/2/w/96/h/96",
+      "big_photo_url": "http://house.boohee.cn/ux/nokch_core_newtea_30_3/thumb.jpg?imageView/2/w/608/h/344",
+      "a_photo_url": "http://house.boohee.cn/ux/nokch_core_newtea_30_3/ad1.jpg",
+      "b_photo_url": "http://house.boohee.cn/ux/nokch_core_newtea_30_3/ad1.jpg",
+      "c_photo_url": "http://house.boohee.cn/ux/nokch_core_newtea_30_3/banner_c.jpg",
+      "all_thumb_photo_urls": [
+        "http://house.boohee.cn/ux/nokch_core_newtea_30_3/ad1.jpg?imageView/2/w/96/h/96"
+      ],
+      "all_big_photo_urls": [
+        "http://house.boohee.cn/ux/nokch_core_newtea_30_3/ad1.jpg?imageView/2/w/608/h/344"
+      ],
+      "square_photo_urls": [
+        "http://house.boohee.cn/ux/nokch_core_newtea_30_3/ad1.jpg?imageView/2/w/640/h/640"
+      ],
+      "weight": "0.3",
+      "need_carriage": false,
+      "category_id": 1,
+      "category_name": "食品",
+      "state": "on_sale",
+      "state_text": "已上架",
+      "description": "<p>【消水肿“瘦”腿】韩国玉米须茶3盒超值</p>\n\n<p>薄荷原价87元，超值组合价68元。</p>\n\n<p>每天2小包，可以喝一个月哦！</p>\n\n<h2>满99/199/299全国包邮</h2>\n\n<p>上海、江苏、浙江、安徽，单笔满99元包邮；</p>\n\n<p>新疆、西藏，单笔满299元包邮；</p>\n\n<p>其他地区，单笔满199元包邮； </p>\n\n<p>注：可发韵达、申通、圆通快递，发顺丰、EMS请联系客服补差价：021-61650553</p>\n\n<h2>【消水肿”瘦”腿】韩国玉米须茶</h2>\n\n<figure>\n<img src=\"http://house.boohee.cn/ux/nokch_core_newtea_30/main_photo.jpg\"></figure>\n\n<h2 class=\"green-light\">薄荷红绿灯<b>绿灯食物</b></h2>\n\n<table class=\"nutrition-panel\" cellspacing=\"0\" cellpadding=\"0\">\n    <tbody><tr>\n      <td class=\"illus\" rowspan=\"3\"><img src=\"http://house.boohee.cn/ux/nokch_core_newtea_30/thumb.jpg\"></td>\n      <td class=\"green-light\">脂肪：0g/100g</td>\n    </tr>\n    <tr>\n      <td class=\"green-light\">糖：0g/100g</td>\n    </tr>\n    <tr>\n      <td class=\"green-light\">钠：0mg/100g</td>\n    </tr>\n    <tr>\n       <td colspan=\"2\"><b>热量：0kcal/100g</b></td>\n    </tr>\n    <tr>\n      <td colspan=\"2\"><b>产品特性：消水肿</b></td>\n    </tr>\n  </tbody></table>\n\n<p>腿部脂肪不多，却很粗，一到下午就感觉肿胀酸麻，这都是因为生活不规律、睡眠不足导致淋巴代谢不通畅，体内水循环不畅、废水无法排走所致。玉米须又称“龙须”，它性平、味甘淡，入肝、肾、膀胱经，有很强的利尿消肿的功效。西医认为玉米须中含有丰富的维生素K，能加速废水排出。久坐的办公族，不妨经常起来活动一下，喝杯玉米须茶，放松腿部肌肉。每天坚持喝两包，让你轻松拥有美腿。</p>\n\n<h2>包装信息</h2>\n\n<ul>\n<li>【产品名称】绿茶园玉米须茶 </li>\n<li>【配料】玉米、大米、玉米须</li>\n<li>【原产国】韩国</li>\n<li>【净含量】30g(1.5*20袋)</li>\n<li>【贮藏方法】置于阴凉干燥处，避免阳光直射</li>\n<li>【生产日期】2014年4月16日</li>\n<li>【保质期至】2016年4月16日</li>\n</ul>\n\n<h2>更多图片</h2>\n\n<p><img src=\"http://house.boohee.cn/ux/nokch_core_newtea_30/p1.jpg\" alt=\"图文消息\">\n<img src=\"http://house.boohee.cn/ux/nokch_core_newtea_30/p2.jpg\" alt=\"图文消息\">\n<img src=\"http://house.boohee.cn/ux/nokch_core_newtea_30/p3.jpg\" alt=\"图文消息\"></p>\n",
+      "month_quantity": 7,
+      "unit_name": ""
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "page": 12,
+  "total_pages": 23,
+  "comments": [
+    {
+      "body": "hi, how are you",
+      "id": 1,
+      "created_at": "2013-09-09T09:27:49.625+08:00",
+      "user": {
+        "id": 2,
+        "nickname": "zgm",
+        "avatar_url": "http://deemoo.info/images/avatars/male/0.png?imageView/1/w/70/h/70"
+      }
+    },
+    {
+      "body": "hi, how are you",
+      "id": 1,
+      "created_at": "2013-09-09T09:27:49.625+08:00",
+      "user": {
+        "id": 2,
+        "nickname": "zgm",
+        "avatar_url": "http://deemoo.info/images/avatars/male/0.png?imageView/1/w/70/h/70"
+      }
+    }
+  ]
+}

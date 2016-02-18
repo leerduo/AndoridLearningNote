@@ -1,0 +1,86 @@
+{
+  "cities": {
+    "city": {
+      "city_id": 1,
+      "city_name": "上海"
+    },
+    "areas": [
+      {
+        "area_name": "华东",
+        "cities": [
+          {
+            "city_id": 10,
+            "city_name": "上海"
+          },
+          {
+            "city_id": 20,
+            "city_name": "苏州"
+          },
+          {
+            "city_id": 30,
+            "city_name": "杭州"
+          },
+          {
+            "city_id": 40,
+            "city_name": "扬州"
+          },
+          {
+            "city_id": 50,
+            "city_name": "常州"
+          },
+          {
+            "city_id": 60,
+            "city_name": "绍兴"
+          },
+          {
+            "city_id": 70,
+            "city_name": "乌镇"
+          }
+        ]
+      },
+      {
+        "area_name": "华北",
+        "cities": [
+          {
+            "city_id": 1101,
+            "city_name": "北京"
+          },
+          {
+            "city_id": 1102,
+            "city_name": "天津"
+          },
+          {
+            "city_id": 1103,
+            "city_name": "内蒙古"
+          }
+        ]
+      },
+      {
+        "area_name": "华中",
+        "cities": [
+          {
+            "city_id": 1201,
+            "city_name": "重庆"
+          },
+          {
+            "city_id": 1202,
+            "city_name": "武汉"
+          }
+        ]
+      },
+      {
+        "area_name": "华南",
+        "cities": [
+          {
+            "city_id": 1301,
+            "city_name": "广州"
+          },
+          {
+            "city_id": 1302,
+            "city_name": "福建"
+          }
+        ]
+      }
+    ]
+  }
+}

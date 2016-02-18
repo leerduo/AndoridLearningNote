@@ -1,0 +1,34 @@
+{
+  "members_count": 58,
+  "page": 1,
+  "total_pages": 18,
+  "mine": {
+    "user": {
+      "id": 23,
+      "nickname": "kkk",
+      "avatar_url": 23
+    },
+    "rank": 23,
+    "steps": 50
+  },
+  "ranks": [
+    {
+      "user": {
+        "id": 23,
+        "nickname": "kkk",
+        "avatar_url": 23
+      },
+      "steps": 23,
+      "rank": 1
+    },
+    {
+      "user": {
+        "id": 23,
+        "nickname": "kkk",
+        "avatar_url": 23
+      },
+      "steps": 40,
+      "rank": 2
+    }
+  ]
+}

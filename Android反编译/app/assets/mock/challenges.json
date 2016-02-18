@@ -1,0 +1,48 @@
+{
+"challenges": [
+  {
+    "id": "1",
+    "name": "瘦10斤",
+    "title": "瘦10斤",
+    "avatar_url": "http://house.boohee.com/a/b/c.jpg",
+    "posts_count": 100,
+    "members_count": 50,
+    "template": "clock_out",
+    "unit": "米",
+    "max": 100,
+    "min": 20
+  },
+
+  {
+    "id": "2",
+    "name": "我要瘦大腿",
+    "title": "我要瘦大腿",
+    "avatar_url": "http://house.boohee.com/a/b/c.jpg",
+    "posts_count": 120,
+    "members_count": 34,
+    "template": "walking",
+    "unit": "米",
+    "max": 100,
+    "min": 20
+  },
+  {
+    "id": "3",
+    "name": "我要瘦大腿",
+    "title": "我要瘦大腿",
+    "avatar_url": "http://house.boohee.com/a/b/c.jpg",
+    "posts_count": 120,
+    "members_count": 34,
+    "template": "wager",
+    "unit": "米",
+    "max": 100,
+    "min": 20
+  }
+],
+  "joined": [
+    1,
+    3,
+    4
+  ],
+  "page": 1,
+  "total_pages": 25
+}

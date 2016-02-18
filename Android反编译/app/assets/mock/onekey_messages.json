@@ -1,0 +1,18 @@
+{
+  "messages": [
+    {
+      "msg_id": 1,
+      "type": "text",
+      "content": "hi",
+      "sender": "user",
+      "created_at": "2015-08-05T17:08:27.000+08:00"
+    },
+    {
+      "msg_id": 2,
+      "type": "text",
+      "content": "hello",
+      "sender": "consultor",
+      "created_at": "2015-08-05T17:08:27.000+08:00"
+    }
+  ]
+}

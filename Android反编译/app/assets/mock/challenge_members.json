@@ -1,0 +1,18 @@
+{
+"members": [
+  {"id": 1, "user_id": 1, "nickname": "我要瘦我要瘦85", "avatar_url": "http://one.boohee.cn/a/2015/4/24/944F6650-8A5D-46C3-A275-E86D5E83CC92.jpg?imageView/1/w/120/h/120"},
+  {"id": 2, "user_id": 4, "nickname": "Week", "avatar_url": "http://one.boohee.cn/a/2015/4/24/944F6650-8A5D-46C3-A275-E86D5E83CC92.jpg?imageView/1/w/120/h/120"},
+  {"id": 3, "user_id": 5, "nickname": "Monday", "avatar_url": "http://one.boohee.cn/a/2015/4/24/944F6650-8A5D-46C3-A275-E86D5E83CC92.jpg?imageView/1/w/120/h/120"},
+  {"id": 4, "user_id": 5, "nickname": "Sall", "avatar_url": "http://one.boohee.cn/a/2015/4/24/944F6650-8A5D-46C3-A275-E86D5E83CC92.jpg?imageView/1/w/120/h/120"},
+  {"id": 6, "user_id": 5, "nickname": "Liaa", "avatar_url": "http://one.boohee.cn/a/2015/4/24/944F6650-8A5D-46C3-A275-E86D5E83CC92.jpg?imageView/1/w/120/h/120"},
+  {"id": 7, "user_id": 5, "nickname": "Clsj", "avatar_url": "http://one.boohee.cn/a/2015/4/24/944F6650-8A5D-46C3-A275-E86D5E83CC92.jpg?imageView/1/w/120/h/120"},
+  {"id": 8, "user_id": 5, "nickname": "Badksfj", "avatar_url": "http://one.boohee.cn/a/2015/4/24/944F6650-8A5D-46C3-A275-E86D5E83CC92.jpg?imageView/1/w/120/h/120"},
+  {"id": 9, "user_id": 5, "nickname": "Saoll", "avatar_url": "http://one.boohee.cn/a/2015/4/24/944F6650-8A5D-46C3-A275-E86D5E83CC92.jpg?imageView/1/w/120/h/120"},
+  {"id": 10, "user_id": 5, "nickname": "Iols", "avatar_url": "http://one.boohee.cn/a/2015/4/24/944F6650-8A5D-46C3-A275-E86D5E83CC92.jpg?imageView/1/w/120/h/120"},
+  {"id": 11, "user_id": 5, "nickname": "Nles", "avatar_url": "http://one.boohee.cn/a/2015/4/24/944F6650-8A5D-46C3-A275-E86D5E83CC92.jpg?imageView/1/w/120/h/120"},
+  {"id": 12, "user_id": 5, "nickname": "Nsler", "avatar_url": "http://one.boohee.cn/a/2015/4/24/944F6650-8A5D-46C3-A275-E86D5E83CC92.jpg?imageView/1/w/120/h/120"},
+],
+"members_count": 189,
+"page": 2,
+"total_pages": 23
+}

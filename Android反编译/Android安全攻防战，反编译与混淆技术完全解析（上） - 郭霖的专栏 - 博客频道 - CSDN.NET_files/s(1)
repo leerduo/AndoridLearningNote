@@ -1,0 +1,14 @@
+ADFHOST68="http://csdnim.qtmojo.com";
+ADFCID68=15;
+ADFBID68=68;
+ADFLOC='CNJSSZ00';
+ADFUSER68="http://csdnim.qtmojo.com/c?d=csdnim&i=z15,10508976,68,149&rf=&a=dBD85orOa19cW2A5yG97RnScyZsS&u=";
+ALLYESID4="CSmMX1rYN16BHIl4mRH";
+ADFPGC="2,5,15,0,71,68,149,10508976";
+
+document.write("<script type=\"text/javascript\">\n");
+document.write("var cpro_id=\"u1607657\";\n");
+document.write("(window[\"cproStyleApi\"] = window[\"cproStyleApi\"] || {})[cpro_id]={at:\"3\",rsi0:\"728\",rsi1:\"90\",pat:\"6\",tn:\"baiduCustNativeAD\",rss1:\"#FFFFFF\",conBW:\"1\",adp:\"1\",ptt:\"0\",titFF:\"%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91\",titFS:\"14\",rss2:\"#000000\",titSU:\"0\",ptbg:\"90\",piw:\"0\",pih:\"0\",ptp:\"0\"}\n");
+document.write("</Scr"+"ipt>\n");
+document.write("<script src=\"http://cpro.baidustatic.com/cpro/ui/c.js\" type=\"text/javascript\"></Scr"+"ipt>");
+

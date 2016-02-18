@@ -1,0 +1,1273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0066)http://blog.csdn.net/guolin_blog/article/details/49738023#comments -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/acom"></script><script type="text/javascript" async="" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/acom(1)"></script>   
+    
+     
+    <script type="text/javascript" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/tracking.js" charset="utf-8"></script>  
+
+    <script type="text/javascript">
+        var protocol = window.location.protocol;
+        document.write('<script type="text/javascript" src="' + protocol + '//csdnimg.cn/pubfooter/js/repoAddr2.js?v=' + Math.random() + '"></' + 'script>');
+    </script><script type="text/javascript" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/repoAddr2.js"></script>
+
+  
+ <meta http-equiv="Cache-Control" content="no-siteapp"><link rel="alternate" media="handheld" href="http://blog.csdn.net/guolin_blog/article/details/49738023#">
+
+    <title>Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏
+        - 博客频道 - CSDN.NET</title>
+    
+    <meta name="description" content="2011-4-19 22:53:29 org.apache.catalina.core.StandardWrapperValve invoke严重: Servlet.service() for servlet jsp threw exceptionorg.apache.commons.fileupload.FileUploadBase$SizeLimitExceededException: the request was rejected because its size (122624) exce">
+    <script src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/ad.js"></script>
+        <!--new top-->
+       
+        <link rel="stylesheet" href="http://c.csdnimg.cn/public/common/toolbar/css/index.css">
+        <!--new top-->
+
+    <link rel="Stylesheet" type="text/css" href="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/style.css">
+    <link id="RSSLink" title="RSS" type="application/rss+xml" rel="alternate" href="http://blog.csdn.net/sinyu890807/rss/list">
+    <link rel="shortcut icon" href="http://c.csdnimg.cn/public/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/default.css">
+ 
+
+
+<script src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/share.js"></script><link rel="stylesheet" type="text/css" href="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/job_reco.css"><script type="text/javascript" charset="utf-8" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/main.js"></script><link rel="stylesheet" type="text/css" href="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/style(1).css"><link rel="stylesheet" type="text/css" href="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/style(2).css"><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><script src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/logger.js"></script><link href="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/bdsstyle.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/share_style0_16.css?v=6aba13f0.css"></head>
+<body><div id="BAIDU_DUP_fp_wrapper" style="position: absolute; left: -1px; bottom: -1px; z-index: 0; width: 0px; height: 0px; overflow: hidden; visibility: hidden; display: none;"><iframe id="BAIDU_DUP_fp_iframe" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/o.html" style="width: 0px; height: 0px; visibility: hidden; display: none;"></iframe></div><div id="MathJax_Message" style="display: none;"></div><iframe frameborder="0" style="display: none;"></iframe>
+    
+   
+      <!--new top-->
+    <script id="toolbar-tpl-scriptId" fixed="true" prod="blog" skin="black" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/html.js" type="text/javascript"></script><div class="csdn-toolbar csdn-toolbar-skin-black ">        <div class="container row center-block ">          <div class="col-md-3 pull-left logo clearfix"><a href="http://www.csdn.net/?ref=toolbar" title="CSDN首页" target="_blank" class="icon"></a><a title="频道首页" href="http://blog.csdn.net/?ref=toolbar_logo" class="img blog-icon"></a></div>          <div class="pull-right login-wrap ">            <ul class="btns">              <li class="loginlink"><a href="https://passport.csdn.net/account/login?ref=toolbar" target="_top">登录&nbsp;</a>|<a target="_top" href="http://passport.csdn.net/account/mobileregister?ref=toolbar&action=mobileRegister">&nbsp;注册</a></li>              <li class="search">                <div class="icon on-search-icon">                  <div class="wrap">                    <div class="curr-icon-wrap">                      <div class="curr-icon"></div>                    </div>                    <form action="http://so.csdn.net/search" method="get" target="_blank">                      <input type="hidden" value="toolbar" name="ref" accesskey="2">                      <div class="border">                        <input placeholder="搜索" type="text" value="" name="q" accesskey="2"><span class="icon-enter-sm"></span>                      </div>                    </form>                  </div>                </div>              </li>              <li class="favor">                <div class="icon on-favor-icon">                  <div class="wrap">                    <div class="curr-icon-wrap">                      <div class="curr-icon"></div>                    </div>                    <div style="display:none;" class="favor-success"><span class="msg">收藏成功</span>                      <div class="btns"><span class="btn btn-primary ok">确定</span></div>                    </div>                    <div style="display:none;" class="favor-failed"><span class="icon-danger-lg"></span><span class="msg">收藏失败，请重新收藏</span>                      <div class="btns"><span class="btn btn-primary ok">确定</span></div>                    </div>                    <form role="form" class="form-horizontal favor-form">                      <div class="form-group">                        <div class="clearfix">                          <label for="input-title" class="col-sm-2 control-label">标题</label>                          <div class="col-sm-10">                            <input id="inputTitle" type="text" placeholder="" class="title form-control">                          </div>                        </div>                        <div class="alert alert-danger"><strong></strong>标题不能为空</div>                      </div>                      <div class="form-group">                        <label for="input-url" class="col-sm-2 control-label">网址</label>                        <div class="col-sm-10">                          <input id="input-url" type="text" placeholder="" class="url form-control">                        </div>                      </div>                      <div class="form-group">                        <label for="input-tag" class="col-sm-2 tag control-label">标签</label>                        <div class="col-sm-10">                          <input id="input-tag" type="text" class="form-control tag">                        </div>                      </div>                      <div class="form-group">                        <label for="input-description" class="description col-sm-2 control-label">摘要</label>                        <div class="col-sm-10">                          <textarea id="input-description" class="form-control description"></textarea>                        </div>                      </div>                      <div class="form-group">                        <div class="col-sm-offset-2 col-sm-10 ft">                          <div class="col-sm-4 pull-left">                            <div class="checkbox">                              <label>                                <input type="checkbox" name="share" checked="checked" class="share">公开                              </label>                            </div>                          </div>                          <div class="col-sm-8 pull-right favor-btns">                            <button type="button" class="cancel btn btn-default">取消</button>                            <button type="submit" class="submit btn btn-primary">收藏</button>                          </div>                        </div>                      </div>                    </form>                  </div>                </div>              </li>              <li class="notify">                <div style="display:none" class="number"></div>                <div style="display: none;" class="icon-hasnotes-sm"></div>                <div id="header_notice_num"><div class="icon-hasnotes" style="display: none;"></div></div>                <div class="icon on-notify-icon">                  <div class="wrap">                    <div class="curr-icon-wrap">                      <div class="curr-icon"></div>                    </div>                    <div id="note1" class="csdn_note" style="display: none;">                      <div class="box"><div class="notifications notice_list_con curr">  <div class="menu_title">    <span class="title"><a href="http://msg.csdn.net/letters" target="_blank" class="read_all">查看所有私信</a><a href="http://msg.csdn.net/" target="_blank" class="go_all">查看所有通知</a></span>  </div>  <div class="loading"></div>  <div class="empty">暂没有新通知</div>  <div class="notice_content" style="overflow-y: auto; max-height: 270px;"></div></div><div class="notifications detail_con" style="display: none">  <div class="menu_title">    <span class="title">      <a class="go_back" href="javascript:void 0;">返回通知列表</a>      <a class="notifications_page_none nextnote" href="javascript:void 0;">下一条</a>      <a class="notifications_page prvnote" href="javascript:void 0;">上一条</a>    </span>  </div>  <div class="notice_content" style="overflow-y: scroll; height: 250px;"></div></div><div class="error"></div></div>                    <iframe src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/acom.html" frameborder="0" allowtransparency="true" style="z-index:-1;position:absolute;top:0;left:0;width:100%;height:100%;background:transparent"></iframe></div>                  </div>                </div>              </li>              <li class="ugc">                <div class="icon on-ugc-icon">                  <div class="wrap clearfix">                    <div class="curr-icon-wrap">                      <div class="curr-icon"></div>                    </div>                    <dl>                      <dt><a href="http://geek.csdn.net/news/expert?ref=toolbar" target="_blank" class="p-news clearfix" style="display:none;"><em class="icon"></em><span>分享资讯</span></a></dt>                      <dt style="border: none;"><a href="http://u.download.csdn.net/upload?ref=toolbar" target="_blank" class="p-doc clearfix"><em class="icon"></em><span>传PPT/文档</span></a></dt>                      <dt><a href="http://bbs.csdn.net/topics/new?ref=toolbar" target="_blank" class="p-ask clearfix"><em class="icon"></em><span>提问题</span></a></dt>                      <dt><a href="http://write.blog.csdn.net/postedit?ref=toolbar" target="_blank" class="p-blog clearfix"><em class="icon"></em><span>写博客</span></a></dt>                      <dt><a href="http://u.download.csdn.net/upload?ref=toolbar" target="_blank" class="p-src clearfix"><em class="icon"></em><span>传资源</span></a></dt>                      <dt><a href="https://code.csdn.net/projects/new?ref=toolbar" target="_blank" class="c-obj clearfix"><em class="icon"></em><span>创建项目</span></a></dt>                      <dt><a href="https://code.csdn.net/snippets/new?ref=toolbar" target="_blank" class="c-code clearfix"><em class="icon"></em><span>创建代码片</span></a></dt>                    </dl>                  </div>                </div>              </li>              <li class="profile">                <div class="icon on-profile-icon"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/2_q178266871.jpg" class="curr-icon-img">                  <div class="wrap clearfix">                    <div class="curr-icon-wrap">                      <div class="curr-icon"></div>                    </div>                    <div class="bd">                      <dl class="clearfix">                        <dt class="pull-left img"><a target="_blank" href="http://my.csdn.net/?ref=toolbar" class="avatar"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/2_q178266871.jpg"></a></dt>                        <dd class="info" style="border: none;"><a target="_blank" href="http://my.csdn.net/?ref=toolbar" class="nickname">q178266871</a><span class="dec">追求成长，无论是技术做人做事，希望和公司一起成长</span></dd>                      </dl>                    </div>                    <div class="ft clearfix"><a target="_blank" href="http://my.csdn.net/my/account/changepwd?ref=toolbar" class="pull-left"><span class="icon-cog"></span>帐号设置</a><a href="https://passport.csdn.net/account/logout?ref=toolbar" target="_top" class="pull-left" style="margin-left:132px; width:18px; height:27px; white-space:nowrap; overflow:hidden;"><span class="icon-signout"></span><span class="out">退出</span></a></div>                  </div>                </div>              </li>              <li class="apps">                <div id="chasnew123" class="hasnew" style="display: none;"></div>                <div id="cappsarea123" class="icon on-apps-icon">                  <div class="wrap clearfix">                    <div class="curr-icon-wrap">                      <div class="curr-icon"></div>                    </div>                  <div class="detail">                    <dl>                      <dt>                        <h5>社区</h5>                      </dt>                      <dd> <a href="http://blog.csdn.net/?ref=toolbar" target="_blank">博客</a></dd>                      <dd> <a href="http://bbs.csdn.net/?ref=toolbar" target="_blank">论坛</a></dd>                      <dd> <a href="http://download.csdn.net/?ref=toolbar" target="_blank">下载</a></dd>                      <dd><a href="http://ask.csdn.net/?ref=toolbar" target="_blank">技术问答</a></dd>                      <dd><a href="http://geek.csdn.net/?ref=toolbar" target="_blank">极客头条</a></dd>                      <dd style="display:none"> <a href="http://hero.csdn.net/?ref=toolbar" target="_blank">英雄会</a></dd>                    </dl>                  </div>                  <div class="detail">                    <dl>                      <dt>                        <h5>服务</h5>                      </dt>                      <dd style="display:none"> <a href="http://job.csdn.net/?ref=toolbar" target="_blank">JOB<img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/new.gif" style="display: none; margin-top: -26px; width: 23px;"></a></dd>                      <dd> <a href="http://edu.csdn.net/?ref=toolbar" target="_blank">学院<img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/new.gif" style="display: none; margin-top: -26px; width: 23px;"></a></dd>                      <dd> <a href="https://code.csdn.net/?ref=toolbar" target="_blank">CODE</a></dd>                      <dd> <a href="http://huiyi.csdn.net/?ref=toolbar" target="_blank">活动</a></dd>                      <dd> <a href="http://www.csto.com/?ref=toolbar" target="_blank">CSTO</a></dd>                      <dd> <a href="http://mall.csdn.net/?ref=toolbar" target="_blank">C币兑换<img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/new.gif" style="display: none; margin-top: -26px; width: 23px;"></a></dd>                    </dl>                  </div>                  <div class="detail last">                    <dl>                      <dt>                        <h5>俱乐部</h5>                      </dt>                      <dd> <a href="http://cto.csdn.net/?ref=toolbar" target="_blank">CTO俱乐部</a></dd>                      <dd> <a href="http://student.csdn.net/?ref=toolbar" target="_blank">高校俱乐部</a></dd>                    </dl>                  </div>                </div>              </div>            </li>            </ul>          </div>        </div>    </div>
+     <!--new top-->
+    <div id="container">
+        <div id="header">
+    <div class="header">
+        <div id="blog_title">
+            <h2>
+                <a href="http://blog.csdn.net/guolin_blog">郭霖的专栏</a></h2>
+            <h3>每当你在感叹，如果有这样一个东西就好了的时候，请注意，其实这是你的机会</h3>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+<div id="navigator">
+    <div class="navigator_bg">
+    </div>
+    <div class="navigator">
+        <ul>
+            
+                <li id="btnContents"><a href="http://blog.csdn.net/guolin_blog?viewmode=contents"><span onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_mulu&#39;])">
+                    <img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/ico_list.gif">目录视图</span></a></li>
+                <li id="btnView"><a href="http://blog.csdn.net/guolin_blog?viewmode=list"><span onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_zhaiyao&#39;])">
+                    <img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/ico_summary.gif">摘要视图</span></a></li>
+                <li id="btnRss"><a href="http://blog.csdn.net/guolin_blog/rss/list"><span onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_RSS&#39;])">
+                    <img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/ico_rss.gif">订阅</span></a></li>                
+
+            </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    var username = "sinyu890807";
+    var _blogger = username;
+    var blog_address = "http://blog.csdn.net/guolin_blog";
+    var static_host = "http://static.blog.csdn.net";
+    var currentUserName = "q178266871";  
+</script>
+
+        <div id="body">
+            <div id="main">
+                <div class="main">
+                        <div class="ad_class">
+<div class="notice tracking-ad" data-mod="popu_3"> 
+
+<a href="http://huiyi.csdn.net/activity/product/goods_list?project_id=2741" target="_blank">
+<font color="red">2016软考项目经理实战班
+</font></a>
+&nbsp;&nbsp;&nbsp;
+
+<a href="http://blog.csdn.net/xingjiarong/article/details/50651235" target="_blank">
+<font color="blue">python编程常用模板总结
+</font></a>
+&nbsp;&nbsp;&nbsp;
+<a href="http://blog.csdn.net/dba_huangzj/article/details/50469185" target="_blank">
+<font color="red">【博客专家】有奖试读—Windows PowerShell实战指南
+</font></a>
+
+</div>                        </div>
+                        
+
+<!--AdForward Begin:-->
+<script type="text/javascript" ads-src="http://csdnim.qtmojo.com/main/s?user=csdn|blog|fumeiti&amp;db=csdnim&amp;border=0&amp;local=yes&amp;js=ie" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/AllyesDeliver.min.js" charset="gbk" id="allyes_ins_1ae6bd835" ads-outputs="0" ads-tid="141a1b4f5_0"></script><div id="141a1b4f5_0" style="padding:0;margin:0;border:0;"><script type="text/javascript" data-belong="allyes" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/s"></script><script type="text/javascript">
+var cpro_id="u2392861";
+(window["cproStyleApi"] = window["cproStyleApi"] || {})[cpro_id]={at:"3",rsi0:"300",rsi1:"250",pat:"17",tn:"baiduCustNativeAD_xuanfu",rss1:"#FFFFFF",conBW:"1",adp:"1",ptt:"0",titFF:"%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91",titFS:"14",rss2:"#000000",titSU:"0"}
+</script>
+<script src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/f.js" type="text/javascript"></script><div id="BAIDU_UNION__wrapper_u2392861_0" style="box-sizing: content-box; width: 311px; height: 286px; overflow: hidden; z-index: 2147483647; position: fixed; bottom: 10px; right: 130px;"><div style="box-sizing: content-box;width:300px;height:250px;padding:4px;border:#acacac 1px solid;overflow:hidden;position:absolute;left:0;top:25px;"><iframe id="BAIDU_UNION__wrapper_u2392861_0_iframe" src="about:block" width="300" height="250" align="center,center" vspace="0" hspace="0" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" style="border:0; vertical-align:bottom;margin:0;" allowtransparency="true"></iframe></div><div id="BAIDU_UNION__wrapper_u2392861_0_closebtn" style="box-sizing: content-box;position:absolute;width:61px;height:20px;top:0;left:250px;margin:0;padding:0;margin-bottom:5px;cursor:pointer;overflow:hidden;"><div style="box-sizing: content-box;width:40px;height:20px;background-color:#999999;color:#fff;float:left;margin-right:1px;font-size:12px;font-family:微软雅黑;text-align: center;line-height:20px;">关闭</div><a style="maring:0;padding:0;display:inline-block;border:none;overflow:hidden;height:20px;line-height:20px;cursor:pointer;width:20px;background:url(&#39;http://cpro.baidustatic.com/cpro/ui/noexpire/img/2.0.1/xuanfu_close.png&#39;) no-repeat 0 0;margin-bottom:3px;float:left"></a></div></div><script type="text/javascript" data-belong="allyes" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/delay.min.js"></script><script type="text/javascript" data-belong="allyes" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/delay.min.js"></script><script type="text/javascript" data-belong="allyes" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/delay.min.js"></script><script type="text/javascript" data-belong="allyes" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/delay.min.js"></script><script type="text/javascript" data-belong="allyes" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/delay.min.js"></script></div>
+<!--AdForward End-->
+
+  
+<link href="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/comment1.css" type="text/css" rel="stylesheet">
+<link href="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/style1.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/jquery.cookie.js"></script>
+<script type="text/javascript" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/main(1).js"></script>
+<link rel="stylesheet" href="http://static.blog.csdn.net/public/res-min/markdown_views.css?v=1.0">
+<link rel="stylesheet" href="http://static.blog.csdn.net/css/category.css?v=1.0">
+<script type="text/javascript" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/MathJax.js"></script>
+
+  <script type="text/ecmascript">
+      window.quickReplyflag = true;
+           
+            var isBole = false;
+            
+          
+    </script>
+<div id="article_details" class="details">
+    <div class="article_title">   
+         <span class="ico ico_type_Original"></span>
+
+
+    <h1>
+        <span class="link_title"><a href="http://blog.csdn.net/guolin_blog/article/details/49738023">
+        Android安全攻防战，反编译与混淆技术完全解析（上）            
+        </a></span>
+    </h1>
+</div>
+
+   
+
+        <div class="article_manage clearfix">
+        <div class="article_l">
+            <span class="link_categories">
+            标签：
+              <a href="http://www.csdn.net/tag/android" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_tag&#39;]);">android</a><a href="http://www.csdn.net/tag/%e5%8f%8d%e7%bc%96%e8%af%91" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_tag&#39;]);">反编译</a><a href="http://www.csdn.net/tag/%e5%ae%89%e5%85%a8" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_tag&#39;]);">安全</a><a href="http://www.csdn.net/tag/%e6%8a%80%e6%9c%af" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_tag&#39;]);">技术</a><a href="http://www.csdn.net/tag/%e6%b7%b7%e6%b7%86" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_tag&#39;]);">混淆</a>
+            </span>
+        </div>
+        <div class="article_r">
+            <span class="link_postdate">2016-02-18 09:09</span>
+            <span class="link_view" title="阅读次数">339人阅读</span>
+            <span class="link_comments" title="评论次数"> <a href="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET.html" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_pinglun&#39;])">评论</a>(30)</span>
+            <span class="link_collect tracking-ad" data-mod="popu_171"> <a href="javascript:void(0);" onclick="javascript:collectArticle(&#39;Android安全攻防战，反编译与混淆技术完全解析（上）&#39;,&#39;49738023&#39;);return false;" title="收藏" target="_blank">收藏</a></span>
+             <span class="link_report"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" onclick="javascript:report(49738023,2);return false;" title="举报">举报</a></span>
+
+        </div>
+    </div>
+      <div class="category clearfix">
+        <div class="category_l">
+           <img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/category_icon.jpg">
+            <span>分类：</span>
+        </div>
+        <div class="category_r">
+                    <label onclick="GetCategoryArticles(&#39;1399638&#39;,&#39;sinyu890807&#39;,&#39;top&#39;,&#39;49738023&#39;);">
+                        <span onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_fenlei&#39;]);">Android疑难解析<em>（34）</em></span>
+                      <img class="arrow-down" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/arrow_triangle _down.jpg" style="display:inline;">
+                      <img class="arrow-up" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/arrow_triangle_up.jpg" style="display:none;">
+                        <div class="subItem">
+                            <div class="subItem_t"><a href="http://blog.csdn.net/sinyu890807/article/category/1399638" target="_blank">作者同类文章</a><i class="J_close">X</i></div>
+                            <ul class="subItem_l" id="top_1399638">                            
+                            </ul>
+                        </div>
+                    </label>                    
+        </div>
+    </div>
+    <script type="text/javascript" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/category.js"></script>  
+        <div class="bog_copyright">         
+            <p class="copyright_p">版权声明：本文出自郭霖的博客，转载必须注明出处。</p>
+        </div>
+
+  
+
+  
+  
+     
+
+<div style="clear:both"></div><div style="border:solid 1px #ccc; background:#eee; float:left; min-width:200px;padding:4px 10px;"><p style="text-align:right;margin:0;"><span style="float:left;">目录<a href="http://blog.csdn.net/guolin_blog/article/details/49738023#" title="系统根据文章中H1到H6标签自动生成文章目录">(?)</a></span><a href="http://blog.csdn.net/guolin_blog/article/details/49738023#" onclick="javascript:return openct(this);" title="展开">[+]</a></p><ol style="display:none;margin-left:14px;padding-left:14px;line-height:160%;"><li><a href="http://blog.csdn.net/guolin_blog/article/details/49738023#t0">反编译</a></li><ol><li><a href="http://blog.csdn.net/guolin_blog/article/details/49738023#t1">反编译代码</a></li><li><a href="http://blog.csdn.net/guolin_blog/article/details/49738023#t2">反编译资源</a></li><li><a href="http://blog.csdn.net/guolin_blog/article/details/49738023#t3">重新打包</a></li></ol></ol></div><div style="clear:both"></div><div id="article_content" class="article_content">
+        <div class="markdown_views"><p>转载请注明出处：<a href="http://blog.csdn.net/guolin_blog/article/details/49738023">http://blog.csdn.net/guolin_blog/article/details/49738023</a> <br>
+之前一直有犹豫过要不要写这篇文章，毕竟去反编译人家的程序并不是什么值得骄傲的事情。不过单纯从技术角度上来讲，掌握反编译功能确实是一项非常有用的技能，可能平常不太会用得到，但是一旦真的需要用到的了，而你却不会的话，那就非常头疼了。另外既然别人可以反编译程序，我们当然有理由应该对程序进行一定程度的保护，因此代码混淆也是我们必须要掌握的一项技术。那么最近的两篇文章我们就围绕反编译和混淆这两个主题来进行一次完全解析。</p>
+
+<hr>
+
+
+
+<h1 id="反编译"><a name="t0"></a>反编译</h1>
+
+<p>我们都知道，Android程序打完包之后得到的是一个APK文件，这个文件是可以直接安装到任何Android手机上的，我们反编译其实也就是对这个APK文件进行反编译。Android的反编译主要又分为两个部分，一个是对代码的反编译，一个是对资源的反编译，我们马上来逐个学习一下。 <br>
+在开始学习之前，首先我们需要准备一个APK文件，为了尊重所有开发者，我就不拿任何一个市面上的软件来演示了，而是自己写一个Demo用来测试。 <br>
+这里我希望代码越简单越好，因此我们建立一个新项目，在Activity里加入一个按钮，当点击按钮时弹出一个Toast，就这么简单，代码如下所示：</p>
+
+
+
+<pre class="prettyprint" name="code"><code class="language-java hljs  has-numbering"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AppCompatActivity</span> {</span>
+
+    <span class="hljs-annotation">@Override</span>
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span>(Bundle savedInstanceState) {
+        <span class="hljs-keyword">super</span>.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Button button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(<span class="hljs-keyword">new</span> View.OnClickListener() {
+            <span class="hljs-annotation">@Override</span>
+            <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onClick</span>(View v) {
+                Toast.makeText(MainActivity.<span class="hljs-keyword">this</span>, <span class="hljs-string">"you clicked button"</span>, Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+}</code><ul class="pre-numbering"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li><li>11</li><li>12</li><li>13</li><li>14</li><li>15</li><li>16</li></ul></pre>
+
+<p>activity_main.xml中的资源如下所示：</p>
+
+
+
+<pre class="prettyprint" name="code"><code class="language-xml hljs  has-numbering"><span class="hljs-pi">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">RelativeLayout
+</span>    <span class="hljs-attribute">xmlns:android</span>=<span class="hljs-value">"http://schemas.android.com/apk/res/android"</span>
+    <span class="hljs-attribute">android:layout_width</span>=<span class="hljs-value">"match_parent"</span>
+    <span class="hljs-attribute">android:layout_height</span>=<span class="hljs-value">"match_parent"</span>
+    <span class="hljs-attribute">android:paddingBottom</span>=<span class="hljs-value">"@dimen/activity_vertical_margin"</span>
+    <span class="hljs-attribute">android:paddingLeft</span>=<span class="hljs-value">"@dimen/activity_horizontal_margin"</span>
+    <span class="hljs-attribute">android:paddingRight</span>=<span class="hljs-value">"@dimen/activity_horizontal_margin"</span>
+    <span class="hljs-attribute">android:paddingTop</span>=<span class="hljs-value">"@dimen/activity_vertical_margin"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">Button
+</span>        <span class="hljs-attribute">android:id</span>=<span class="hljs-value">"@+id/button"</span>
+        <span class="hljs-attribute">android:layout_width</span>=<span class="hljs-value">"wrap_content"</span>
+        <span class="hljs-attribute">android:layout_height</span>=<span class="hljs-value">"wrap_content"</span>
+        <span class="hljs-attribute">android:text</span>=<span class="hljs-value">"Button"</span>/&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">RelativeLayout</span>&gt;</span></code><ul class="pre-numbering"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li><li>11</li><li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li></ul></pre>
+
+<p>然后我们将代码打成一个APK包，并命名成Demo.apk，再把它安装到手机上，结果如下所示： <br>
+</p><center><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20160204142511216" alt="" title=""></center> <br>
+好的，到这里准备工作就已经基本完成了，接下来就让我们开始对这个Demo程序进行反编译吧。<p></p>
+
+
+
+<h2 id="反编译代码"><a name="t1"></a>反编译代码</h2>
+
+<p>要想将APK文件中的代码反编译出来，我们需要用到以下两款工具：</p>
+
+<ul>
+<li><strong>dex2jar</strong> 这个工具用于将dex文件转换成jar文件 <br>
+下载地址：<a href="http://sourceforge.net/projects/dex2jar/files/">http://sourceforge.net/projects/dex2jar/files/</a></li>
+<li><strong>jd-gui</strong> 这个工具用于将jar文件转换成java代码 <br>
+下载地址：<a href="http://jd.benow.ca/">http://jd.benow.ca/</a></li>
+</ul>
+
+<p>将这两个工具都下载好并解压，然后我们就开始对Demo程序进行反编译。解压dex2jar压缩包后，你会发现有很多个文件，如下图所示： <br>
+</p><center><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20160204153609614" alt="" title=""></center> <br>
+其中我们要用到的是d2j-dex2jar.bat这个文件，当然如果你是linux或mac系统的话就要用d2j-dex2jar.sh这个文件。 <br>
+然后我们将Demo.apk文件也进行解压，如果不知道怎么直接解压的可以先将文件重命名成Demo.zip，然后用解压软件打开。解压之后你会发现里面有一个classes.dex文件，如下图所示： <br>
+<center><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20160204160337530" alt="" title=""></center> <br>
+这个classes.dex文件就是存放所有java代码的地方了，我们将它拷贝到dex2jar解压后的目录下，并在cmd中也进入到同样的目录，然后执行：<p></p>
+
+
+
+<pre class="prettyprint" name="code"><code class="language-shell hljs avrasm has-numbering">d2j-dex2jar classes<span class="hljs-preprocessor">.dex</span></code><ul class="pre-numbering"><li>1</li></ul></pre>
+
+<p>执行结果如下图所示： <br>
+</p><center><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20160204160725801" alt="" title=""></center> <br>
+没有报任何错误，这就说明我们已经转换成功了。现在观察dex2jar目录，你会发现多了一个文件，如下图所示： <br>
+<center><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20160204161831426" alt="" title=""></center> <br>
+可以看到，classes-dex2jar.jar这个文件就是我们借助工具之后成功转换出来的jar文件了。但是对于我们而言，jar文件也不是可读的，因此这里还需要再借助一下jd-gui这个工具来将jar文件转换成java代码。 <br>
+下面就很简单了，使用jd-gui工具打开classes-dex2jar.jar这个文件，结果如下图所示： <br>
+<center><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20160204162548914" width="900px"></center> <br>
+OK，由此可见，我们的代码反编译工作已经成功了，MainActivity中的代码非常清晰，基本已经做到了90%以上的还原工作。但是如果想要做到100%的代码还原还是非常有难度的，因为像setContentView()方法传入的参数，其实就是一个资源的id值而已，那么这里反编译也就只能将相应的id值进行还原，而无法变成像R.layout.activity_main这样直观的代码展示。 <br>
+另外，除了MainActivity之外，还有很多其它的代码也被反编译出来了，因为当前项目有引用support-v4和support-v7的包，这些引用的library也会作为代码的一部分被打包到classes.dex文件当中，因此反编译的时候这些代码也会一起被还原。 <br>
+好的，学完了反编译代码，接下来我们看一下如何反编译资源。<p></p>
+
+
+
+<h2 id="反编译资源"><a name="t2"></a>反编译资源</h2>
+
+<p>其实细心的朋友可能已经观察到了，刚才Demo.apk的解压目录当中不是已经有资源文件了吗，有AndroidManifest.xml文件，也有res目录。进入res目录当中，内容如下图所示： <br>
+</p><center><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20160205114006588" alt="" title=""></center> <br>
+这不是所有资源文件都在这里了么？其实这些资源文件都是在打包的时候被编译过了，我们直接打开的话是看不到明文的，不信的话我们打开AndroidManifest.xml文件来瞧一瞧，内容如下图所示： <br>
+<center><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20160205114422374" alt="" title=""></center> <br>
+可以看到，这代码是完全没法阅读的。当然如果你去打开activity_main.xml看看，结果也不会好到哪儿去： <br>
+<center><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20160205114648290" alt="" title=""></center> <br>
+由此可见，直接对APK包进行解压是无法得到它的原始资源文件的，因此我们还需要对资源进行反编译才行。 <br>
+要想将APK文件中的资源反编译出来，又要用到另外一个工具了：<p></p>
+
+<ul>
+<li><strong>apktool</strong> 这个工具用于最大幅度地还原APK文件中的9-patch图片、布局、字符串等等一系列的资源。 <br>
+下载地址：<a href="http://ibotpeaches.github.io/Apktool/install/">http://ibotpeaches.github.io/Apktool/install/</a></li>
+</ul>
+
+<p>关于这个工具的下载我还要再补充几句，我们需要的就是apktool.bat和apktool.jar这两个文件。目前apktool.jar的最新版本是2.0.3，这里我就下载最新的了，然后将apktool_2.0.3.jar重命名成apktool.jar，并将它们放到同一个文件夹下就可以了，如下图所示： <br>
+</p><center><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20160205125449076" alt="" title=""></center> <br>
+接下来的工作就很简单了，我们将Demo.apk拷贝到和这两个文件同样的目录当中，然后cmd也进入到这个目录下，并在cmd中执行如下命令：<p></p>
+
+
+
+<pre class="prettyprint" name="code"><code class="language-shell hljs avrasm has-numbering">apktool d Demo<span class="hljs-preprocessor">.apk</span></code><ul class="pre-numbering"><li>1</li></ul></pre>
+
+<p>其中d是decode的意思，表示我们要对Demo.apk这个文件进行解码。那除了这个基本用法之外，我们还可以再加上一些附加参数来控制decode的更多行为：</p>
+
+<ul>
+<li><strong>-f</strong> 如果目标文件夹已存在，则强制删除现有文件夹（默认如果目标文件夹已存在，则解码失败）。</li>
+<li><strong>-o</strong> 指定解码目标文件夹的名称（默认使用APK文件的名字来命名目标文件夹）。</li>
+<li><strong>-s</strong> 不反编译dex文件，也就是说classes.dex文件会被保留（默认会将dex文件解码成smali文件）。</li>
+<li><strong>-r</strong> 不反编译资源文件，也就是说resources.arsc文件会被保留（默认会将resources.arsc解码成具体的资源文件）。</li>
+</ul>
+
+<p>常用用法就这么多了，那么上述命令的执行结果如下图所示： <br>
+</p><center><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20160205130623698" alt="" title=""></center> <br>
+这就说明反编译资源已经成功了。 <br>
+当然即使你在和我执行一模一样的操作，也有可能会在这里反编译失败，比如说会报如下错误： <br>
+<center><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20160205131116809" alt="这里写图片描述" title=""></center> <br>
+出现这个错误的原因很有可能是你之前使用过apktool的老版本进行过反编译操作，然后apktool就会在你系统的<code>C:\Users\Administrator\apktool\framework</code>这个目录下生成一个名字为<code>1.apk</code>的缓存文件，将这个缓存文件删除掉，然后再重新执行反编译命令应该就可以成功了。 <br>
+现在你会发现在当前目录下多了一个Demo文件夹，这个文件夹中存放的就是反编译的结果了。我们可以打开AndroidManifest.xml来瞧一瞧，如下图所示： <br>
+<center><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20160205184526870" alt="" title=""></center> <br>
+怎么样？这样就完全能看得懂了吧，然后可以再到res/layout中看一下activity_main.xml文件，如下图所示： <br>
+<center><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20160205185353442" alt="" title=""></center> <br>
+可以看到，activity_main.xml中的内容基本和源代码中的内容是一致的，外层是一个RelativeLayout，里面则是一个Button。你可以再到其它目录中去看一看别的资源，基本上都是可以正常还原的，这样我们就把反编译资源的方法也已经掌握了。<p></p>
+
+
+
+<h2 id="重新打包"><a name="t3"></a>重新打包</h2>
+
+<p>那么对于反编译出来的文件夹，我们能不能重新把它打包成APK文件呢？答案是肯定的，只不过我实在想不出有什么义正言辞的理由可以让我们这么做。有的人会说汉化，没错，汉化的方式确实就是将一个APK进行反编译，然后翻译其中的资源再重新打包，但是不管怎么说这仍然是将别人的程序进行破解，所以我并不认为这是什么光荣的事情。那么我们就不去讨论本身这件事情的对或错，这里只是站在技术的角度来学习一下重新打包的相关知识。 <br>
+首先我们来看一下通过apktool反编译后的包目录情况，如下图所示： <br>
+</p><center><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20160208234027946" alt="" title=""></center> <br>
+其中，original文件夹下存放的是未经反编译过、原始的AndroidManifest.xml文件，res文件夹下存放的是反编译出来的所有资源，smali文件夹下存放的是反编译出来的所有代码，AndroidManifest.xml则是经过反编译还原后的manifest文件。这里值得一提的是smali文件夹，如果你进入到这个文件夹中你会发现它的目录结构和我们源码中src的目录结构是几乎一样的，主要的区别就是所有的java文件都变成了smali文件。smali文件其实也是真正的源代码，只不过它的语法和java完全不同，它有点类似于汇编的语法，是Android虚拟机所使用的寄存器语言，语法结构大概如下所示： <br>
+<center><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20160208235859750" alt="" title=""></center> <br>
+看上去有点晕头转向是吗？但是如果你一旦能够看得懂smali文件的话，那么你就可以做很恐怖的事情了——你可以随意修改应用程序内的逻辑，将其进行破解！ <br>
+不过我对这种黑技术并没有什么太大的兴趣，因此我也没有去做具体研究，但即使是这样，也已经可以对程序的逻辑做一定程度的修改了。比如说当我们点击按钮时会弹出<code>you clicked button</code>这样一句Toast，逻辑是写在MainActivity按钮点击事件的匿名类当中的，因此这段代码反编译之后一定就会在MainActivity$1.smali这个文件当中，让我们打开瞧一瞧，部分代码如下所示： <br>
+<center><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20160209154620278" width="900px"></center> <br>
+虽说多数的代码我是看不懂的，但其中第47行实在太明显了，Toast显示的内容不就是在这里定义的么，那么如果我们想把Demo程序hack掉，就可以将这段字符串给改掉，比如说我把它改成<code>Your app is been hacked</code>。 <br>
+关于smali的语法，网上的资料也非常多，如果你对这门技术十分感兴趣的话可以直接上网去搜，这里我只是简单介绍一下，就不再深入讲解相关知识了。 <br>
+改了一处代码后我们再来改一处资源吧，比如这里想要把Demo的应用图标给换掉，那么首先我们要准备好一张新的图片，如下图所示： <br>
+<center><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20160209161422695" alt="" title=""><center></center></center><p></p>
+
+<p>然后从AndroidManifest.xml文件中可以看出，应用图标使用的是ic_launcher.png这张图片，那么我们将上面篮球这张图片命名成ic_launcher.png，然后拷贝到所有以res/mipmap开头的文件夹当中完成替换操作。 <br>
+在做了两处改动之后，我们现在来把反编译后的Demo文件夹重新打包成APK吧，其实非常简单，只需要在cmd中执行如下命令：</p>
+
+
+
+<pre class="prettyprint" name="code"><code class="language-shell hljs avrasm has-numbering">apktool b Demo -o New_Demo<span class="hljs-preprocessor">.apk</span></code><ul class="pre-numbering"><li>1</li></ul></pre>
+
+<p>其中b是build的意思，表示我们要将Demo文件夹打包成APK文件，-o用于指定新生成的APK文件名，这里新的文件叫作New_Demo.apk。执行结果如下图所示： <br>
+</p><center><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20160209163551554" alt="" title=""></center> <br>
+现在你会发现在同级目录下面生成了一个新的APK文件： <br>
+<center><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20160209175505785" alt="" title=""></center> <br>
+不过不要高兴得太早了，目前这个New_Demo.apk还是不能安装的，因为它还没有进行签名。那么如果这是别人的程序的话，我们从哪儿能拿到它原来的签名文件呢？很显然，这是根本没有办法拿到的，因此我们只能拿自己的签名文件来对这个APK文件重新进行签名，但同时也表明我们重新打包出来的软件就是个十足的盗版软件。这里大家学学技术就好了，希望不要有任何人去做什么坏事情。 <br>
+那么这里我就用一个之前生成好的签名文件了，使用Android Studio或者Eclipse都可以非常简单地生成一个签名文件。 <br>
+有了签名文件之后在cmd中执行签名命令就可以进行签名了，命令格式如下：<p></p>
+
+
+
+<pre class="prettyprint" name="code"><code class="language-shell hljs lasso has-numbering">jarsigner <span class="hljs-attribute">-verbose</span> <span class="hljs-attribute">-sigalg</span> SHA1withRSA <span class="hljs-attribute">-digestalg</span> SHA1 <span class="hljs-attribute">-keystore</span> 签名文件名 <span class="hljs-attribute">-storepass</span> 签名密码 待签名的APK文件名 签名的别名</code><ul class="pre-numbering"><li>1</li></ul></pre>
+
+<p>其中jarsigner命令文件是存放在jdk的bin目录下的，需要将bin目录配置在系统的环境变量当中才可以在任何位置执行此命令。 <br>
+签名之后的APK文件现在已经可以安装到手机上了，不过在此之前Android还极度建议我们对签名后的APK文件进行一次对齐操作，因为这样可以使得我们的程序在Android系统中运行得更快。对齐操作使用的是zipalign工具，该工具存放于<code>&lt;Android SDK&gt;/build-tools/&lt;version&gt;</code>目录下，将这个目录配置到系统环境变量当中就可以在任何位置执行此命令了。命令格式如下：</p>
+
+
+
+<pre class="prettyprint" name="code"><code class="language-shell hljs avrasm has-numbering">zipalign <span class="hljs-number">4</span> New_Demo<span class="hljs-preprocessor">.apk</span> New_Demo_aligned<span class="hljs-preprocessor">.apk</span></code><ul class="pre-numbering"><li>1</li></ul></pre>
+
+<p>其中4是固定值不能改变，后面指定待对齐的APK文件名和对齐后的APK文件名。运行这段命令之后就会生成一个New_Demo_aligned.apk文件，如下所示： <br>
+</p><center><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20160209175645990" alt="" title=""></center> <br>
+这个New_Demo_aligned.apk就是我们重新打包签名对齐后的文件了，现在把它安装到手机上，效果如下图所示： <br>
+<center><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20160212105044897" alt="" title=""></center> <br>
+可以看到，应用图标已经成功改成了篮球，另外点击按钮后弹出的Toast的提示也变成了我们修改后的文字，说明重新打包操作确实已经成功了。<p></p>
+
+<hr>
+
+<p>好的，我们把反编译代码、反编译资源、重新打包这三大主题的内容都已经掌握了，关于反编译相关的内容就到这里，下篇文章会介绍Android代码混淆方面的相关技术，敬请期待。</p>
+
+<blockquote>
+  <p>关注我的微信公众号，第一时间获得博客的更新提醒，更有很多其它的技术信息分享给大家 <br>
+  扫一扫下方二维码或搜索微信号guolin_blog即可关注： <br>
+  <img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20150128153831686" width="200px"></p>
+</blockquote></div>
+        <script type="text/javascript">
+            $(function () {
+                $('pre.prettyprint code').each(function () {
+                    var lines = $(this).text().split('\n').length;
+                    var $numbering = $('<ul/>').addClass('pre-numbering').hide();
+                    $(this).addClass('has-numbering').parent().append($numbering);
+                    for (i = 1; i <= lines; i++) {
+                        $numbering.append($('<li/>').text(i));
+                    };
+                    $numbering.fadeIn(1700);
+                });
+            });
+        </script>
+   
+</div>
+
+
+
+
+<!-- Baidu Button BEGIN -->
+
+
+
+
+<div class="bdsharebuttonbox tracking-ad bdshare-button-style0-16" style="float: right;" data-mod="popu_172" data-bd-bind="1455764239762">
+<a href="http://blog.csdn.net/guolin_blog/article/details/49738023#" class="bds_more" data-cmd="more" style="background-position:0 0 !important; background-image: url(http://bdimg.share.baidu.com/static/api/img/share/icons_0_16.png?v=d754dcc0.png) !important" target="_blank"></a>
+<a href="http://blog.csdn.net/guolin_blog/article/details/49738023#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间" style="background-position:0 -52px !important" target="_blank"></a>
+<a href="http://blog.csdn.net/guolin_blog/article/details/49738023#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博" style="background-position:0 -104px !important" target="_blank"></a>
+<a href="http://blog.csdn.net/guolin_blog/article/details/49738023#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博" style="background-position:0 -260px !important" target="_blank"></a>
+<a href="http://blog.csdn.net/guolin_blog/article/details/49738023#" class="bds_renren" data-cmd="renren" title="分享到人人网" style="background-position:0 -208px !important" target="_blank"></a>
+<a href="http://blog.csdn.net/guolin_blog/article/details/49738023#" class="bds_weixin" data-cmd="weixin" title="分享到微信" style="background-position:0 -1612px !important" target="_blank"></a>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "1", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+<!-- Baidu Button END -->
+
+   <link rel="stylesheet" href="http://static.blog.csdn.net/css/blog_detail.css">
+
+    
+<!--172.16.140.14-->
+
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=1536434" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/bds_s_v2.js"></script>
+
+<script type="text/javascript">
+    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+ 
+
+        <div id="digg" articleid="49738023">
+            <dl id="btnDigg" class="digg digg_enable">
+               
+                 <dt>顶</dt>
+                <dd>7</dd>
+            </dl>
+            <dl id="btnBury" class="digg digg_enable">
+              
+                  <dt>踩</dt>
+                <dd>0</dd>
+            </dl>
+        </div>
+
+   <ul class="article_next_prev">
+                <li class="prev_article"><span onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_shangyipian&#39;]);location.href=&#39;/guolin_blog/article/details/48719871&#39;;">上一篇</span><a href="http://blog.csdn.net/guolin_blog/article/details/48719871" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_shangyipian&#39;])">Android Scroller完全解析，关于Scroller你所需知道的一切</a></li>
+    </ul>
+
+    <div style="clear:both; height:10px;"></div>
+
+
+        <div class="similar_article" style="">
+                <h4>我的同类文章</h4>
+                <div class="similar_c" style="margin:20px 0px 0px 0px">
+                    <div class="similar_c_t">
+                                <label class="similar_cur">
+                                    <span style="cursor:pointer" onclick="GetCategoryArticles(&#39;1399638&#39;,&#39;sinyu890807&#39;,&#39;foot&#39;,&#39;49738023&#39;);">Android疑难解析<em>（34）</em></span>
+                                </label>
+                    </div>
+                   
+                    <div class="similar_wrap tracking-ad" data-mod="popu_141" style="max-height:195px;">
+                        <a href="http://blog.csdn.net/" style="display:none" target="_blank">http://blog.csdn.net</a>
+                        <ul class="similar_list fl"><li><em>•</em><a href="http://blog.csdn.net/sinyu890807/article/details/48719871" id="foot_aritcle_48719871undefined10980562260374427" target="_blank" title="Android Scroller完全解析，关于Scroller你所需知道的一切">Android Scroller完全解析，关于Scroller你所需知道的一切</a></li> <li><em>•</em><a href="http://blog.csdn.net/sinyu890807/article/details/45586553" id="foot_aritcle_45586553undefined5809696740470827" target="_blank" title="Android ListView异步加载图片乱序问题，原因分析及解决方案">Android ListView异步加载图片乱序问题，原因分析及解决方案</a></li> <li><em>•</em><a href="http://blog.csdn.net/sinyu890807/article/details/44171115" id="foot_aritcle_44171115undefined13451208150945604" target="_blank" title="Android属性动画完全解析(下)，Interpolator和ViewPropertyAnimator的用法">Android属性动画完全解析(下)，Interpolator和ViewPropertyAnimator的用法</a></li> <li><em>•</em><a href="http://blog.csdn.net/sinyu890807/article/details/43536355" id="foot_aritcle_43536355undefined4474238660186529" target="_blank" title="Android属性动画完全解析(上)，初识属性动画的基本用法">Android属性动画完全解析(上)，初识属性动画的基本用法</a></li> <li><em>•</em><a href="http://blog.csdn.net/sinyu890807/article/details/42318689" id="foot_aritcle_42318689undefined6570008846465498" target="_blank" title="Android最佳性能实践(三)——高性能编码优化">Android最佳性能实践(三)——高性能编码优化</a></li> </ul>
+
+                        <ul class="similar_list fr"><li><em>•</em><a href="http://blog.csdn.net/sinyu890807/article/details/47028975" id="foot_aritcle_47028975undefined5444969891104847" target="_blank" title="Android Context完全解析，你所不知道的Context的各种细节">Android Context完全解析，你所不知道的Context的各种细节</a></li> <li><em>•</em><a href="http://blog.csdn.net/sinyu890807/article/details/44996879" id="foot_aritcle_44996879undefined09117829706519842" target="_blank" title="Android ListView工作原理完全解析，带你从源码的角度彻底理解">Android ListView工作原理完全解析，带你从源码的角度彻底理解</a></li> <li><em>•</em><a href="http://blog.csdn.net/sinyu890807/article/details/43816093" id="foot_aritcle_43816093undefined8576964375097305" target="_blank" title="Android属性动画完全解析(中)，ValueAnimator和ObjectAnimator的高级用法">Android属性动画完全解析(中)，ValueAnimator和ObjectAnimator的高级用法</a></li> <li><em>•</em><a href="http://blog.csdn.net/sinyu890807/article/details/43376527" id="foot_aritcle_43376527undefined9121545611415058" target="_blank" title="Android最佳性能实践(四)——布局优化技巧">Android最佳性能实践(四)——布局优化技巧</a></li> <li><em>•</em><a href="http://blog.csdn.net/sinyu890807/article/details/42238633" id="foot_aritcle_42238633undefined5729393353685737" target="_blank" title="Android最佳性能实践(二)——分析内存的使用情况">Android最佳性能实践(二)——分析内存的使用情况</a></li> <li style="padding-left: 200px;"><a href="http://blog.csdn.net/sinyu890807/article/category/1399638" target="_blank">更多</a></li></ul>
+                    </div>
+                </div>
+            </div>    
+    <script type="text/javascript">
+        $(function () {
+            GetCategoryArticles('1399638', 'sinyu890807','foot','49738023');
+        });
+    </script>
+      
+</div>
+<div id="suggest">
+
+    <dl class="blog-associat-tag">
+        <dt>主题推荐</dt>
+        <dd>
+                <a href="http://www.csdn.net/tag/android" target="_blank" class="blog-tage-red">android</a> 
+                <a href="http://www.csdn.net/tag/%E5%8F%8D%E7%BC%96%E8%AF%91" target="_blank" class="blog-tage-red">反编译</a> 
+                <a href="http://www.csdn.net/tag/%E6%8A%80%E6%9C%AF" target="_blank" class="blog-tage-red">技术</a> 
+                <a href="http://www.csdn.net/tag/%E5%AE%89%E5%85%A8" target="_blank" class="blog-tage-red">安全</a> 
+                <a href="http://www.csdn.net/tag/%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98" target="_blank" class="blog-tage-red">开发人员</a> 
+                <a href="http://www.csdn.net/tag/%E6%89%8B%E6%9C%BA" target="_blank" class="blog-tage-red">手机</a> 
+                <a href="http://www.csdn.net/tag/%E6%B5%8B%E8%AF%95" target="_blank" class="blog-tage-red">测试</a> 
+                <a href="http://www.csdn.net/tag/%E8%BD%AF%E4%BB%B6" target="_blank" class="blog-tage-red">软件</a> 
+                <a href="http://www.csdn.net/tag/pre" target="_blank" class="blog-tage-red">pre</a> 
+                <a href="http://www.csdn.net/tag/apk" target="_blank" class="blog-tage-red">apk</a> 
+                <a href="http://www.csdn.net/tag/class" target="_blank" class="blog-tage-red">class</a> 
+        </dd>        
+    </dl> 
+    <span style="display:none" id="tags">android,反编译,技术,安全,开发人员,手机,测试,软件,pre,apk,class</span>
+
+</div>
+         <script language="javascript" type="text/javascript">     
+             $(function(){
+                 $.get("/sinyu890807/svc/GetSuggestContent/49738023",function(data){
+                     $("#suggest").html(data);
+                 });     
+             });             
+         </script>  
+
+
+<style>
+.blog-ass-articl dd {
+color: #369;
+width: 99%; /*修改行*/
+float: left;
+overflow: hidden;
+font: normal normal 12px/23px "SimSun";
+height: 23px;
+margin: 0;
+padding: 0 0 0 10px;
+margin-right: 30px;
+background: url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px;
+}
+</style>
+
+<dl class="blog-ass-articl" id="res-relatived"> 
+     <dt><span>猜你在找</span></dt>    
+
+
+   
+
+
+    <div id="adCollege" style="width: 42%;float: left;"> 
+        <script src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/job_reco.js" type="text/javascript"></script> 
+        <script type="text/javascript">
+            csdn.position.showEdu({
+                sourceType: "blog",
+                searchType: "detail",
+                searchKey: "49738023",
+                username: "q178266871",
+                recordcount: "5",
+                containerId: "adCollege" //容器DIV的id。 
+            });
+        </script> 
+    <div class="tracking-ad" data-mod="popu_84"><dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;"><a href="http://edu.csdn.net/course/detail/1340" title="“攒课”课题3：安卓编译与开发、Linux内核及驱动" strategy="v4:user-s" target="_blank">“攒课”课题3：安卓编译与开发、Linux内核及驱动</a></dd><dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;"><a href="http://edu.csdn.net/course/detail/162" title="Qt基础与Qt on Android入门" strategy="v4:user-s" target="_blank">Qt基础与Qt on Android入门</a></dd><dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;"><a href="http://edu.csdn.net/course/detail/461" title="Android应用的调试" strategy="v4:user-s" target="_blank">Android应用的调试</a></dd><dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;"><a href="http://edu.csdn.net/course/detail/1478" title="Android底层技术：HAL驱动开发" strategy="v4:user-s" target="_blank">Android底层技术：HAL驱动开发</a></dd><dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;"><a href="http://edu.csdn.net/course/detail/1480" title="Android底层技术：Java层系统服务(Android Service)" strategy="v4:user-s" target="_blank">Android底层技术：Java层系统服务(Android Service)</a></dd></div></div>  
+
+    
+     <div id="res" data-mod="popu_36" class="tracking-ad" style="width: 42%; float: left; margin-right: 30px; display: block;"><dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px;"><a href="http://blog.csdn.net/xiaruoli89/article/details/50563317" title="安全系列一Android Apk反编译得到Java源代码" strategy="SearchAlgorithm" target="_blank">安全系列一Android Apk反编译得到Java源代码</a></dd><dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px;"><a href="http://blog.csdn.net/jiazhijun/article/details/9428861" title="Android DEX安全攻防战" strategy="SearchAlgorithm" target="_blank">Android DEX安全攻防战</a></dd><dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px;"><a href="http://blog.csdn.net/wangbaochu/article/details/45341283" title="Android DEX安全攻防战" strategy="SearchAlgorithm" target="_blank">Android DEX安全攻防战</a></dd><dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px;"><a href="http://blog.csdn.net/liqianwei1230/article/details/39854259" title="手机安全卫士6--androidjar 反编译" strategy="SearchAlgorithm" target="_blank">手机安全卫士6--androidjar 反编译</a></dd><dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px;"><a href="http://blog.csdn.net/earbao/article/details/14441849" title="Android DEX安全攻防战" strategy="SearchAlgorithm" target="_blank">Android DEX安全攻防战</a></dd></div>
+   
+</dl>
+
+
+
+<script type="text/javascript">
+    $(function () {
+        setTimeout(function () {
+            var searchtitletags = 'Android安全攻防战，反编译与混淆技术完全解析（上）' + ',' + $("#tags").html();
+            searchService({
+                index: 'blog',
+                query: searchtitletags,
+                from: 5,
+                size: 5,
+                appendTo: '#res',
+                url: 'recommend',
+                his: 2,
+                client: "blog_cf_enhance",
+                tmpl: '<dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px;"><a href="#{ url }" title="#{ title }" strategy="#{ strategy }">#{ title }</a></dd>'
+            });
+        }, 500);
+    });    
+
+ </script>   
+
+    <div id="ad_cen">        
+<!--AdForward Begin:-->
+<script type="text/javascript" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/s(1)" charset="gbk"></script><script type="text/javascript">
+var cpro_id="u1607657";
+(window["cproStyleApi"] = window["cproStyleApi"] || {})[cpro_id]={at:"3",rsi0:"728",rsi1:"90",pat:"6",tn:"baiduCustNativeAD",rss1:"#FFFFFF",conBW:"1",adp:"1",ptt:"0",titFF:"%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91",titFS:"14",rss2:"#000000",titSU:"0",ptbg:"90",piw:"0",pih:"0",ptp:"0"}
+</script>
+<script src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/c.js" type="text/javascript"></script><div id="BAIDU_UNION__wrapper_u1607657_0"><iframe id="iframeu1607657_0" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/acom(2).html" width="728" height="90" align="center,center" vspace="0" hspace="0" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" style="border:0; vertical-align:bottom;margin:0;" allowtransparency="true"></iframe></div>
+<!--AdForward End-->    </div>  
+
+<div class="comment_class">
+    <div id="comment_title" class="panel_head">
+        <span class="see_comment">查看评论</span><a name="comments"></a></div>
+    <div id="comment_list"><dl class="comment_item comment_topic" id="comment_item_5884654"><dt class="comment_head" floor="30">30楼 <span class="user"><a class="username" href="http://blog.csdn.net/yilylong" target="_blank">海虫宝宝</a> <span class="ptime">11分钟前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884654" username="yilylong"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/yilylong" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_yilylong.jpg" width="40" height="40"></a></dd><dd class="comment_body">期待混淆篇</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884646"><dt class="comment_head" floor="29">29楼 <span class="user"><a class="username" href="http://blog.csdn.net/u011216273" target="_blank">home乐乐呵</a> <span class="ptime">15分钟前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884646" username="u011216273"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/u011216273" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_u011216273.jpg" width="40" height="40"></a></dd><dd class="comment_body">终于抢到沙发了哇哈哈期待下篇文章</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884629"><dt class="comment_head" floor="28">28楼 <span class="user"><a class="username" href="http://blog.csdn.net/eziowayne" target="_blank">eziowayne</a> <span class="ptime">31分钟前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884629" username="eziowayne"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/eziowayne" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_eziowayne.jpg" width="40" height="40"></a></dd><dd class="comment_body">工具介绍得不错，但是并没有什么值得一提的东西。</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884621"><dt class="comment_head" floor="27">27楼 <span class="user"><a class="username" href="http://blog.csdn.net/u013171283" target="_blank">helloserver</a> <span class="ptime">36分钟前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display: none;" commentid="5884621" username="u013171283"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/u013171283" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_u013171283.jpg" width="40" height="40"></a></dd><dd class="comment_body">我擦  沙发被抢了  mark</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884620"><dt class="comment_head" floor="26">26楼 <span class="user"><a class="username" href="http://blog.csdn.net/u012332264" target="_blank">mengqianyue</a> <span class="ptime">35分钟前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884620" username="u012332264"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/u012332264" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_u012332264.jpg" width="40" height="40"></a></dd><dd class="comment_body">又来晚了，先码再看</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884617"><dt class="comment_head" floor="25">25楼 <span class="user"><a class="username" href="http://blog.csdn.net/u012987546" target="_blank">LiuJuno_o</a> <span class="ptime">39分钟前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884617" username="u012987546"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/u012987546" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_u012987546.jpg" width="40" height="40"></a></dd><dd class="comment_body">看完了，郭神的文章一直都是通熟易懂。期待下一篇文章</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884615"><dt class="comment_head" floor="24">24楼 <span class="user"><a class="username" href="http://blog.csdn.net/hhllnw" target="_blank">hhllnw</a> <span class="ptime">40分钟前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884615" username="hhllnw"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/hhllnw" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_hhllnw.jpg" width="40" height="40"></a></dd><dd class="comment_body">期待下一篇</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884605"><dt class="comment_head" floor="23">23楼 <span class="user"><a class="username" href="http://blog.csdn.net/qq_31563307" target="_blank">qq_31563307</a> <span class="ptime">46分钟前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884605" username="qq_31563307"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/qq_31563307" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_qq_31563307.jpg" width="40" height="40"></a></dd><dd class="comment_body">膜拜郭神</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884602"><dt class="comment_head" floor="22">22楼 <span class="user"><a class="username" href="http://blog.csdn.net/zhongxiaweimian" target="_blank">仲夏未眠</a> <span class="ptime">48分钟前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884602" username="zhongxiaweimian"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/zhongxiaweimian" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_zhongxiaweimian.jpg" width="40" height="40"></a></dd><dd class="comment_body">期待下一篇</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884600"><dt class="comment_head" floor="21">21楼 <span class="user"><a class="username" href="http://blog.csdn.net/u010231855" target="_blank">定沓</a> <span class="ptime">48分钟前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884600" username="u010231855"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/u010231855" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_u010231855.jpg" width="40" height="40"></a></dd><dd class="comment_body">谢谢郭神，在看《第一行代码》，对着书在Android studio 上敲代码。</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884599"><dt class="comment_head" floor="20">20楼 <span class="user"><a class="username" href="http://blog.csdn.net/u010231855" target="_blank">定沓</a> <span class="ptime">50分钟前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884599" username="u010231855"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/u010231855" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_u010231855.jpg" width="40" height="40"></a></dd><dd class="comment_body">谢谢，郭大神，《第一行代码》还没看完，有点吃力，我对照着书在android studio上敲代码，还是遇到不少问题，不知道怎么提问解答，对我这种初级菜鸟能在什么地方可以讨论分享啊？？</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884597"><dt class="comment_head" floor="19">19楼 <span class="user"><a class="username" href="http://blog.csdn.net/u010212704" target="_blank">u010212704</a> <span class="ptime">49分钟前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884597" username="u010212704"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/u010212704" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_u010212704.jpg" width="40" height="40"></a></dd><dd class="comment_body">刚好用到这里，膜拜大神，谢谢大神</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884592"><dt class="comment_head" floor="18">18楼 <span class="user"><a class="username" href="http://blog.csdn.net/u010421464" target="_blank">u010421464</a> <span class="ptime">52分钟前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884592" username="u010421464"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/u010421464" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_u010421464.jpg" width="40" height="40"></a></dd><dd class="comment_body">果断来占座~</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884578"><dt class="comment_head" floor="17">17楼 <span class="user"><a class="username" href="http://blog.csdn.net/yewanglei" target="_blank">酒_剑仙</a> <span class="ptime">59分钟前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884578" username="yewanglei"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/yewanglei" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_yewanglei.jpg" width="40" height="40"></a></dd><dd class="comment_body">有学到了点新东西</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884577"><dt class="comment_head" floor="16">16楼 <span class="user"><a class="username" href="http://blog.csdn.net/u014543338" target="_blank">haoshili123</a> <span class="ptime">58分钟前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884577" username="u014543338"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/u014543338" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_u014543338.jpg" width="40" height="40"></a></dd><dd class="comment_body">来晚了</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884574"><dt class="comment_head" floor="15">15楼 <span class="user"><a class="username" href="http://blog.csdn.net/cqm1990" target="_blank">EasyVeclin</a> <span class="ptime">59分钟前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884574" username="cqm1990"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/cqm1990" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_cqm1990.jpg" width="40" height="40"></a></dd><dd class="comment_body">刘明</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884572"><dt class="comment_head" floor="14">14楼 <span class="user"><a class="username" href="http://blog.csdn.net/hongheqq" target="_blank">hongheqq</a> <span class="ptime">1小时前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884572" username="hongheqq"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/hongheqq" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_hongheqq.jpg" width="40" height="40"></a></dd><dd class="comment_body">不错，显然还可以讲的更深入一些</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884571"><dt class="comment_head" floor="13">13楼 <span class="user"><a class="username" href="http://blog.csdn.net/hahawhyha" target="_blank">hahawhyha</a> <span class="ptime">1小时前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884571" username="hahawhyha"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/hahawhyha" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_hahawhyha.jpg" width="40" height="40"></a></dd><dd class="comment_body">评论好快~赞</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884569"><dt class="comment_head" floor="12">12楼 <span class="user"><a class="username" href="http://blog.csdn.net/wsnokia" target="_blank">澤彦</a> <span class="ptime">1小时前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884569" username="wsnokia"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/wsnokia" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_wsnokia.jpg" width="40" height="40"></a></dd><dd class="comment_body">刚做了混淆，签名打包时，出现这个错误，怎么回事？郭神<br>Exception   = [java.lang.IllegalArgumentException] (Can't find any super classes of [com/jfinal/server/JFinalClassLoader] (not even immediate super class [org/eclipse/jetty/webapp/WebAppClassLoader]))<br>[2016-02-18 09:16:03 - ZXY_Android_Client] java.lang.IllegalArgumentException: Can't find any super classes of [com/jfinal/server/JFinalClassLoader] (not even immediate super class [org/eclipse/jetty/webapp/WebAppClassLoader])<br>[2016-02-18 09:16:03 - ZXY_Android_Client]</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884565"><dt class="comment_head" floor="11">11楼 <span class="user"><a class="username" href="http://blog.csdn.net/lianlianzhuifeng" target="_blank">恋恋追风</a> <span class="ptime">1小时前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884565" username="lianlianzhuifeng"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/lianlianzhuifeng" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_lianlianzhuifeng.jpg" width="40" height="40"></a></dd><dd class="comment_body">顶！！</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884563"><dt class="comment_head" floor="10">10楼 <span class="user"><a class="username" href="http://blog.csdn.net/BHGXZB" target="_blank">BHGXZB</a> <span class="ptime">1小时前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884563" username="BHGXZB"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/BHGXZB" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_bhgxzb.jpg" width="40" height="40"></a></dd><dd class="comment_body">又是10L</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884562"><dt class="comment_head" floor="9">9楼 <span class="user"><a class="username" href="http://blog.csdn.net/u013058533" target="_blank">PANWCS</a> <span class="ptime">1小时前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884562" username="u013058533"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/u013058533" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_u013058533.jpg" width="40" height="40"></a></dd><dd class="comment_body">挺好的，虽然第一时间看到文章，但是还是读完再来评价。郭神的文风一如既往的易懂，谢谢分享！</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884558"><dt class="comment_head" floor="8">8楼 <span class="user"><a class="username" href="http://blog.csdn.net/kong_wjb" target="_blank">kong_wjb</a> <span class="ptime">1小时前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884558" username="kong_wjb"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/kong_wjb" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_kong_wjb.jpg" width="40" height="40"></a></dd><dd class="comment_body">你们太快了</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884554"><dt class="comment_head" floor="7">7楼 <span class="user"><a class="username" href="http://blog.csdn.net/u010948188" target="_blank">Cruzetang</a> <span class="ptime">1小时前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884554" username="u010948188"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/u010948188" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_u010948188.jpg" width="40" height="40"></a></dd><dd class="comment_body">zan++</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884553"><dt class="comment_head" floor="6">6楼 <span class="user"><a class="username" href="http://blog.csdn.net/Loser_KK" target="_blank">Loser_KK</a> <span class="ptime">1小时前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884553" username="Loser_KK"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/Loser_KK" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_loser_kk.jpg" width="40" height="40"></a></dd><dd class="comment_body">沙发</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884552"><dt class="comment_head" floor="5">5楼 <span class="user"><a class="username" href="http://blog.csdn.net/luo649807190qq" target="_blank">萝卜爱吃胡萝卜</a> <span class="ptime">1小时前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884552" username="luo649807190qq"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/luo649807190qq" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_luo649807190qq.jpg" width="40" height="40"></a></dd><dd class="comment_body">土地婆</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884550"><dt class="comment_head" floor="4">4楼 <span class="user"><a class="username" href="http://blog.csdn.net/SnowWitch" target="_blank">SnowWitch</a> <span class="ptime">1小时前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884550" username="SnowWitch"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/SnowWitch" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_snowwitch.jpg" width="40" height="40"></a></dd><dd class="comment_body">软卧</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884549"><dt class="comment_head" floor="3">3楼 <span class="user"><a class="username" href="http://blog.csdn.net/chancong521" target="_blank">ziruiandchan</a> <span class="ptime">1小时前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884549" username="chancong521"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/chancong521" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_chancong521.jpg" width="40" height="40"></a></dd><dd class="comment_body">期待代码混淆文章</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884547"><dt class="comment_head" floor="2">2楼 <span class="user"><a class="username" href="http://blog.csdn.net/once10301" target="_blank">白骆驼之爱</a> <span class="ptime">1小时前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884547" username="once10301"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/once10301" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_once10301.jpg" width="40" height="40"></a></dd><dd class="comment_body">地板</dd></dl><dl class="comment_item comment_topic" id="comment_item_5884544"><dt class="comment_head" floor="1">1楼 <span class="user"><a class="username" href="http://blog.csdn.net/kangliang1230" target="_blank">不倦</a> <span class="ptime">1小时前发表</span>  <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="5884544" username="kangliang1230"> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/kangliang1230" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/3_kangliang1230.jpg" width="40" height="40"></a></dd><dd class="comment_body">沙发</dd></dl><div class="clear"></div></div>
+    <div id="comment_bar" style="display: none;">
+    </div>
+    <div id="comment_form"><a name="commentbox"></a><a name="reply"></a><a name="quote"></a><form action="http://blog.csdn.net/sinyu890807/comment/submit?id=49738023" method="post" onsubmit="return subform(this);"><div class="commentform"><div class="panel_head">发表评论</div><ul><li class="left">用 户 名：</li><li class="right">q178266871</li></ul><ul><li class="left">评论内容：</li><li class="right" style="position:relative;"><div id="ubbtools"><a href="http://blog.csdn.net/guolin_blog/article/details/49738023#insertcode" code="code"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/code.gif" border="0" alt="插入代码" title="插入代码"></a></div><div id="lang_list" style="position: absolute; top: 28px; left: 0px; display: none;"><a class="long_name" href="http://blog.csdn.net/guolin_blog/article/details/49738023#html">HTML/XML</a><a class="long_name" href="http://blog.csdn.net/guolin_blog/article/details/49738023#objc">objective-c</a><a class="zhong_name" href="http://blog.csdn.net/guolin_blog/article/details/49738023#delphi">Delphi</a><a class="zhong_name" href="http://blog.csdn.net/guolin_blog/article/details/49738023#ruby">Ruby</a><a href="http://blog.csdn.net/guolin_blog/article/details/49738023#php">PHP</a><a class="duan_name" href="http://blog.csdn.net/guolin_blog/article/details/49738023#csharp">C#</a><a style=" border-right: none;" class="duan_name" href="http://blog.csdn.net/guolin_blog/article/details/49738023#cpp">C++</a><a style=" border-bottom:none;" class="long_name" href="http://blog.csdn.net/guolin_blog/article/details/49738023#javascript">JavaScript</a><a style=" border-bottom:none;" class="long_name" href="http://blog.csdn.net/guolin_blog/article/details/49738023#vb">Visual Basic</a><a style=" border-bottom:none;" class="zhong_name" href="http://blog.csdn.net/guolin_blog/article/details/49738023#python">Python</a><a style=" border-bottom:none;" class="zhong_name" href="http://blog.csdn.net/guolin_blog/article/details/49738023#java">Java</a><a style="border-bottom:none;" class="duan_name" href="http://blog.csdn.net/guolin_blog/article/details/49738023#css">CSS</a><a style="border-bottom:none;" class="duan_name" href="http://blog.csdn.net/guolin_blog/article/details/49738023#sql">SQL</a><a style="border:none;" class="duan_name" href="http://blog.csdn.net/guolin_blog/article/details/49738023#plain">其它</a></div><textarea class="comment_content" name="comment_content" id="comment_content" style="width: 400px; height: 200px;"></textarea></li></ul><ul><input type="hidden" id="comment_replyId" name="comment_replyId"><input type="hidden" id="comment_userId" name="comment_userId" value="521203"><input type="hidden" id="commentId" name="commentId" value=""><input type="submit" class="comment_btn" value="提交">&nbsp;&nbsp;<span id="tip_comment" style="color: Red; display: none;"></span></ul></div></form></div>
+    <div class="announce">
+        * 以上用户言论只代表其个人观点，不代表CSDN网站的观点或立场<a name="reply"></a><a name="quote"></a></div>
+</div>
+
+<script type="text/javascript">
+    var fileName = '49738023';
+    var commentscount = 30;
+    var islock = false
+</script>
+<script type="text/javascript" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/comment.js"></script>
+    <div id="ad_bot">
+    </div>
+<div id="report_dialog">
+</div>
+
+<div id="d-top" style="bottom:60px;">
+        <a id="quick-reply" class="btn btn-top q-reply" title="快速回复" style="display:none;">
+            <img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/blog-icon-reply.png" alt="快速回复">
+        </a>    
+
+    <a id="d-top-a" class="btn btn-top backtop" style="display: none;" title="返回顶部" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_huidaodingbu&#39;])">         
+         <img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/top.png" alt="TOP">
+    </a>
+</div>
+<script type="text/javascript">
+    $(function ()
+    {
+        $("#ad_frm_0").height("90px");
+        
+        setTimeout(function(){
+            $("#ad_frm_2").height("200px");
+        },1000);    
+    });
+  
+</script>
+<style type="text/css">
+    .tag_list
+    {
+        background: none repeat scroll 0 0 #FFFFFF;
+        border: 1px solid #D7CBC1;
+        color: #000000;
+        font-size: 12px;
+        line-height: 20px;
+        list-style: none outside none;
+        margin: 10px 2% 0 1%;
+        padding: 1px;
+    }
+    .tag_list h5
+    {
+        background: none repeat scroll 0 0 #E0DBD3;
+        color: #47381C;
+        font-size: 12px;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 5px;
+        margin: 0;
+    }
+    .tag_list h5 a
+    {
+        color: #47381C;
+    }
+    .classify
+    {
+        margin: 10px 0;
+        padding: 4px 12px 8px;
+    }
+    .classify a
+    {
+        margin-right: 20px;
+        white-space: nowrap;
+    }
+</style>
+
+
+<div class="tag_list" style="">
+
+    <h5>
+        <a href="http://www.csdn.net/tag/" target="_blank">核心技术类目</a></h5>
+    <div class="classify">
+<a title="全部主题" href="http://www.csdn.net/tag" target="_blank" onclick="LogClickCount(this,336);">全部主题</a>
+<a title="Hadoop" href="http://g.csdn.net/5272865" target="_blank" onclick="LogClickCount(this,336);">Hadoop</a>
+<a title="AWS" href="http://g.csdn.net/5272866" target="_blank" onclick="LogClickCount(this,336);">AWS</a>
+<a title="移动游戏" href="http://g.csdn.net/5272870" target="_blank" onclick="LogClickCount(this,336);">移动游戏</a>
+<a title="Java" href="http://g.csdn.net/5272871" target="_blank" onclick="LogClickCount(this,336);">Java</a>
+<a title="Android" href="http://g.csdn.net/5272872" target="_blank" onclick="LogClickCount(this,336);">Android</a>
+<a title="iOS" href="http://g.csdn.net/5272873" target="_blank" onclick="LogClickCount(this,336);">iOS</a>
+<a title="Swift" href="http://g.csdn.net/5272868" target="_blank" onclick="LogClickCount(this,336);">Swift</a>
+<a title="智能硬件" href="http://g.csdn.net/5272869" target="_blank" onclick="LogClickCount(this,336);">智能硬件</a>
+<a title="Docker" href="http://g.csdn.net/5272867" target="_blank" onclick="LogClickCount(this,336);">Docker</a>
+<a title="OpenStack" href="http://g.csdn.net/5272925" target="_blank" onclick="LogClickCount(this,336);">OpenStack</a>
+<a title="VPN" href="http://www.csdn.net/tag/vpn" target="_blank" onclick="LogClickCount(this,336);">VPN</a>
+<a title="Spark" href="http://g.csdn.net/5272924" target="_blank" onclick="LogClickCount(this,336);">Spark</a>
+<a title="ERP" href="http://www.csdn.net/tag/erp" target="_blank" onclick="LogClickCount(this,336);">ERP</a>
+<a title="IE10" href="http://www.csdn.net/tag/ie10" target="_blank" onclick="LogClickCount(this,336);">IE10</a>
+<a title="Eclipse" href="http://www.csdn.net/tag/eclipse" target="_blank" onclick="LogClickCount(this,336);">Eclipse</a>
+<a title="CRM" href="http://www.csdn.net/tag/crm" target="_blank" onclick="LogClickCount(this,336);">CRM</a>
+<a title="JavaScript" href="http://www.csdn.net/tag/javascript" target="_blank" onclick="LogClickCount(this,336);">JavaScript</a>
+<a title="数据库" href="http://www.csdn.net/tag/%E6%95%B0%E6%8D%AE%E5%BA%93" target="_blank" onclick="LogClickCount(this,336);">数据库</a>
+<a title="Ubuntu" href="http://www.csdn.net/tag/ubuntu" target="_blank" onclick="LogClickCount(this,336);">Ubuntu</a>
+<a title="NFC" href="http://www.csdn.net/tag/nfc" target="_blank" onclick="LogClickCount(this,336);">NFC</a>
+<a title="WAP" href="http://www.csdn.net/tag/wap" target="_blank" onclick="LogClickCount(this,336);">WAP</a>
+<a title="jQuery" href="http://www.csdn.net/tag/jquery" target="_blank" onclick="LogClickCount(this,336);">jQuery</a>
+<a title="BI" href="http://www.csdn.net/tag/bi" target="_blank" onclick="LogClickCount(this,336);">BI</a>
+<a title="HTML5" href="http://www.csdn.net/tag/html5" target="_blank" onclick="LogClickCount(this,336);">HTML5</a>
+<a title="Spring" href="http://www.csdn.net/tag/spring" target="_blank" onclick="LogClickCount(this,336);">Spring</a>
+<a title="Apache" href="http://www.csdn.net/tag/apache" target="_blank" onclick="LogClickCount(this,336);">Apache</a>
+<a title=".NET" href="http://www.csdn.net/tag/.net" target="_blank" onclick="LogClickCount(this,336);">.NET</a>
+<a title="API" href="http://www.csdn.net/tag/api" target="_blank" onclick="LogClickCount(this,336);">API</a>
+<a title="HTML" href="http://www.csdn.net/tag/html" target="_blank" onclick="LogClickCount(this,336);">HTML</a>
+<a title="SDK" href="http://www.csdn.net/tag/sdk" target="_blank" onclick="LogClickCount(this,336);">SDK</a>
+<a title="IIS" href="http://www.csdn.net/tag/iis" target="_blank" onclick="LogClickCount(this,336);">IIS</a>
+<a title="Fedora" href="http://www.csdn.net/tag/fedora" target="_blank" onclick="LogClickCount(this,336);">Fedora</a>
+<a title="XML" href="http://www.csdn.net/tag/xml" target="_blank" onclick="LogClickCount(this,336);">XML</a>
+<a title="LBS" href="http://www.csdn.net/tag/lbs" target="_blank" onclick="LogClickCount(this,336);">LBS</a>
+<a title="Unity" href="http://www.csdn.net/tag/unity" target="_blank" onclick="LogClickCount(this,336);">Unity</a>
+<a title="Splashtop" href="http://www.csdn.net/tag/splashtop" target="_blank" onclick="LogClickCount(this,336);">Splashtop</a>
+<a title="UML" href="http://www.csdn.net/tag/uml" target="_blank" onclick="LogClickCount(this,336);">UML</a>
+<a title="components" href="http://www.csdn.net/tag/components" target="_blank" onclick="LogClickCount(this,336);">components</a>
+<a title="Windows Mobile" href="http://www.csdn.net/tag/windowsmobile" target="_blank" onclick="LogClickCount(this,336);">Windows Mobile</a>
+<a title="Rails" href="http://www.csdn.net/tag/rails" target="_blank" onclick="LogClickCount(this,336);">Rails</a>
+<a title="QEMU" href="http://www.csdn.net/tag/qemu" target="_blank" onclick="LogClickCount(this,336);">QEMU</a>
+<a title="KDE" href="http://www.csdn.net/tag/kde" target="_blank" onclick="LogClickCount(this,336);">KDE</a>
+<a title="Cassandra" href="http://www.csdn.net/tag/cassandra" target="_blank" onclick="LogClickCount(this,336);">Cassandra</a>
+<a title="CloudStack" href="http://www.csdn.net/tag/cloudstack" target="_blank" onclick="LogClickCount(this,336);">CloudStack</a>
+<a title="FTC" href="http://www.csdn.net/tag/ftc" target="_blank" onclick="LogClickCount(this,336);">FTC</a>
+<a title="coremail" href="http://www.csdn.net/tag/coremail" target="_blank" onclick="LogClickCount(this,336);">coremail</a>
+<a title="OPhone " href="http://www.csdn.net/tag/ophone" target="_blank" onclick="LogClickCount(this,336);">OPhone </a>
+<a title="CouchBase" href="http://www.csdn.net/tag/couchbase" target="_blank" onclick="LogClickCount(this,336);">CouchBase</a>
+<a title="云计算" href="http://www.csdn.net/tag/%E4%BA%91%E8%AE%A1%E7%AE%97" target="_blank" onclick="LogClickCount(this,336);">云计算</a>
+<a title="iOS6" href="http://www.csdn.net/tag/iOS6" target="_blank" onclick="LogClickCount(this,336);">iOS6</a>
+<a title="Rackspace " href="http://www.csdn.net/tag/rackspace" target="_blank" onclick="LogClickCount(this,336);">Rackspace </a>
+<a title="Web App" href="http://www.csdn.net/tag/webapp" target="_blank" onclick="LogClickCount(this,336);">Web App</a>
+<a title="SpringSide" href="http://www.csdn.net/tag/springside" target="_blank" onclick="LogClickCount(this,336);">SpringSide</a>
+<a title="Maemo" href="http://www.csdn.net/tag/maemo" target="_blank" onclick="LogClickCount(this,336);">Maemo</a>
+<a title="Compuware" href="http://www.csdn.net/tag/compuware" target="_blank" onclick="LogClickCount(this,336);">Compuware</a>
+<a title="大数据" href="http://www.csdn.net/tag/%E5%A4%A7%E6%95%B0%E6%8D%AE" target="_blank" onclick="LogClickCount(this,336);">大数据</a>
+<a title="aptech" href="http://www.csdn.net/tag/aptech" target="_blank" onclick="LogClickCount(this,336);">aptech</a>
+<a title="Perl" href="http://www.csdn.net/tag/perl" target="_blank" onclick="LogClickCount(this,336);">Perl</a>
+<a title="Tornado" href="http://www.csdn.net/tag/tornado" target="_blank" onclick="LogClickCount(this,336);">Tornado</a>
+<a title="Ruby" href="http://www.csdn.net/tag/ruby" target="_blank" onclick="LogClickCount(this,336);">Ruby</a>
+<a title="Hibernate" href="http://www.csdn.net/hibernate" target="_blank" onclick="LogClickCount(this,336);">Hibernate</a>
+<a title="ThinkPHP" href="http://www.csdn.net/tag/thinkphp" target="_blank" onclick="LogClickCount(this,336);">ThinkPHP</a>
+<a title="HBase" href="http://www.csdn.net/tag/hbase" target="_blank" onclick="LogClickCount(this,336);">HBase</a>
+<a title="Pure" href="http://www.csdn.net/tag/pure" target="_blank" onclick="LogClickCount(this,336);">Pure</a>
+<a title="Solr" href="http://www.csdn.net/tag/solr" target="_blank" onclick="LogClickCount(this,336);">Solr</a>
+<a title="Angular" href="http://www.csdn.net/tag/angular" target="_blank" onclick="LogClickCount(this,336);">Angular</a>
+<a title="Cloud Foundry" href="http://www.csdn.net/tag/cloudfoundry" target="_blank" onclick="LogClickCount(this,336);">Cloud Foundry</a>
+<a title="Redis" href="http://www.csdn.net/tag/redis" target="_blank" onclick="LogClickCount(this,336);">Redis</a>
+<a title="Scala" href="http://www.csdn.net/tag/scala" target="_blank" onclick="LogClickCount(this,336);">Scala</a>
+<a title="Django" href="http://www.csdn.net/tag/django" target="_blank" onclick="LogClickCount(this,336);">Django</a>
+<a title="Bootstrap" href="http://www.csdn.net/tag/bootstrap" target="_blank" onclick="LogClickCount(this,336);">Bootstrap</a>
+    </div>
+
+</div>
+  <script language="javascript" type="text/javascript">     
+      $(function(){
+              setTimeout(function(){
+                  $.get("/sinyu890807/svc/GetTagContent",function(data){
+                      $(".tag_list").html(data).show();
+                  });     
+              });
+          },500);                       
+ </script> 
+
+
+<div id="pop_win" style="display:none ;position: absolute; z-index: 10000; border: 1px solid rgb(220, 220, 220); top: 222.5px; left: 630px; opacity: 1; background: none 0px 0px repeat scroll rgb(255, 255, 255);">
+    
+</div>
+<div id="popup_mask"></div>
+<style>
+    #popup_mask
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 9999;
+        left: 0px;
+        top: 0px;
+        opacity: 0.3;
+        filter: alpha(opacity=30);
+        display: none;
+    }
+
+</style>
+
+
+
+
+<script type="text/javascript">
+    $(function(){
+        setTimeout(function(){
+            $(".comment_body:contains('回复')").each(function(index,item){
+                var u=$(this).text().split('：')[0].toString().replace("回复","")
+                var thisComment=$(this);
+                if(u)
+                {
+                    $.getJSON("https://passport.csdn.net/get/nick?callback=?", {users: u}, function(a) {
+                        if(a!=null&&a.data!=null&&a.data.length>0)
+                        {
+                            nick=a.data[0].n; 
+                            if(u!=nick)
+                            {
+                                thisComment.text(thisComment.text().replace(u,nick));  
+                            }
+                        }       
+                    });  
+                }
+            });
+        },200);  
+        
+        setTimeout(function(){
+            $("a img[src='http://js.tongji.linezing.com/stats.gif']").parent().css({"position":"absolute","left":"50%"});
+        },300);
+    });
+
+    function loginbox(){
+        var $logpop=$("#pop_win");
+        $logpop.html('<iframe src="https://passport.csdn.net/account/loginbox?service=http://static.blog.csdn.net/callback.htm" frameborder="0" height="600" width="400" scrolling="no"></iframe>');
+
+        $('#popup_mask').css({
+            opacity: 0.5,
+            width: $( document ).width() + 'px',
+            height:  $( document ).height() + 'px'
+        });
+        $('#popup_mask').css("display","block");
+ 
+        $logpop.css( {
+            top: ($( window ).height() - $logpop.height())/ 2  + $( window 
+       ).scrollTop() + 'px',
+            left:($( window ).width() - $logpop.width())/ 2
+        } );
+ 
+        setTimeout( function () {
+            $logpop.show();
+            $logpop.css( {
+                opacity: 1
+            } );
+        }, 200 );
+ 
+        $('#popup_mask').unbind("click");
+        $('#popup_mask').bind("click", function(){
+            $('#popup_mask').hide();
+            var $clopop = $("#pop_win");
+            $("#common_ask_div_sc").css("display","none");
+            $clopop.css( {
+                opacity: 0
+            } );
+            setTimeout( function () {
+                $clopop.hide();
+            }, 350 );
+            return false;
+        });
+    }    
+
+</script>
+                        <div class="clear">
+                        </div>
+                    </div>                   
+                
+            </div>
+                   
+           <div id="side">
+    <div class="side">
+<div id="panel_Profile" class="panel">
+<ul class="panel_head"><span>个人资料</span></ul>
+<ul class="panel_body profile">
+<div id="blog_userface">
+    <a href="http://my.csdn.net/sinyu890807" target="_blank">
+    <img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/1_sinyu890807.jpg" title="访问我的空间" style="max-width:90%">
+    </a>
+    <br>
+    <span><a href="http://my.csdn.net/sinyu890807" class="user_name" target="_blank">guolin</a></span>
+</div>
+<div class="interact">
+
+    <a href="javascript:void(0);" class="attented" id="span_add_follow" title="[加关注]"></a>
+
+ <a href="javascript:void(0);" class="letter" title="[发私信]" onclick="window.open(&#39;http://msg.csdn.net/letters/model?receiver=sinyu890807&#39;,&#39;_blank&#39;,&#39;height=350,width=700&#39;);_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_sixin&#39;])"></a>  
+</div>
+<div id="blog_medal">
+                       <div class="ico_expert" onclick="javascript:location=&#39;http://blog.csdn.net/experts/rule.html&#39;" title="CSDN认证专家" style="cursor:pointer;width:60px;height:60px;background:url(&#39;http://c.csdnimg.cn/jifen/images/xunzhang/xunzhang/bokezhuanjiamiddle.png&#39;) no-repeat"></div>
+                <div id="bms_box">
+                                            <a target="_blank">
+                                                    <img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/zhuanlandaren.png" onmouseover="m_over_m(this,2)" onmouseout="m_out_m()" alt="1">
+                                            </a>
+                                            <a target="_blank">
+                                                    <img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/bokezhixing.png" onmouseover="m_over_m(this,6)" onmouseout="m_out_m()" alt="1">
+                                            </a>
+               </div>
+</div>
+<ul id="blog_rank">
+    <li>访问：<span>3411291次</span></li>
+    <li>积分：<span>30691</span> </li>    
+    <li>等级： <span style="position:relative;display:inline-block;z-index:1">
+            <img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/blog8.png" alt="" style="vertical-align: middle;" id="leveImg">
+            <div id="smallTittle" style=" position: absolute;  left: -24px;  top: 25px;  text-align: center;  width: 101px;  height: 32px;  background-color: #fff;  line-height: 32px;  border: 2px #DDDDDD solid;  box-shadow: 0px 2px 2px rgba (0,0,0,0.1);  display: none;   z-index: 999;">
+            <div style="left: 42%;  top: -8px;  position: absolute;  width: 0;  height: 0;  border-left: 10px solid transparent;  border-right: 10px solid transparent;  border-bottom: 8px solid #EAEAEA;"></div>
+            积分：30691 </div>
+        </span>  </li>
+    <li>排名：<span>第98名</span></li>
+</ul>
+<ul id="blog_statistics">
+    <li>原创：<span>81篇</span></li>
+    <li>转载：<span>0篇</span></li>
+    <li>译文：<span>6篇</span></li>
+    <li>评论：<span>8849条</span></li>
+</ul>
+</ul>
+</div>
+
+
+
+
+<div id="custom_column_36348469" class="panel">
+<ul class="panel_head"><span>我写的书</span></ul>
+<ul class="panel_body">
+<p>如果喜欢我写的博客<br>也许你会更加喜欢我写的书<br>书中拥有更多全新Android知识<br>和博客并无交集</p>
+<br>
+<center><a href="http://blog.csdn.net/guolin_blog/article/details/26365913"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/1405567749_8669.jpg"></a></center>
+<div style="width:130px; margin-left: auto; margin-right: auto; margin-top: 5px">
+<center>
+<p><a target="_blank" href="http://blog.csdn.net/guolin_blog/article/details/26365913">查看详情</a></p><p></p></center>
+<br>
+网上购买：
+<center>
+<p>
+<a target="_blank" href="http://product.dangdang.com/23521220.html">当当网</a> 
+&nbsp;&nbsp;
+<a target="_blank" href="http://product.china-pub.com/3770350">互动出版</a>
+</p>
+<p>
+<a target="_blank" href="http://item.jd.com/11504254.html">京东</a>
+&nbsp;&nbsp;&nbsp;
+<a target="_blank" href="https://detail.tmall.com/item.htm?id=40099990853">天猫</a> 
+&nbsp;&nbsp;&nbsp;
+<a target="_blank" href="http://www.amazon.cn/%E7%AC%AC%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81-Android-%E9%83%AD%E9%9C%96/dp/B00LVHTI9U">亚马逊</a>
+</p>
+</center>
+</div>
+<br>
+<p>书中源码下载：<a target="_blank" href="http://download.csdn.net/detail/sinyu890807/7747691">请点击这里</a></p>
+<p>书中章节试读：<a target="_blank" href="http://download.csdn.net/detail/sinyu890807/7749729">请点击这里</a></p>
+</ul>
+</div>
+
+<div id="custom_column_22765363" class="panel">
+<ul class="panel_head"><span>我的微信公众号</span></ul>
+<ul class="panel_body">
+关注我的微信公众号，第一时间获得博客的更新提醒，更有很多其它的技术信息分享给大家，扫一扫下方二维码或搜索微信号guolin_blog即可关注：<br>
+<center><img style="width:150px; height:150px" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20150128153831686"></center>
+</ul>
+</div><div id="panel_Category" class="panel">
+    <ul class="panel_head"><span>博客专栏</span></ul>
+    <ul class="panel_body" id="sp_column">
+    <table cellpadding="0" cellspacing="0"><tbody><tr>
+    <td style="padding:10px 10px 0 0;">
+    <a href="http://blog.csdn.net/column/details/android-database-pro.html" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/20151123180007942" style="width:75px;height:75px;"></a>
+    </td>
+    <td style="padding:10px 0; vertical-align:top;">
+    <a href="http://blog.csdn.net/column/details/android-database-pro.html" target="_blank">Android数据库高手秘籍</a>
+    <p>文章：9篇</p>
+    <span>阅读：248349</span>
+    </td>
+    </tr></tbody></table>
+    </ul>
+</div>
+
+<div id="custom_column_26685579" class="panel">
+<ul class="panel_head"><span>共同进步</span></ul>
+<ul class="panel_body">
+<span style="display:block;">感兴趣的朋友可以加入我的QQ群，一起讨论学习，共同进步。</span><br>
+<span style="display:block;">一群：223116373</span>
+<span style="display:block;">二群：256344794</span>
+<span style="display:block;">三群：153325493</span><br>
+<span style="display:block;">人数有限，请不要重复加群</span>
+<span style="display:none;"><font color="#f9920d">(即满)</font></span>
+</ul>
+</div>
+
+<div id="custom_column_37398049" class="panel">
+<ul class="panel_head"><span>友情链接</span></ul>
+<ul class="panel_body">
+<a target="_blank" href="http://blog.csdn.net/lmj623565791">鸿洋的博客</a>
+<br><br>
+<a target="_blank" href="http://blog.csdn.net/xiaanming">夏安明的博客</a>
+</ul>
+</div><div id="panel_Category" class="panel">
+<ul class="panel_head"><span>文章分类</span></ul>
+<ul class="panel_body">    
+                 <li>
+                    <a href="http://blog.csdn.net/sinyu890807/article/category/1369150" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_wenzhangfenlei&#39;]); ">Android精华教程</a><span>(26)</span>
+                </li>
+                 <li>
+                    <a href="http://blog.csdn.net/sinyu890807/article/category/1399638" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_wenzhangfenlei&#39;]); ">Android疑难解析</a><span>(35)</span>
+                </li>
+                 <li>
+                    <a href="http://blog.csdn.net/sinyu890807/article/category/2400923" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_wenzhangfenlei&#39;]); ">Android第一行代码</a><span>(3)</span>
+                </li>
+                 <li>
+                    <a href="http://blog.csdn.net/sinyu890807/article/category/2522725" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_wenzhangfenlei&#39;]); ">Android数据库高手秘籍</a><span>(9)</span>
+                </li>
+                 <li>
+                    <a href="http://blog.csdn.net/sinyu890807/article/category/1381137" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_wenzhangfenlei&#39;]); ">Java设计模式透析</a><span>(5)</span>
+                </li>
+                 <li>
+                    <a href="http://blog.csdn.net/sinyu890807/article/category/1380837" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_wenzhangfenlei&#39;]); ">Ruby设计模式透析</a><span>(5)</span>
+                </li>
+                 <li>
+                    <a href="http://blog.csdn.net/sinyu890807/article/category/1807611" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_wenzhangfenlei&#39;]); ">随笔</a><span>(4)</span>
+                </li>
+</ul>
+</div><div id="panel_Archive" class="panel">
+<ul class="panel_head"><span>文章存档</span></ul>
+<ul class="panel_body">
+<div id="archive_list"><li><a href="http://blog.csdn.net/sinyu890807/article/month/2016/02">2016年02月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2016/01">2016年01月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2015/12">2015年12月</a><span>(2)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2015/11">2015年11月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2015/10">2015年10月</a><span>(1)</span></li><span class="hidelist" style="display:none;"><li><a href="http://blog.csdn.net/sinyu890807/article/month/2015/08">2015年08月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2015/07">2015年07月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2015/06">2015年06月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2015/05">2015年05月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2015/04">2015年04月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2015/03">2015年03月</a><span>(2)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2015/02">2015年02月</a><span>(2)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2014/12">2014年12月</a><span>(3)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2014/11">2014年11月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2014/10">2014年10月</a><span>(2)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2014/09">2014年09月</a><span>(5)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2014/08">2014年08月</a><span>(3)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2014/07">2014年07月</a><span>(3)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2014/06">2014年06月</a><span>(2)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2014/05">2014年05月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2014/04">2014年04月</a><span>(3)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2014/03">2014年03月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2014/01">2014年01月</a><span>(2)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2013/12">2013年12月</a><span>(5)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2013/11">2013年11月</a><span>(4)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2013/10">2013年10月</a><span>(4)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2013/09">2013年09月</a><span>(4)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2013/08">2013年08月</a><span>(4)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2013/07">2013年07月</a><span>(5)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2013/06">2013年06月</a><span>(5)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2013/05">2013年05月</a><span>(5)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2013/04">2013年04月</a><span>(6)</span></li><li><a href="http://blog.csdn.net/sinyu890807/article/month/2013/03">2013年03月</a><span>(4)</span></li></span><div id="archive_list_button" class="list_closed">展开</div></div>
+</ul>
+</div>
+<div id="hotarticls" class="panel">
+<ul class="panel_head">
+    <span>       
+阅读排行    </span>
+</ul>
+
+<ul class="panel_body itemlist">
+<li>
+<a href="http://blog.csdn.net/guolin_blog/article/details/8881711" title="Android Fragment完全解析，关于碎片你所需知道的一切">Android Fragment完全解析，关于碎片你所需知道的一切</a><span>(179794)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/guolin_blog/article/details/17482095" title="Android Volley完全解析(一)，初识Volley的基本用法">Android Volley完全解析(一)，初识Volley的基本用法</a><span>(123244)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/guolin_blog/article/details/12921889" title="Android LayoutInflater原理分析，带你一步步深入了解View(一)">Android LayoutInflater原理分析，带你一步步深入了解View(一)</a><span>(112530)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/guolin_blog/article/details/9097463" title="Android事件分发机制完全解析，带你从源码的角度彻底理解(上)">Android事件分发机制完全解析，带你从源码的角度彻底理解(上)</a><span>(98757)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/guolin_blog/article/details/9316683" title="Android高效加载大图、多图解决方案，有效避免程序OOM">Android高效加载大图、多图解决方案，有效避免程序OOM</a><span>(94256)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/guolin_blog/article/details/11952435" title="Android Service完全解析，关于服务你所需知道的一切(上)">Android Service完全解析，关于服务你所需知道的一切(上)</a><span>(90717)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/guolin_blog/article/details/18234477" title="Android ActionBar完全解析，使用官方推荐的最佳导航栏(上)">Android ActionBar完全解析，使用官方推荐的最佳导航栏(上)</a><span>(87703)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/guolin_blog/article/details/13171191" title="Android Fragment应用实战，使用碎片向ActivityGroup说再见">Android Fragment应用实战，使用碎片向ActivityGroup说再见</a><span>(87015)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/guolin_blog/article/details/16330267" title="Android视图绘制流程完全解析，带你一步步深入了解View(二)">Android视图绘制流程完全解析，带你一步步深入了解View(二)</a><span>(85584)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/guolin_blog/article/details/9255575" title="Android下拉刷新完全解析，教你如何一分钟实现下拉刷新功能">Android下拉刷新完全解析，教你如何一分钟实现下拉刷新功能</a><span>(75612)</span>
+</li>
+</ul>
+</div>
+<div id="hotarticls2" class="panel">
+<ul class="panel_head"><span>评论排行</span></ul>
+<ul class="panel_body itemlist">
+<li>
+<a href="http://blog.csdn.net/guolin_blog/article/details/26365913" title="历时一年，我的著作《第一行代码——Android》已出版！">历时一年，我的著作《第一行代码——Android》已出版！</a><span>(504)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/guolin_blog/article/details/34093441" title="Android照片墙完整版，完美结合LruCache和DiskLruCache">Android照片墙完整版，完美结合LruCache和DiskLruCache</a><span>(289)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/guolin_blog/article/details/12921889" title="Android LayoutInflater原理分析，带你一步步深入了解View(一)">Android LayoutInflater原理分析，带你一步步深入了解View(一)</a><span>(263)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/guolin_blog/article/details/9671609" title="Android双向滑动菜单完全解析，教你如何一分钟实现双向滑动特效">Android双向滑动菜单完全解析，教你如何一分钟实现双向滑动特效</a><span>(260)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/guolin_blog/article/details/8744400" title="Android滑动菜单框架完全解析，教你如何一分钟实现滑动菜单特效">Android滑动菜单框架完全解析，教你如何一分钟实现滑动菜单特效</a><span>(247)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/guolin_blog/article/details/9255575" title="Android下拉刷新完全解析，教你如何一分钟实现下拉刷新功能">Android下拉刷新完全解析，教你如何一分钟实现下拉刷新功能</a><span>(245)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/guolin_blog/article/details/13171191" title="Android Fragment应用实战，使用碎片向ActivityGroup说再见">Android Fragment应用实战，使用碎片向ActivityGroup说再见</a><span>(218)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/guolin_blog/article/details/49805231" title="2015年终总结，忙碌和无所事事的一年">2015年终总结，忙碌和无所事事的一年</a><span>(211)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/guolin_blog/article/details/26365683" title="Android ActionBar应用实战，高仿微信主界面的设计">Android ActionBar应用实战，高仿微信主界面的设计</a><span>(186)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/guolin_blog/article/details/8881711" title="Android Fragment完全解析，关于碎片你所需知道的一切">Android Fragment完全解析，关于碎片你所需知道的一切</a><span>(175)</span>
+</li>
+</ul>
+</div>
+<div id="newcomments" class="panel">
+<ul class="panel_head"><span>最新评论</span></ul>
+<ul class="panel_body itemlist">
+    <li>
+   
+         <a href="http://blog.csdn.net/guolin_blog/article/details/49805231#comments">2015年终总结，忙碌和无所事事的一年</a>
+    <p style="margin:0px;"><a href="http://blog.csdn.net/yoonm" class="user_name">yoonm</a>:
+恭喜恭喜！
+    </p>
+    </li>
+    <li>
+   
+         <a href="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET.html">Android安全攻防战，反编译与混淆技术完全解析（上）</a>
+    <p style="margin:0px;"><a href="http://blog.csdn.net/yilylong" class="user_name">海虫宝宝</a>:
+期待混淆篇
+    </p>
+    </li>
+    <li>
+   
+         <a href="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET.html">Android安全攻防战，反编译与混淆技术完全解析（上）</a>
+    <p style="margin:0px;"><a href="http://blog.csdn.net/u011216273" class="user_name">home乐乐呵</a>:
+终于抢到沙发了哇哈哈期待下篇文章
+    </p>
+    </li>
+    <li>
+   
+         <a href="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET.html">Android安全攻防战，反编译与混淆技术完全解析（上）</a>
+    <p style="margin:0px;"><a href="http://blog.csdn.net/eziowayne" class="user_name">eziowayne</a>:
+工具介绍得不错，但是并没有什么值得一提的东西。
+    </p>
+    </li>
+    <li>
+   
+         <a href="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET.html">Android安全攻防战，反编译与混淆技术完全解析（上）</a>
+    <p style="margin:0px;"><a href="http://blog.csdn.net/u013171283" class="user_name">helloserver</a>:
+我擦  沙发被抢了  mark
+    </p>
+    </li>
+    <li>
+   
+         <a href="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET.html">Android安全攻防战，反编译与混淆技术完全解析（上）</a>
+    <p style="margin:0px;"><a href="http://blog.csdn.net/u012332264" class="user_name">mengqianyue</a>:
+又来晚了，先码再看
+    </p>
+    </li>
+    <li>
+   
+         <a href="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET.html">Android安全攻防战，反编译与混淆技术完全解析（上）</a>
+    <p style="margin:0px;"><a href="http://blog.csdn.net/u012987546" class="user_name">LiuJuno_o</a>:
+看完了，郭神的文章一直都是通熟易懂。期待下一篇文章
+    </p>
+    </li>
+    <li>
+   
+         <a href="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET.html">Android安全攻防战，反编译与混淆技术完全解析（上）</a>
+    <p style="margin:0px;"><a href="http://blog.csdn.net/hhllnw" class="user_name">hhllnw</a>:
+期待下一篇
+    </p>
+    </li>
+    <li>
+   
+         <a href="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET.html">Android安全攻防战，反编译与混淆技术完全解析（上）</a>
+    <p style="margin:0px;"><a href="http://blog.csdn.net/qq_31563307" class="user_name">qq_31563307</a>:
+膜拜郭神
+    </p>
+    </li>
+    <li>
+   
+         <a href="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET.html">Android安全攻防战，反编译与混淆技术完全解析（上）</a>
+    <p style="margin:0px;"><a href="http://blog.csdn.net/zhongxiaweimian" class="user_name">仲夏未眠</a>:
+期待下一篇
+    </p>
+    </li>
+</ul>
+</div>
+<div class="panel" id="panel_Search">
+    <ul class="panel_head"><span>文章搜索</span></ul>
+    <ul class="panel_body">
+        <form id="frmSearch" action="http://so.csdn.net/search" class="form_search" target="_blank">
+        <span><input id="inputSearch" type="text" class="blogsearch" title="请输入关键字"></span>
+        <input id="btnSubmit" type="button" value="搜索" title="search in blog">
+        <input type="hidden" name="q" id="inputQ">
+        <input type="hidden" name="t" value="blog">
+        <a id="btnSearchBlog" target="_blank"></a>
+        </form>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $("#btnSubmit").click(function () {           
+            search();
+        });
+
+        $("#frmSearch").submit(function () {
+            search();
+            return false;
+        });
+
+        function search()
+        {
+            var url = "http://so.csdn.net/so/search/s.do?q=" + encodeURIComponent($("#inputSearch").val()) + "&u=" + username + "&t=blog";
+            window.location.href = url;
+        }   
+    });
+</script>    </div>
+    <div class="clear">
+    </div>
+ </div>   
+            <div class="clear">
+            </div>
+        </div>
+        
+
+<script type="text/javascript" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/cnick.js"></script>
+<script type="text/javascript" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/newblog.min.js"></script>
+
+
+<script type="text/javascript" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/showblogmedal.ashx"></script>
+<script type="text/javascript" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/JavaScript1.js"></script><link rel="stylesheet" type="text/css" href="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/pub_footer_2014.css"><div class="pub_fo"><div id="pub_footerall" class="pub_footer_new"><dl><dt></dt> <dd class="foot_sub_menu"><a href="http://www.csdn.net/company/about.html" target="_blank">公司简介</a><span>|</span><a href="http://www.csdn.net/company/recruit.html" target="_blank">招贤纳士</a><span>|</span><a href="http://www.csdn.net/company/marketing.html" target="_blank">广告服务</a><span>|</span><a href="http://www.csdn.net/company/account.html" target="_blank">银行汇款帐号</a><span>|</span><a href="http://www.csdn.net/company/contact.html" target="_blank">联系方式</a><span>|</span><a href="http://www.csdn.net/company/statement.html" target="_blank">版权声明</a><span>|</span><a href="http://www.csdn.net/company/layer.html" target="_blank">法律顾问</a><span>|</span><a href="mailto:webmaster@csdn.net">问题报告</a><span>|</span><a target="_blank" href="http://www.csdn.net/friendlink.html">合作伙伴</a><span>|</span><a href="http://bbs.csdn.net/forums/Service" target="_blank">论坛反馈</a></dd><dd class="foot_contact"><a href="http://wpa.qq.com/msgrd?v=3&uin=2355263776&site=qq&menu=yes" target="_blank" class="qq">网站客服</a><a href="http://wpa.qq.com/msgrd?v=3&uin=2251809102&site=qq&menu=yes" target="_blank" class="qq">杂志客服</a><a href="http://e.weibo.com/csdnsupport/profile" target="_blank" class="weibo">微博客服</a><a href="mailto:webmaster@csdn.net" class="email" title="联系邮箱">webmaster@csdn.net</a><span class="phone" title="服务热线">400-600-2320</span><span class="interval">|</span><span>北京创新乐知信息技术有限公司 版权所有</span><span class="interval">|</span><span>江苏乐知网络技术有限公司 提供商务支持</span></dd><dd class="foot_copyright"><span>京&nbsp;ICP&nbsp;证&nbsp;09002463&nbsp;号</span><span class="interval">|</span><span>Copyright © 1999-2014, CSDN.NET, All Rights Reserved&nbsp;</span><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202001032100010" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/gongshang_logos.gif" alt="GongshangLogo" title=""></a></dd></dl></div></div><div id="note1" class="csdn_note" style="display:none; position:absolute; z-index:9999; width:440px">  <span class="notice_top_arrow"><span class="inner"></span></span>  <div class="box"></div></div><div class="csdn_notice_tip" style="display: none; position: absolute; z-index: 9990; width: 170px;">  <iframe src="about:blank" frameborder="0" scrolling="no" style="z-index:-1;position:absolute;top:0;left:0;width:100%;height:100%;background:transparent"></iframe>  <div class="tip_text">您有<strong>0</strong>条新通知</div>  <a href="javascript:void 0" class="close2"></a></div><script id="noticeScript" type="text/javascript" btnid="header_notice_num" wrapid="note1" count="5" subcount="5" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/notify.js"></script>
+
+    <script type="text/javascript" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/tongji.js"></script><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/tongji.do" border="0" width="1" height="1"><a href="http://tongji.linezing.com/report.html?unit_id=3311294" target="_blank"><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/icon1.gif" border="0" alt="量子统计"></a>
+<script type="text/javascript">document.write("<img src=http://counter.csdn.net/pv.aspx?id=24 border=0 width=0 height=0>");</script><img src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/pv.aspx" border="0" width="0" height="0">
+<script type="text/javascript" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/counter.js"></script><script type="text/javascript" charset="UTF-8" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/msg.popup.js"></script>
+<script type="text/javascript" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/ad-blog.js"></script>
+<script type="text/javascript">
+    $(function () {
+        function __get_code_toolbar(snippet_id) {
+            return $("<span class='tracking-ad' data-mod='popu_167'><a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "' target='_blank' title='在CODE上查看代码片'  style='text-indent:0;'><img src='https://code.csdn.net/assets/CODE_ico.png' width=12 height=12 alt='在CODE上查看代码片' style='position:relative;top:1px;left:2px;'/></a></span>"
+                    + "<span class='tracking-ad' data-mod='popu_170'><a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "/fork' target='_blank' title='派生到我的代码片' style='text-indent:0;'><img src='https://code.csdn.net/assets/ico_fork.svg' width=12 height=12 alt='派生到我的代码片' style='position:relative;top:2px;left:2px;'/></a></span>");
+        }
+        
+        $("[code_snippet_id]").each(function () {
+            __s_id = $(this).attr("code_snippet_id");
+            if (__s_id != null && __s_id != "" && __s_id != 0 && parseInt(__s_id) > 70020) {
+                __code_tool = __get_code_toolbar(__s_id);
+                $(this).prev().find(".tools").append(__code_tool);
+            }
+        });
+
+        $(".bar").show();
+    });
+</script>
+
+
+
+
+    </div><input type="hidden" id="aa_g_data_ids">
+      <!--new top-->
+    
+    <script id="csdn-toolbar-id" btnid="header_notice_num" wrapid="note1" count="5" subcount="5" type="text/javascript" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/toolbar.js"></script>
+     <!--new top-->
+   
+    <link href="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/ask_float_block.css" type="text/css" rel="stylesheet">
+    <script language="JavaScript" type="text/javascript" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/wmd.js"></script>
+    <script language="JavaScript" type="text/javascript" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/showdown.js"></script>
+    <script language="JavaScript" type="text/javascript" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/prettify.js"></script>
+    <script language="JavaScript" type="text/javascript" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/ask_float_block.js"></script>
+   
+
+   
+ <div id="tag-suggest-pop">
+  <div class="relative">
+    <div class="close"></div>
+    <div class="content"></div>
+  </div>
+</div><link rel="stylesheet" type="text/css" media="screen" href="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/ask_float_fonts_css-6b30a53970eb5c3a2a045e3df585b475.css"><div data-mod="popu_64" class="tracking-ad" chg-blk="0"><a id="com-appcode-float-block" href="http://www.csdn.net/app/" target="_blank" title="APP二维码" style="top:342px"><span id="appcode-close"></span></a><a id="com-app-float-block" href="http://www.csdn.net/app/" title="APP下载" style="top:426px"></a><a id="com-quick-reply" title="快速回复" style="top:464px"></a><a id="com-d-top-a" style="top: 502px; display: inline;" title="返回顶部" onclick=""></a> </div><div class="pop_edit ask_second comm_ask_second"><h3>提问</h3><span class="ask_float_span">您的问题将会被发布在“<a class="ask_float_channel" href="http://ask.csdn.net/" target="_blank" style="cursor:pointer">技术问答</a>”频道</span><a href="http://blog.csdn.net/guolin_blog/article/details/49738023#" nodetype="close" class="close">×</a><div class="context"><div class="err_div"><span class="err_ico"></span><span class="err_txt">该问题已存在，请勿重复提问</span></div><div class="input_div"><input id="askInputSecond" type="text" style="font-size:14px;" placeholder="问题标题"></div><div class="cm_box"><div class="cm_dialog"></div> <div class="pop_cm cm_add_link"><input type="text" placeholder="链接内容" id="af_cm_link_txt"><input type="text" placeholder="链接地址" id="af_cm_link_url"><input type="text" placeholder="链接提示" id="af_cm_link_tit"><div class="text-right"><span class="btn btn-default btn-sm" id="add_link_btn">插入链接</span> </div> </div><div class="pop_cm cm_add_img"><div class="nav-tabs"><a class="img_tab active" href="http://blog.csdn.net/guolin_blog/article/details/49738023#tab_upload">本地上传</a><a class="img_tab" href="http://blog.csdn.net/guolin_blog/article/details/49738023#tab_weburl">网络图片</a></div><div class="tab_panel active" id="tab_upload"><div class="set_img"><iframe src="about:blank"></iframe></div></div><div class="tab_panel" id="tab_weburl"><input type="text" placeholder="图片地址" id="af_cm_img_url"><input type="text" placeholder="图片说明" id="af_cm_img_alt"><div class="text-right"><span class="btn btn-default btn-sm" id="add_img_btn">插入图片</span> </div></div> </div></div> <textarea id="editor_all" rows="8" style="display: none;"></textarea><div class="editor-toolbar"><i class="separator">|</i><a class="icon-headline" title="标题一（Ctrl+Alt+1）"></a><a class="icon-heading" title="标题二（Ctrl+Alt+2）"></a><a class="icon-bold" title="粗体（Ctrl+B）"></a><a class="icon-italic" title="斜体（Ctrl+I）"></a><i class="separator">|</i><a class="icon-quote-left" title="引用（Ctrl+’）"></a><a class="icon-code" title="插入代码片（Ctrl+,）"></a><a class="icon-list-ul" title="无序列表（Ctrl+L）"></a><a class="icon-list-ol" title="有序列表（Ctrl+Alt+L）"></a><i class="separator">|</i><a class="icon-link" title="添加链接（Ctrl+K）"></a><a class="icon-picture" title="添加图片（Ctrl+Alt+I）"></a><i class="separator">|</i><a class="icon-reply" title="撤退（Ctrl+Z）"></a><a class="icon-share-alt" title="前进（Ctrl+Shift+Z）"></a><i class="separator">|</i><a class="icon-info" href="http://ask.csdn.net/pages/markdown" target="_blank" title="markdown语法参考"></a><a class="icon-preview" title="预览"></a><i class="separator">|</i></div><div class="CodeMirror cm-s-paper CodeMirror-focused"><div style="overflow: hidden; position: relative; width: 3px; height: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none; font-size: 4px;" tabindex="0"></textarea></div><div class="CodeMirror-hscrollbar"><div style="height: 1px;"></div></div><div class="CodeMirror-vscrollbar"><div style="width: 1px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-gutter-filler"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="min-width: 33px;"><div style="position: relative;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre>&nbsp;<span style="display: inline-block; width: 1px; margin-right: -1px;">&nbsp;</span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code"></div><div class="CodeMirror-cursor" style="visibility: hidden;">&nbsp;</div><div class="CodeMirror-cursor CodeMirror-secondarycursor" style="visibility: hidden;">&nbsp;</div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px;"></div><div class="CodeMirror-gutters" style="display: none;"></div></div></div><div class="editor-statusbar"><span class="lines">0</span><span class="words">0</span><span class="cursor">0:0</span></div><div class="div_tags clearfix"><div id="divSearchTags" class="tags_con"><input type="text"></div><input type="hidden" name="txtSearchTags"></div><div id="ask2_tagRecomm_div" class="drt_tagRecomm tracking-ad" data-mod="popu_73"><span class="drt_tit">推荐标签：</span></div></div><div class="success"><div class="left_area"><input id="chk_cb" type="checkbox"><span class="wyxs">我要悬赏</span><input id="cb_num" class="cb_num" readonly="true"><span class="phib_rii"><span> 币</span></span></div><a href="http://blog.csdn.net/guolin_blog/article/details/49738023#" nodetype="cancel" class="cancel">取消</a><a href="http://blog.csdn.net/guolin_blog/article/details/49738023#" nodetype="ok" class="ok">发布</a></div></div><div id="common_ask_div_sc" class="searchContainer"><div class="sTitle">可能存在类似的问题：</div><div class="sFooter"><a class="sFirstNewAsk">我想提一个新问题</a></div></div><script src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/pv.gif"></script><div class="sogoutip" style="z-index: 2147483645; visibility: hidden; display: none;"></div><div class="sogoubottom" id="sougou_bottom" style="display: none;"></div><div id="ext_stophi" style="z-index: 2147483647;"><div class="extnoticebg"></div><div class="extnotice"><h2>关闭提示 <a href="http://blog.csdn.net/guolin_blog/article/details/49738023#" title="关闭提示" id="closenotice" class="closenotice">关闭</a></h2><p id="sogouconfirmtxt"></p>  <a id="sogouconfirm" href="http://blog.csdn.net/guolin_blog/article/details/49738023#" class="extconfirm">确 认</a> <a id="sogoucancel" href="http://blog.csdn.net/guolin_blog/article/details/49738023#" class="extconfirm">取 消</a></div></div><div id="ext_overlay" class="ext_overlayBG" style="display: none; z-index: 2147483646;"></div><iframe class="sogou_sugg_feedbackquan" frameborder="0" scrolling="no" src="./Android安全攻防战，反编译与混淆技术完全解析（上） - 郭霖的专栏 - 博客频道 - CSDN.NET_files/upload.html" style="border: none; display: none; z-index: 2147483645; background: transparent;"></iframe><div class="rec-mini" id="id_div_close" style="display: none; z-index: 2147483645; width: 53px; height: 53px; position: fixed; right: 7px; bottom: 7px; cursor: pointer; background: url(http://ht.www.sogou.com/images/mini.png) no-repeat;"></div></body></html>

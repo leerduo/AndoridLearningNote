@@ -1,0 +1,25 @@
+{
+  "badge": {
+    "check_in": {
+      "continue": 12,
+      "checked": true
+    },
+    "friends": 16,
+    "hot_posts": 0
+  },
+  "im_status": true,
+  "blocks": [
+    {
+      "name": "减肥健身",
+      "show_more": "",
+      "img": "http://one.boohee.cn/p/2015/07/23/7d5eda5bdee1f1949332082343b4ee85.png",
+      "link_to": "http://www.boohee.com"
+    },
+    {
+      "name": "成功故事",
+      "show_more": "http://www.boohee.com",
+      "img": "http://one.boohee.cn/p/2015/07/01/9b3c979b8108f651b9a6139cd42327e7.png",
+      "link_to": "http://www.boohee.com"
+    }
+  ]
+}

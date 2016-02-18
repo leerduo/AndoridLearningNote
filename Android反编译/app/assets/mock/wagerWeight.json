@@ -1,0 +1,30 @@
+{
+  "type": "base_weight",
+  "weight": 100.1,
+  "photos": [
+    {
+      "id": "5",
+      "small_url": "http://one.boohee.cn/p/2015/05/18/1f746981745896781dd4508f7948459e.png?imageView/1/w/140/h/140",
+      "middle_url": "http://one.boohee.cn/p/2015/05/18/1f746981745896781dd4508f7948459e.png?imageView/2/w/450/h/450",
+      "big_url": "http://one.boohee.cn/p/2015/05/18/1f746981745896781dd4508f7948459e.png?imageView/2/w/640",
+      "preview_width": 270,
+      "preview_height": 450
+    },
+    {
+      "id": "6",
+      "small_url": "http://one.boohee.cn/p/2015/05/18/1f746981745896781dd4508f7948459e.png?imageView/1/w/140/h/140",
+      "middle_url": "http://one.boohee.cn/p/2015/05/18/1f746981745896781dd4508f7948459e.png?imageView/2/w/450/h/450",
+      "big_url": "http://one.boohee.cn/p/2015/05/18/1f746981745896781dd4508f7948459e.png?imageView/2/w/640",
+      "preview_width": 270,
+      "preview_height": 450
+    },
+    {
+      "id": "6",
+      "small_url": "http://one.boohee.cn/p/2015/05/18/1f746981745896781dd4508f7948459e.png?imageView/1/w/140/h/140",
+      "middle_url": "http://one.boohee.cn/p/2015/05/18/1f746981745896781dd4508f7948459e.png?imageView/2/w/450/h/450",
+      "big_url": "http://one.boohee.cn/p/2015/05/18/1f746981745896781dd4508f7948459e.png?imageView/2/w/640",
+      "preview_width": 270,
+      "preview_height": 450
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+"challenges": [
+  {
+    "id": "1",
+    "name": "打开类型",
+    "title": "瘦10斤",
+    "avatar_url": "http://house.boohee.com/a/b/c.jpg",
+    "detail_url": "http://www.baidu.com",
+    "posts_count": 100,
+    "members_count": 50,
+    "template": "clock_out",
+    "unit": "米",
+    "max": 100,
+    "min": 20
+  },
+
+  {
+    "id": "2",
+    "name": "每天一万步",
+    "title": "我要瘦大腿",
+    "avatar_url": "http://house.boohee.com/a/b/c.jpg",
+    "detail_url": "http://www.baidu.com",
+    "posts_count": 120,
+    "members_count": 34,
+    "template": "walking",
+    "unit": "米",
+    "max": 100,
+    "min": 20
+  },
+  {
+    "id": "3",
+    "name": "我赌我会瘦第八季",
+    "title": "我要瘦大腿",
+    "avatar_url": "http://house.boohee.com/a/b/c.jpg",
+    "detail_url": "http://www.baidu.com",
+    "posts_count": 120,
+    "members_count": 34,
+    "template": "wager",
+    "unit": "米",
+    "max": 100,
+    "min": 20
+  }
+],
+"recommends": [
+  {
+    "id": "5",
+    "name": "每天十万步",
+    "title": "不减肥徒悲伤",
+    "avatar_url": "http://house.boohee.com/a/b/c.jpg",
+    "detail_url": "http://www.baidu.com",
+    "posts_count": 100,
+    "members_count": 50,
+    "template": "walking",
+    "unit": "米",
+    "max": 100,
+    "min": 20
+  }
+]
+}

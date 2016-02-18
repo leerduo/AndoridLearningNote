@@ -1,0 +1,95 @@
+{
+  "foods": [
+    {
+      "calory": "589.0",
+      "code": "huasheng_chao",
+      "health_light": 1,
+      "name": "花生(炒)",
+      "s_points": "15.4",
+      "thumb_image_name": "/house/food_mid/mid_photo_201522122012658.jpg",
+      "weight": "100.0"
+    },
+    {
+      "calory": "320.0",
+      "code": "dangao_huangdangao",
+      "health_light": 2,
+      "name": "蛋糕(黄蛋糕)",
+      "s_points": "7.93",
+      "thumb_image_name": "/house/food_mid/mid_photo_2015221236391116.jpg",
+      "weight": "100.0"
+    },
+    {
+      "calory": "627.0",
+      "code": "hetao_gan",
+      "health_light": 1,
+      "name": "核桃(干)",
+      "s_points": "16.8",
+      "thumb_image_name": "/house/food_mid/mid_photo_2015225134943634.jpg",
+      "weight": "100.0"
+    },
+    {
+      "calory": "563.0",
+      "code": "huashengren_sheng",
+      "health_light": 1,
+      "name": "花生仁(生)",
+      "s_points": "14.6",
+      "thumb_image_name": "/house/food_mid/mid_photo_201522122044659.jpg",
+      "weight": "100.0"
+    },
+    {
+      "calory": "43.0",
+      "code": "putao_junzhi",
+      "health_light": 1,
+      "name": "葡萄",
+      "s_points": "1.09",
+      "thumb_image_name": "/house/food_mid/mid_photo_201515163439559.jpg",
+      "weight": "100.0"
+    },
+    {
+      "calory": "433.0",
+      "code": "binggan_junzhi",
+      "health_light": 2,
+      "name": "饼干",
+      "s_points": "10.92",
+      "thumb_image_name": "/house/food_mid/mid_photo_201522123671179.jpg",
+      "weight": "100.0"
+    },
+    {
+      "calory": "43.0",
+      "code": "jieganzi",
+      "health_light": 1,
+      "name": "橘子",
+      "s_points": "1.07",
+      "thumb_image_name": "/house/food_mid/mid_photo_20151311681587.jpg",
+      "weight": "100.0"
+    },
+    {
+      "calory": "91.0",
+      "code": "xiangjiao",
+      "health_light": 1,
+      "name": "香蕉",
+      "s_points": "2.27",
+      "thumb_image_name": "/house/food_mid/mid_photo_2015131152726611.jpg",
+      "weight": "100.0"
+    },
+    {
+      "calory": "130.0",
+      "code": "niangdoufu",
+      "health_light": 2,
+      "name": "酿豆腐",
+      "s_points": "3.37",
+      "thumb_image_name": "/house/food_mid/mid_photo_20153213204410281.jpg",
+      "weight": "100.0"
+    },
+    {
+      "calory": "109.0",
+      "code": "miantiao_fuqiangfen_zhu",
+      "health_light": 1,
+      "name": "面条(煮)",
+      "s_points": "2.69",
+      "thumb_image_name": "/house/food_mid/mid_photo_20152415513316.jpg",
+      "weight": "100.0"
+    }
+  ],
+  "total_page": 2
+}

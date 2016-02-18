@@ -1,0 +1,38 @@
+{
+  "members_count": 58,
+  "page": 1,
+  "total_pages": 18,
+  "unit": "分钟",
+  "mine": {
+    "user": {
+      "id": 23,
+      "nickname": "kkk",
+      "avatar_url": 23
+    },
+    "rank": 23,
+    "duration": 64,
+    "checkins_count": 58
+  },
+  "ranks": [
+    {
+      "rank": 1,
+      "user": {
+        "id": 23,
+        "nickname": "kkk",
+        "avatar_url": 23
+      },
+      "duration": 64,
+      "checkins_count": 58
+    },
+    {
+      "rank": 2,
+      "user": {
+        "id": 23,
+        "nickname": "kkk",
+        "avatar_url": 23
+      },
+      "duration": 64,
+      "checkins_count": 58
+    }
+  ]
+}

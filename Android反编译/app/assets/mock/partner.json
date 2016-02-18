@@ -1,0 +1,92 @@
+{
+  "badge": {
+    "friends": 902,
+    "hot_posts": 101,
+    "story": {
+      "id": 1,
+      "is_new": true,
+      "url": "http://one.boohee.com/events/new_stories?share=true",
+      "icon": "http://up.boohee.cn/house/u/shop/bh_milktea_drink_224/app/banner.jpg",
+      "name": "成功故事",
+      "desc": "成功的背后一定有其故事"
+      }
+  },
+
+  "sliders": [
+    {
+      "title":"轻卡 脱脂奶茶",
+      "url":"boohee://goods/803",
+      "pic_url":"http://up.boohee.cn/house/u/shop/bh_milktea_drink_224/app/banner.jpg?imageView/3/w/750/h/1/q/90",
+      "link_type":"web",
+      "order":"0"
+    },
+    {
+      "title":"超模LCD减重方案",
+      "url":"boohee://goods/801",
+      "pic_url":"http://up.boohee.cn/house/u/shop/bh_drink_sm25_280_8/app/banner.jpg?imageView/3/w/750/h/1/q/90",
+      "link_type":"web",
+      "order":"0"
+    },
+    {
+      "title":"成功故事",
+      "url":"http://up.boohee.cn/house/u/story/tong.html",
+      "pic_url":"http://up.boohee.cn/house/u/story/img/tongtong/enjoy.png",
+      "link_type":"web",
+      "order":"1"
+    },
+    {
+      "title":"薄荷暴走族",
+      "url":"http://shop.boohee.com/store/pages/wxfm",
+      "pic_url":"http://up.boohee.cn/house/u/event_banner/img/baozou.jpg",
+      "link_type":"web",
+      "order":"2"
+    }
+  ],
+  "blocks":[
+    {
+      "name":"超模25减重套餐",
+      "show_more":"http://shop.boohee.com/store/pages/shop_sm25",
+      "img":"http://up.boohee.cn/house/u/shop/ad_page/20151101/banner_v9.jpg?imageView/3/w/750/h/1/q/90",
+      "link_to":"http://up.boohee.cn/house/u/shop/ad_page/20151101/index.html"
+    },
+    {
+      "name":"我赌我会瘦",
+      "show_more":"http://status.boohee.com/api/v1/bets/",
+      "img":"http://up.boohee.cn/house/u/bet/img/s8_banner_750x375_v3.jpg",
+      "link_to":"boohee://topic_posts/我赌我会瘦"
+    }
+  ],
+  "category": {
+    "title":" 减肥",
+    "id":10,
+    "more_url":"/api/v1/app_square/10/more_events.json",
+    "show_more":true,
+    "category_type":"home",
+    "events":[
+      {
+        "title":"成功故事",
+        "desc":"找到最适合你的那一个",
+        "pic_url":"http://up.boohee.cn/house/u/one/circle/cover/small/story.jpg?imageView2/1/w/80/h/80",
+        "url":"http://shop.boohee.com/store/pages/story"
+      },
+      {
+        "title":"30天减肥计划",
+        "desc":"循序渐进，30天全新出发！",
+        "pic_url":"http://up.boohee.cn/house/u/one/circle/cover/small/30days_fitness_program.png",
+        "url":"http://status.boohee.com/api/v1/milestones/free_gate"
+      },
+      {
+        "title":"健康减肥公开课",
+        "desc":"减肥语音公开课，点开即听",
+        "pic_url":"http://up.boohee.cn/house/u/one/circle/cover/small/cctalk.jpg?imageView2/1/w/80/h/80",
+        "url":"http://status.boohee.com/s/cctalk_class?share=true"
+      },
+      {
+        "title":" 对比照",
+        "desc":"减肥是最好的整容",
+        "pic_url":"http://up.boohee.cn/house/u/one/circle/cover/small/comparison.jpg?imageView2/1/w/80/h/80",
+        "url":"boohee://topic_posts/对比照"
+      }
+    ]
+  }
+}
