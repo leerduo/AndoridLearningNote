@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_onekey_header" android:background="@color/white" android:paddingTop="@dimen/s_dp" android:paddingBottom="@dimen/s_dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView android:layout_gravity="center_vertical" android:id="@id/iv_user_avatar" android:layout_width="44.0dip" android:layout_height="44.0dip" android:layout_marginLeft="@dimen/m_dp" android:src="@drawable/default_avatar" />
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:id="@id/user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:id="@id/tv_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/xs_dp" />
+        </LinearLayout>
+        <TextView android:background="@drawable/arrow_right_selector" android:layout_width="8.0dip" android:layout_height="15.0dip" android:layout_margin="@dimen/m_dp" />
+    </LinearLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/m_dp" android:layout_marginBottom="12.0dip">
+        <TextView android:textSize="@dimen/global_font_small" android:textColor="@color/light_font_color" android:id="@id/tv_consultor_hi" android:background="@drawable/img_bubble" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/m_dp" android:text="@string/title_no_consultor" android:layout_toLeftOf="@id/iv_consultor_avatar" android:layout_centerVertical="true" />
+        <de.hdodenhof.circleimageview.CircleImageView android:id="@id/iv_consultor_avatar" android:layout_width="33.0dip" android:layout_height="33.0dip" android:layout_marginRight="@dimen/m_dp" android:src="@drawable/icon_consultor_avatar" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <include layout="@layout/header_plan_post" />
+    <LinearLayout android:orientation="vertical" android:id="@id/layout_im_message" android:paddingLeft="@dimen/global_dimens_normal" android:paddingRight="@dimen/global_dimens_normal" android:paddingBottom="@dimen/m_dp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:gravity="center_vertical" android:paddingLeft="@dimen/m_dp" android:paddingTop="@dimen/s_dp" android:paddingRight="@dimen/s_dp" android:paddingBottom="@dimen/s_dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/iv_post_type" android:background="@drawable/icon_chat_list" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:gravity="center|left" android:id="@id/tv_im_group" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:singleLine="true" android:maxLength="15" android:layout_toRightOf="@id/iv_post_type" />
+                <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:gravity="center|left" android:id="@id/tv_im_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_marginTop="5.0dip" android:singleLine="true" android:maxLength="20" android:layout_toRightOf="@id/iv_post_type" android:layout_below="@id/tv_im_group" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <TextView android:textSize="@dimen/least_font" android:textColor="@color/light_font_color" android:gravity="right" android:id="@id/tv_im_create_at" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/global_dimens_large" />
+    </LinearLayout>
+</LinearLayout>

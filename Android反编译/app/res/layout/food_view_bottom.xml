@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip">
+        <TextView android:textSize="@dimen/bigger_font" android:textColor="@color/main_font_color" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nutrition_info" android:layout_centerVertical="true" />
+        <LinearLayout android:gravity="center|right" android:id="@id/nutrition_info" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <TextView android:textSize="@dimen/main_font" android:textColor="@color/appraise_text" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/view_detail" android:drawableRight="@drawable/list_arrow" />
+        </LinearLayout>
+    </RelativeLayout>
+    <TableLayout android:orientation="vertical" android:background="@color/alph_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0dip">
+        <TableRow android:background="#7fffffcc" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/appraise_text" android:ellipsize="end" android:gravity="center|left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/notrient_element" android:maxLines="1" android:layout_weight="3.0" />
+            <TextView android:textColor="@color/appraise_text" android:gravity="center|right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/content_per_gram" android:layout_weight="5.0" />
+            <TextView android:textColor="@color/appraise_text" android:ellipsize="end" android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/traffic_light" android:maxLines="1" android:layout_weight="2.0" />
+        </TableRow>
+        <TextView android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <TableRow android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/appraise_text" android:gravity="center|left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/calory" android:layout_weight="3.0" />
+            <LinearLayout android:gravity="center|right" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0">
+                <TextView android:textColor="@color/appraise_text" android:id="@id/food_calory" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/zero_point_zero" />
+                <TextView android:textColor="@color/appraise_text" android:id="@id/kcal_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/kcal" />
+                <TextView android:textColor="@color/appraise_text" android:id="@id/backslash" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/backslash" />
+                <TextView android:textColor="@color/appraise_text" android:id="@id/calory_kilojoule" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/zero_point_zero" />
+                <TextView android:textColor="@color/appraise_text" android:id="@id/kilojoule_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/kilojoule" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0">
+                <ImageView android:id="@id/light_calory" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </TableRow>
+        <TextView android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <TableRow android:background="@color/alph_white" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/appraise_text" android:gravity="center|left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/protein" android:layout_weight="3.0" />
+            <LinearLayout android:gravity="center|right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0">
+                <TextView android:textColor="@color/appraise_text" android:id="@id/food_protein" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/zero_point_zero" />
+                <TextView android:textColor="@color/appraise_text" android:gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gram" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0">
+                <ImageView android:id="@id/light_protein" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </TableRow>
+        <TextView android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <TableRow android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/appraise_text" android:gravity="center|left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/fat" android:layout_weight="3.0" />
+            <LinearLayout android:gravity="center|right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0">
+                <TextView android:textColor="@color/appraise_text" android:id="@id/food_fat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/zero_point_zero" />
+                <TextView android:textColor="@color/appraise_text" android:gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gram" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0">
+                <ImageView android:id="@id/light_fat" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </TableRow>
+        <TextView android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <TableRow android:background="@color/alph_white" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/appraise_text" android:gravity="center|left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/carbohydrate" android:layout_weight="3.0" />
+            <LinearLayout android:gravity="center|right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0">
+                <TextView android:textColor="@color/appraise_text" android:id="@id/food_carbohydrate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/zero_point_zero" />
+                <TextView android:textColor="@color/appraise_text" android:gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gram" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0">
+                <ImageView android:id="@id/light_carbohydrate" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </TableRow>
+        <TextView android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <TableRow android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/appraise_text" android:gravity="center|left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/fiber_dietary" android:layout_weight="3.0" />
+            <LinearLayout android:gravity="center|right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="5.0">
+                <TextView android:textColor="@color/appraise_text" android:id="@id/food_fiber_dietary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/zero_point_zero" />
+                <TextView android:textColor="@color/appraise_text" android:gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gram" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0">
+                <ImageView android:id="@id/light_fiber_dietary" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </TableRow>
+        <TextView android:background="@color/gray" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    </TableLayout>
+</LinearLayout>

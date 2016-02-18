@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_header_bg" android:layout_width="fill_parent" android:layout_height="200.0dip" android:scaleType="centerCrop" />
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/user_des" android:paddingLeft="20.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="200.0dip">
+        <RelativeLayout android:layout_width="@dimen/header_avatar_width" android:layout_height="@dimen/header_avatar_height">
+            <com.boohee.widgets.CircularImage android:id="@id/header_avatar" android:layout_width="@dimen/header_avatar_width" android:layout_height="@dimen/header_avatar_height" android:src="@drawable/default_avatar" />
+            <ImageView android:id="@id/iv_official" android:layout_width="12.0dip" android:layout_height="12.0dip" android:src="@drawable/user_title_official" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/header_avatar_height">
+            <TextView android:textSize="@dimen/main_font" android:textColor="@color/white" android:id="@id/nickname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="你的昵称" />
+            <TextView android:textColor="#c0ffffff" android:id="@id/description" android:paddingTop="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="减肥宣言减肥宣言减肥宣言减肥宣言减肥宣言减肥宣言减肥宣言减肥宣言减" android:maxLines="2" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/header_bottom" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_below="@id/user_des">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:id="@id/tv_post_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="\ 133" />
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dynamic" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:id="@id/tv_diamond_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="33万" />
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/diamond" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_friends" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/small_font" android:textColor="#ff21a6f6" android:id="@id/tv_friends_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="\ 3748" />
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friend" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_fans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/small_font" android:textColor="#ff21a6f6" android:id="@id/tv_fans_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="33万" />
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fans" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

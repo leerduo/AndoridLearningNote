@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ff515151" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_finish" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="60.0dip" android:layout_marginBottom="30.0dip" />
+    <LinearLayout android:orientation="vertical" android:id="@id/progress_layout" android:background="#ff101010" android:layout_width="fill_parent" android:layout_height="88.0dip" android:layout_marginLeft="40.0dip" android:layout_marginRight="40.0dip" android:layout_marginBottom="@dimen/s_dp">
+        <TextView android:textSize="@dimen/global_font_small" android:textColor="@color/light_font_color" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/s_dp" android:text="计划进度" />
+        <TextView android:textSize="@dimen/global_dimens_large" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/tv_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/s_dp" />
+        <ProgressBar android:id="@id/lesson_progress" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="4.0dip" android:layout_marginLeft="@dimen/s_dp" android:layout_marginTop="@dimen/s_dp" android:layout_marginRight="@dimen/s_dp" android:progressDrawable="@drawable/progress_video_green" android:layout_toLeftOf="@id/tv_download_status" android:layout_centerVertical="true" style="?android:attr/progressBarStyleHorizontal" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="75.0dip" android:layout_marginLeft="40.0dip" android:layout_marginRight="40.0dip">
+        <LinearLayout android:orientation="vertical" android:background="#ff101010" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="@dimen/s_dp" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/global_font_small" android:textColor="@color/light_font_color" android:layout_gravity="center_horizontal" android:padding="@dimen/s_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/today_calory_cost" />
+            <TextView android:textSize="@dimen/global_dimens_large" android:textColor="@color/white" android:layout_gravity="center_horizontal" android:id="@id/tv_today_cost" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <RelativeLayout android:orientation="vertical" android:background="#ff101010" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/s_dp" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/global_font_small" android:textColor="@color/light_font_color" android:layout_gravity="center_horizontal" android:id="@id/tv_basic" android:padding="@dimen/s_dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="明日基础代谢/千卡" android:maxLines="1" android:singleLine="true" />
+            <TextView android:textSize="@dimen/global_dimens_large" android:textColor="@color/white" android:id="@id/tv_tomorrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/tv_basic" android:layout_centerHorizontal="true" />
+            <ImageView android:id="@id/btn_question" android:padding="@dimen/s_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_tips" android:scaleType="center" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/diamond_layout" android:background="#ff101010" android:layout_width="fill_parent" android:layout_height="75.0dip" android:layout_marginLeft="40.0dip" android:layout_marginTop="@dimen/s_dp" android:layout_marginRight="40.0dip">
+        <TextView android:textSize="@dimen/global_font_small" android:textColor="@color/light_font_color" android:layout_gravity="center_horizontal" android:padding="@dimen/s_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="获得钻石" />
+        <TextView android:textSize="@dimen/global_dimens_large" android:textColor="@color/white" android:layout_gravity="center_horizontal" android:id="@id/tv_diamond" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/global_font_small" android:textColor="@color/white" android:id="@id/tv_unfinsh_count" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="40.0dip" android:layout_marginTop="@dimen/s_dp" android:layout_marginRight="40.0dip" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/m_dp">
+        <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/btn_go_sport_plan" android:background="@drawable/bg_white_corner_btn" android:paddingLeft="@dimen/s_dp" android:paddingRight="@dimen/s_dp" android:visibility="visible" android:layout_width="112.0dip" android:layout_height="40.0dip" android:text="回计划页" />
+        <TextView android:textSize="@dimen/global_font_small" android:textColor="@color/white" android:gravity="center" android:id="@id/btn_post_status" android:background="@drawable/bg_red_corner" android:visibility="gone" android:layout_width="112.0dip" android:layout_height="40.0dip" android:layout_marginLeft="@dimen/s_dp" android:text="发动态" />
+    </LinearLayout>
+</LinearLayout>

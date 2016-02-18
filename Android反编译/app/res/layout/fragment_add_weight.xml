@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:id="@id/ll_add_weight" android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/view_pop_date_top" />
+    <include layout="@layout/view_divide_line" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="160.0dip" android:layout_weight="1.5">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <FrameLayout android:id="@id/fl_camara" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView android:layout_gravity="center" android:id="@id/iv_weight" android:layout_width="80.0dip" android:layout_height="80.0dip" android:src="@drawable/img_weight_camera" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <ImageView android:layout_gravity="center|right|top" android:id="@id/iv_delete_camera" android:visibility="gone" android:layout_width="15.0dip" android:layout_height="15.0dip" android:src="@drawable/ic_delete_camera" />
+            </FrameLayout>
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:id="@id/txt_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/s_dp" android:text="无图无真相" android:layout_below="@id/iv_weight" android:layout_centerHorizontal="true" />
+        </LinearLayout>
+    </RelativeLayout>
+    <include layout="@layout/view_divide_line" />
+    <LinearLayout android:orientation="horizontal" android:background="@color/white" android:paddingLeft="@dimen/l_dp" android:paddingRight="@dimen/l_dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="180.0dip" android:layout_weight="1.5">
+        <kankan.wheel.widget.WheelView android:id="@id/wheel_weight_integer" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <kankan.wheel.widget.WheelView android:id="@id/wheel_weight_decimal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+    <include layout="@layout/view_divide_line" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="180.0dip" android:layout_weight="7.0">
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/navbar_red" android:gravity="center" android:id="@id/txt_del" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/m_dp" android:text="删除这条记录" android:drawableLeft="@drawable/ic_trash_normal" android:drawablePadding="5.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:gravity="center" android:id="@id/txt_is_add_des" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/m_dp" android:text="未记录" android:drawablePadding="5.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</LinearLayout>

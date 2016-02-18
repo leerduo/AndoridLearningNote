@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/view_search" />
+        <com.boohee.widgets.PagerSlidingTabStrip android:textColor="@color/light_font_color" android:id="@id/sliding_tabs" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="40.0dip" app:pstsIndicatorColor="@color/actionbar_background" xmlns:app="http://schemas.android.com/apk/res-auto" />
+        <android.support.v4.view.ViewPager android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <include layout="@layout/view_divide_line" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/xxl_dp">
+            <FrameLayout android:id="@id/fl_camera" android:background="@drawable/listview_bg_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/small_font" android:textColor="@color/primary_color" android:gravity="center" android:layout_gravity="center" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="拍照记录" android:drawableLeft="@drawable/ic_post_camera_default" android:drawablePadding="@dimen/xs_dp" />
+            </FrameLayout>
+            <View android:background="@color/divider_color" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_marginTop="@dimen/s_dp" android:layout_marginBottom="@dimen/s_dp" />
+            <FrameLayout android:id="@id/fl_custom_food" android:background="@drawable/listview_bg_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/small_font" android:textColor="@color/primary_color" android:gravity="center" android:layout_gravity="center" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="自定义食物" android:drawableLeft="@drawable/ic_add_my_food" android:drawablePadding="@dimen/xs_dp" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <de.hdodenhof.circleimageview.CircleImageView android:layout_gravity="center" android:id="@id/iv_diet_cart" android:visibility="gone" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/img_default_food" />
+</FrameLayout>

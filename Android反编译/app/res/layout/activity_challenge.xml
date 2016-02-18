@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.boohee.myview.ViewPagerHeaderScroll.widget.TouchCallbackLayout android:id="@id/layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v4.view.ViewPager android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/tabs_height" />
+        <LinearLayout android:orientation="vertical" android:id="@id/header" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/include_challenge_head" android:layout_width="fill_parent" android:layout_height="@dimen/viewpager_header_height" layout="@layout/view_challenge_head" />
+            <include layout="@layout/view_divide_line" />
+            <com.boohee.widgets.PagerSlidingTabStrip android:textColor="@color/light_font_color" android:id="@id/sliding_tabs" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/tabs_height" app:pstsIndicatorColor="@color/actionbar_background" xmlns:app="http://schemas.android.com/apk/res-auto" />
+        </LinearLayout>
+    </com.boohee.myview.ViewPagerHeaderScroll.widget.TouchCallbackLayout>
+    <com.balysv.materialripple.MaterialRippleLayout android:layout_gravity="bottom" android:background="@color/white" style="@style/RippleLayout" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@color/divider_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <TextView android:textSize="@dimen/main_font" android:textColor="@color/navbar_red" android:gravity="center" android:layout_gravity="center" android:id="@id/bottom_tv" android:layout_width="wrap_content" android:layout_height="@dimen/navbar_height" android:drawablePadding="5.0dip" />
+        </LinearLayout>
+    </com.balysv.materialripple.MaterialRippleLayout>
+</FrameLayout>

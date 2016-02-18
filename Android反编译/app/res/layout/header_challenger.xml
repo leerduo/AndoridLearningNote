@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:gravity="center" android:id="@id/header_challenger_tv" android:padding="@dimen/s_dp" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include layout="@layout/view_divide_line" />
+</LinearLayout>

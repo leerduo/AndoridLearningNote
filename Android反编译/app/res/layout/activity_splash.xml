@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/img_start_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/word" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <TextView android:id="@id/tv_time" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/m_dp" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/img_start_logo">
+        <ImageView android:id="@id/ivAdContent" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/launch" android:scaleType="centerCrop" />
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/white" android:gravity="center" android:layout_gravity="bottom" android:id="@id/tv_ad_title" android:background="@color/fifty_percent_black" android:paddingLeft="@dimen/m_dp" android:paddingRight="@dimen/m_dp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip" android:drawableRight="@drawable/ic_arrow_right_disabled" />
+    </FrameLayout>
+    <ImageView android:id="@id/iv_third_logo" android:paddingTop="@dimen/toolbar_padding_top" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_market_meizu" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+</RelativeLayout>

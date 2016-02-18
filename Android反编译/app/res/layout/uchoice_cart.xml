@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/uchoice_main_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/rl_cart_hint" android:paddingBottom="40.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/gray" android:gravity="center_horizontal" android:id="@id/tv_cart_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nothing_in_cart" android:drawableTop="@drawable/ic_no_cart" android:drawablePadding="15.0dip" android:layout_centerHorizontal="true" />
+        <Button android:textSize="@dimen/main_font" android:textColor="@color/white" android:id="@id/btn_cart_go" android:background="@drawable/btn_red_selector" android:padding="5.0dip" android:layout_width="166.0dip" android:layout_height="40.0dip" android:layout_marginLeft="8.0dip" android:layout_marginTop="40.0dip" android:layout_marginRight="8.0dip" android:text="@string/go_to_store" android:layout_below="@id/tv_cart_hint" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ListView android:id="@id/lv_cart" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="0.0dip" android:cacheColorHint="#00000000" android:childDivider="@color/gray" android:divider="@color/view_divide_line" android:dividerHeight="1.0px" android:layout_weight="1.0" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_bottom_bar" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <include layout="@layout/view_divide_line" />
+        <RelativeLayout android:background="@color/white" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textColor="@color/home_container_font" android:id="@id/tv_price_all" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/count_all" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/large_font" android:textStyle="bold" android:textColor="@color/navbar_red" android:id="@id/tv_price_all_value" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@id/tv_price_all" android:layout_centerVertical="true" />
+            <Button android:textSize="@dimen/small_font" android:textColor="@color/white" android:gravity="center" android:id="@id/btn_account" android:background="@drawable/btn_red_selector" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="5.0dip" android:text="@string/account" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_delete" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <include layout="@layout/view_divide_line" />
+        <Button android:textSize="@dimen/small_font" android:textColor="@color/white" android:gravity="center" android:id="@id/btn_delete" android:background="@drawable/btn_red_selector" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_margin="5.0dip" android:text="@string/delete" />
+    </LinearLayout>
+</LinearLayout>

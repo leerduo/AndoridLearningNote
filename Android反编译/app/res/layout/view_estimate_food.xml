@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:padding="@dimen/ten_dp" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/food_img" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitXY" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ten_dp" android:layout_below="@id/food_img">
+        <View android:layout_centerVertical="true" style="@style/HorizontalWholeDivider" />
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:id="@id/food_des" android:background="@color/white" android:paddingLeft="@dimen/ten_dp" android:paddingRight="@dimen/ten_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

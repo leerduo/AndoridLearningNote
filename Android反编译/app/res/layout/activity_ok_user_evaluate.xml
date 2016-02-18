@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/img_background_flower" android:layout_alignParentBottom="true" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/ok_white_stroke_shape" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/global_dimens_small" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/ok_evaluate" android:padding="@dimen/global_dimens_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/global_dimens_small" android:layout_alignParentTop="true">
+            <de.hdodenhof.circleimageview.CircleImageView android:layout_gravity="center_horizontal" android:id="@id/iv_avatar" android:layout_width="@dimen/global_avatar_normal" android:layout_height="@dimen/global_avatar_normal" android:layout_marginTop="@dimen/global_dimens_normal" />
+            <TextView android:gravity="center_horizontal" android:id="@id/tv_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/global_dimens_small" />
+            <ScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:gravity="center_horizontal" android:id="@id/tv_introduce" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/global_dimens_normal" android:layout_marginBottom="@dimen/global_dimens_normal" />
+            </ScrollView>
+            <RelativeLayout android:id="@id/view_start" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/user_evaluate_button_margin_top" android:layout_marginBottom="@dimen/global_dimens_large">
+                <Button android:textColor="@color/common_white" android:id="@id/bt_start" android:background="@drawable/ok_button_blue_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/mobile_user_evaluate" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/global_main_bg" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:textSize="@dimen/global_font_normal" android:textColor="@color/txt_1_selector" android:gravity="center" android:id="@id/btn_bingo" android:background="@drawable/btn_red_selector" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_marginTop="@dimen/m_dp" android:layout_marginRight="@dimen/m_dp" android:text="有疑问？问问我的顾问" />
+    <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:gravity="center" android:id="@id/tv_bingo_des" android:paddingTop="@dimen/m_dp" android:paddingBottom="@dimen/xl_dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/analysis_bingo_des_2" />
+</LinearLayout>

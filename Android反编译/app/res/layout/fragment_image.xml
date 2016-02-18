@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.balysv.materialripple.MaterialRippleLayout android:id="@id/ripple" android:layout_width="fill_parent" android:layout_height="wrap_content" app:mrl_rippleColor="@color/ripple_color" app:mrl_rippleOverlay="@bool/rippleOverlay" app:mrl_rippleAlpha="0.2" app:mrl_rippleHover="@bool/rippleHover" app:mrl_rippleDelayClick="@bool/rippleDelayClick"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+</com.balysv.materialripple.MaterialRippleLayout>

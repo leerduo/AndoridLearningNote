@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/view_next" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/view_body" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="请选择你的预约时间" />
+                <LinearLayout android:orientation="vertical" android:id="@id/view_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <TextView android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="我的问题(选填)" />
+                <EditText android:gravity="center|top" android:id="@id/et_remark" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:hint="你可以在这里写下你想问的问题哦" android:minLines="3" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/view_null" android:padding="8.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:gravity="center_horizontal" android:id="@id/tv_nobooking" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="╮(╯▽╰)╭\n不好意思\n今天和明天的预定已经满了\n明天在来试一试吧！" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout android:id="@id/view_submit" android:padding="@dimen/abc_button_padding_horizontal_material" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:id="@id/bt_submit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="确定" />
+    </RelativeLayout>
+</RelativeLayout>

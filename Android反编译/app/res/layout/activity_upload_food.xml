@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip">
+        <View style="@style/HorizontalWholeDivider" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_brand" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/mine_left_margin">
+            <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/upload_edit_brand_two" />
+            <EditText android:textColorHint="@color/light_font_color" android:gravity="right" android:id="@id/et_food_brand" android:background="@null" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/upload_edit_tip" android:singleLine="true" android:layout_weight="1.0" />
+        </LinearLayout>
+        <View style="@style/SixteenHorizontalDivider" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_food_name" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/mine_left_margin">
+            <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/upload_edit_food_name" />
+            <EditText android:gravity="right" android:id="@id/et_food_name" android:background="@null" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" />
+        </LinearLayout>
+        <View style="@style/SixteenHorizontalDivider" />
+        <com.balysv.materialripple.MaterialRippleLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/GlobalRippleLayout">
+            <RelativeLayout android:id="@id/rl_food_code" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/mine_left_margin" android:layout_centerVertical="true">
+                    <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/upload_state_code" />
+                    <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/upload_state_code_tip" />
+                </LinearLayout>
+                <ImageView android:id="@id/iv_scan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/m_dp" android:src="@drawable/ic_scan" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:id="@id/tv_food_code" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/iv_scan" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </com.balysv.materialripple.MaterialRippleLayout>
+        <View style="@style/SixteenHorizontalDivider" />
+        <com.balysv.materialripple.MaterialRippleLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/GlobalRippleLayout">
+            <RelativeLayout android:id="@id/rl_food_front" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/mine_left_margin" android:layout_centerVertical="true">
+                    <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/upload_front" />
+                    <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/upload_front_tip" />
+                </LinearLayout>
+                <ImageView android:id="@id/iv_front_camera" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/m_dp" android:src="@drawable/ic_post_camera_default" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <RelativeLayout android:id="@id/rl_front" android:visibility="gone" android:layout_width="@dimen/header_avatar_width" android:layout_height="@dimen/header_avatar_height" android:layout_toLeftOf="@id/iv_front_camera" android:layout_centerVertical="true">
+                    <com.boohee.widgets.RoundedCornersImage android:id="@id/iv_front_img" android:layout_width="@dimen/list_item_avatar_width" android:layout_height="@dimen/list_item_avatar_height" android:src="@drawable/default_avatar" android:layout_centerInParent="true" />
+                    <ImageView android:id="@id/iv_front_delete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_remove_btn" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </com.balysv.materialripple.MaterialRippleLayout>
+        <View style="@style/SixteenHorizontalDivider" />
+        <com.balysv.materialripple.MaterialRippleLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/GlobalRippleLayout">
+            <RelativeLayout android:id="@id/rl_food_back" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/mine_left_margin" android:layout_centerVertical="true">
+                    <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/upload_back" />
+                    <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/upload_back_tip" />
+                </LinearLayout>
+                <ImageView android:id="@id/iv_back_camera" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/m_dp" android:src="@drawable/ic_post_camera_default" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <RelativeLayout android:id="@id/rl_back" android:visibility="gone" android:layout_width="@dimen/header_avatar_width" android:layout_height="@dimen/header_avatar_height" android:layout_toLeftOf="@id/iv_back_camera" android:layout_centerVertical="true">
+                    <com.boohee.widgets.RoundedCornersImage android:id="@id/iv_back_img" android:layout_width="@dimen/list_item_avatar_width" android:layout_height="@dimen/list_item_avatar_height" android:src="@drawable/default_avatar" android:layout_centerInParent="true" />
+                    <ImageView android:id="@id/iv_back_delete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_remove_btn" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </com.balysv.materialripple.MaterialRippleLayout>
+        <View style="@style/HorizontalWholeDivider" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="folder_cover_size">82.0dip</dimen>
+    <dimen name="image_size">120.0dip</dimen>
+    <dimen name="space_size">3.0dip</dimen>
+</resources>

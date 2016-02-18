@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.balysv.materialripple.MaterialRippleLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/RippleLayout"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_my_page" android:padding="@dimen/m_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="我的主页" android:drawableLeft="@drawable/ic_my_page" android:drawablePadding="@dimen/s_dp" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+    <View android:background="@color/divider_color" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_margin="@dimen/s_dp" />
+    <com.balysv.materialripple.MaterialRippleLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/RippleLayout"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_find_friends" android:padding="@dimen/m_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="找朋友" android:drawableLeft="@drawable/ic_add_friend" android:drawablePadding="@dimen/s_dp" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+</LinearLayout>

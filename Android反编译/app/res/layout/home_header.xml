@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/view_divide_line" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="78.0dip">
+        <com.balysv.materialripple.MaterialRippleLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" app:mrl_rippleColor="@color/ripple_color" app:mrl_rippleOverlay="@bool/rippleOverlay" app:mrl_rippleAlpha="0.2" app:mrl_rippleHover="@bool/rippleHover" app:mrl_rippleDelayClick="@bool/rippleDelayClick" xmlns:app="http://schemas.android.com/apk/res-auto">
+            <RelativeLayout android:layout_gravity="center" android:id="@id/rl_find_friend" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/least_font" android:textColor="@color/main_font_color" android:gravity="center" android:layout_gravity="center" android:padding="@dimen/s_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="找朋友" android:drawableTop="@drawable/ic_frends" android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </com.balysv.materialripple.MaterialRippleLayout>
+        <com.balysv.materialripple.MaterialRippleLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" app:mrl_rippleColor="@color/ripple_color" app:mrl_rippleOverlay="@bool/rippleOverlay" app:mrl_rippleAlpha="0.2" app:mrl_rippleHover="@bool/rippleHover" app:mrl_rippleDelayClick="@bool/rippleDelayClick" xmlns:app="http://schemas.android.com/apk/res-auto">
+            <RelativeLayout android:layout_gravity="center" android:id="@id/rl_hot" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/least_font" android:textColor="@color/main_font_color" android:gravity="center" android:padding="@dimen/s_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="热门话题" android:drawableTop="@drawable/ic_hot" android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </com.balysv.materialripple.MaterialRippleLayout>
+        <com.balysv.materialripple.MaterialRippleLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" app:mrl_rippleColor="@color/ripple_color" app:mrl_rippleOverlay="@bool/rippleOverlay" app:mrl_rippleAlpha="0.2" app:mrl_rippleHover="@bool/rippleHover" app:mrl_rippleDelayClick="@bool/rippleDelayClick" xmlns:app="http://schemas.android.com/apk/res-auto">
+            <RelativeLayout android:layout_gravity="center" android:id="@id/rl_my_timeline" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/least_font" android:textColor="@color/main_font_color" android:gravity="center" android:padding="@dimen/s_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="我的动态" android:drawableTop="@drawable/ic_trends" android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </com.balysv.materialripple.MaterialRippleLayout>
+        <com.balysv.materialripple.MaterialRippleLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" app:mrl_rippleColor="@color/ripple_color" app:mrl_rippleOverlay="@bool/rippleOverlay" app:mrl_rippleAlpha="0.2" app:mrl_rippleHover="@bool/rippleHover" app:mrl_rippleDelayClick="@bool/rippleDelayClick" xmlns:app="http://schemas.android.com/apk/res-auto">
+            <RelativeLayout android:layout_gravity="center" android:id="@id/rl_topic" android:background="@drawable/listview_bg_selector" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/least_font" android:textColor="@color/main_font_color" android:gravity="center" android:padding="@dimen/s_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="打卡" android:drawableTop="@drawable/ic_sign" android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </LinearLayout>
+</LinearLayout>

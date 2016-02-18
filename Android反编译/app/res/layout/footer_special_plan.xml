@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/add_layout" android:paddingBottom="@dimen/m_dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/global_font_small" android:textColor="@color/light_font_color" android:gravity="center" android:id="@id/tv_tips" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/special_tips" />
+    <com.balysv.materialripple.MaterialRippleLayout android:layout_marginLeft="@dimen/m_dp" android:layout_marginTop="@dimen/xl_dp" android:layout_marginRight="@dimen/m_dp" android:layout_below="@id/tv_tips" style="@style/RippleLayout">
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_add_sport" android:background="@drawable/bg_video_green_corner" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="+添加运动" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+</RelativeLayout>

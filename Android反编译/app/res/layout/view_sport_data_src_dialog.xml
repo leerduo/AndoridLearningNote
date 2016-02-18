@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/corner_white_bg" android:paddingTop="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/l_dp" android:layout_marginRight="@dimen/l_dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/bigger_font" android:textColor="@color/main_font_color" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="请选择数据源" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/l_dp" android:layout_marginBottom="@dimen/m_dp">
+        <Button android:textSize="@dimen/main_font_size" android:textColor="@color/main_font_color" android:id="@id/btn_miband" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/m_dp" android:text="小米手环" android:drawableTop="@drawable/logo_miband" android:drawablePadding="@dimen/s_dp" />
+        <Button android:textSize="@dimen/main_font_size" android:textColor="@color/main_font_color" android:id="@id/btn_ledongli" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="乐动力" android:drawableTop="@drawable/logo_ledongli" android:drawablePadding="@dimen/s_dp" />
+    </LinearLayout>
+    <include layout="@layout/view_divide_line" />
+    <TextView android:textSize="@dimen/bigger_font" android:textColor="@color/main_font_color" android:gravity="center" android:id="@id/btn_cancel" android:background="@drawable/bottom_corner_white_bg" android:padding="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cancel" />
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="112.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_img" android:layout_width="80.0dip" android:layout_height="80.0dip" android:layout_margin="@dimen/m_dp" android:scaleType="centerCrop" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/iv_img">
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:id="@id/tv_lesson_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/m_dp" />
+        <TextView android:textSize="@dimen/global_font_small" android:textColor="@color/main_font_color" android:id="@id/tv_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/s_dp" />
+        <TextView android:textSize="@dimen/global_font_small" android:textColor="@color/light_font_color" android:id="@id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/m_dp" />
+    </LinearLayout>
+    <TextView android:textColor="@color/navbar_red" android:gravity="center" android:id="@id/tv_send_status" android:padding="@dimen/m_dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="发动态" android:drawableLeft="@drawable/ic_add_post" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

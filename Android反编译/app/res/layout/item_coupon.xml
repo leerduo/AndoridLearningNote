@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/img_discount_bg_l" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/bigger_font" android:textColor="@color/dark_gray" android:id="@id/tv_coupon_name" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:id="@id/tv_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mine_top_margin" android:text="使用期限：" android:layout_below="@id/tv_coupon_name" android:layout_alignLeft="@id/tv_coupon_name" />
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:id="@id/tv_deadline" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/tv_text" android:layout_alignTop="@id/tv_text" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:background="@drawable/img_discount_bg_r" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/bigger_font" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_money" android:layout_width="wrap_content" android:layout_height="fill_parent" android:drawableLeft="@drawable/ic_rmb" android:drawablePadding="3.0dip" />
+    </LinearLayout>
+</LinearLayout>

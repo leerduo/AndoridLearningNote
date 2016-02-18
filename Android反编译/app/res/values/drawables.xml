@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="default_pressed">#fffff5d6</item>
+    <item type="drawable" name="fit_level">#ffcff1ff</item>
+    <item type="drawable" name="gray">#ffc0c0c0</item>
+    <item type="drawable" name="notification_template_icon_bg">#3333b5e5</item>
+    <item type="drawable" name="transparent">#00000000</item>
+    <item type="drawable" name="white">#ffffffff</item>
+</resources>

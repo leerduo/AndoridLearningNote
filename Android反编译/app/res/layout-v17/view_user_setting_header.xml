@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:layout_marginTop="10.0dip" style="@style/HorizontalWholeDivider" />
+    <com.balysv.materialripple.MaterialRippleLayout android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/RippleLayout">
+        <RelativeLayout android:id="@id/rl_profile" android:background="@color/white" android:paddingLeft="@dimen/m_dp" android:paddingTop="10.0dip" android:paddingRight="@dimen/m_dp" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.joooonho.SelectableRoundedImageView android:id="@id/user_icon" android:layout_width="60.0dip" android:layout_height="60.0dip" android:scaleType="centerCrop" android:layout_centerVertical="true" app:sriv_left_top_corner_radius="6.0dip" app:sriv_right_top_corner_radius="6.0dip" app:sriv_left_bottom_corner_radius="6.0dip" app:sriv_right_bottom_corner_radius="6.0dip" />
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_toRightOf="@id/user_icon" android:layout_centerVertical="true">
+                <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:id="@id/tv_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:id="@id/tv_edit_profile" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/change_user_profile" android:singleLine="true" />
+            </LinearLayout>
+            <TextView android:layout_centerVertical="true" style="@style/UserProfileTextValueStyle" />
+        </RelativeLayout>
+    </com.balysv.materialripple.MaterialRippleLayout>
+    <View style="@style/HorizontalWholeDivider" />
+    <LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.balysv.materialripple.MaterialRippleLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/RippleLayout">
+            <RelativeLayout android:id="@id/rl_order" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/iv_order_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_shop_order" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+                <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:id="@id/tv_order_tab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/order" android:layout_below="@id/iv_order_icon" android:layout_centerHorizontal="true" />
+                <ImageView android:id="@id/iv_order_index" android:visibility="gone" android:layout_width="8.0dip" android:layout_height="8.0dip" android:src="@drawable/ic_circle_tag_btn_s" android:scaleType="centerCrop" android:layout_toRightOf="@id/tv_order_tab" android:layout_alignParentTop="true" android:layout_toEndOf="@id/tv_order_tab" />
+            </RelativeLayout>
+        </com.balysv.materialripple.MaterialRippleLayout>
+        <com.balysv.materialripple.MaterialRippleLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/RippleLayout">
+            <RelativeLayout android:id="@id/rl_address" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/iv_address_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_shop_location" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+                <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:id="@id/tv_address_tab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/address_list" android:layout_below="@id/iv_address_icon" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </com.balysv.materialripple.MaterialRippleLayout>
+        <com.balysv.materialripple.MaterialRippleLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/RippleLayout">
+            <RelativeLayout android:id="@id/rl_coupon" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/iv_coupon_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_shop_coupon" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+                <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:id="@id/tv_coupon_tab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/coupon" android:layout_below="@id/iv_coupon_icon" android:layout_centerHorizontal="true" />
+                <ImageView android:id="@id/iv_coupon_index" android:visibility="gone" android:layout_width="8.0dip" android:layout_height="8.0dip" android:src="@drawable/ic_circle_tag_btn_s" android:scaleType="centerCrop" android:layout_toRightOf="@id/tv_coupon_tab" android:layout_alignParentTop="true" android:layout_toEndOf="@id/tv_coupon_tab" />
+            </RelativeLayout>
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </LinearLayout>
+    <View style="@style/HorizontalWholeDivider" />
+</LinearLayout>

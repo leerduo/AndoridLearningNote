@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.handmark.pulltorefresh.library.PullToRefreshListView android:scrollbarStyle="outsideOverlay" android:id="@id/listview" android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="-2.0dip" android:drawSelectorOnTop="false" android:scrollingCache="true" android:layout_weight="1.0" android:headerDividersEnabled="false" android:footerDividersEnabled="true" ptr:ptrHeaderBackground="@color/global_main_bg" ptr:ptrHeaderTextColor="@android:color/darker_gray" ptr:ptrShowIndicator="false" ptr:ptrOverScroll="false" ptr:ptrAnimationStyle="flip" ptr:ptrScrollingWhileRefreshingEnabled="true" style="@style/PullToRefreshListViewStyle"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ptr="http://schemas.android.com/apk/res-auto" />
+    <LinearLayout android:padding="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textSize="@dimen/main_font_size" android:textColor="@color/white" android:id="@id/btn_go_home" android:background="@drawable/shape_circle_tag_select" android:padding="@dimen/s_dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/go_home" />
+    </LinearLayout>
+</LinearLayout>

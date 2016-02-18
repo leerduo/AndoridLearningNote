@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/large_font" android:textColor="@color/main_font_color" android:gravity="center_vertical" android:id="@id/menu_cooking" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.5" />
+    <TextView android:textSize="@dimen/main_font" android:textColor="@color/appraise_text" android:id="@id/menu_appraise" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.4" />
+    <TextView android:textSize="@dimen/large_font" android:textColor="@color/main_font_color" android:id="@id/menu_material" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.5" />
+    <TextView android:textSize="@dimen/main_font" android:textColor="@color/appraise_text" android:id="@id/menu_material_detail" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.4" />
+</LinearLayout>

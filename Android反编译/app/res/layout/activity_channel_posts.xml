@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/timeline_view" />
+    <android.support.design.widget.FloatingActionButton android:layout_gravity="bottom|center|right" android:id="@id/fab_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/m_dp" android:layout_marginBottom="@dimen/m_dp" android:src="@drawable/ic_add_post_big" app:elevation="2.0dip" app:fabSize="normal" app:pressedTranslationZ="8.0dip" app:backgroundTint="@color/primary_color" xmlns:app="http://schemas.android.com/apk/res-auto" />
+</FrameLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_top" android:background="@drawable/default_list_selector" android:padding="@dimen/s_dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.boohee.widgets.RoundedCornersImage android:id="@id/iv_avatar" android:layout_width="@dimen/list_item_avatar_width" android:layout_height="@dimen/list_item_avatar_height" android:layout_marginRight="@dimen/s_dp" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/timeline_nickname" android:textColor="@color/timeline_nickname" android:id="@id/tv_nickname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:singleLine="true" />
+            <TextView android:textSize="@dimen/timeline_date" android:textColor="@color/timeline_date" android:gravity="right" android:id="@id/tv_post_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+        <ImageView android:background="@drawable/arrow_right_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <include layout="@layout/view_divide_line" />
+    <lecho.lib.hellocharts.view.LineChartView android:id="@id/linechart" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="200.0dip" />
+    <include layout="@layout/view_divide_line" />
+    <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:orientation="vertical" android:id="@id/tv_comment_count" android:paddingLeft="@dimen/m_dp" android:paddingTop="@dimen/s_dp" android:paddingBottom="@dimen/s_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <include layout="@layout/view_divide_line" />
+</LinearLayout>

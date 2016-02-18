@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox android:gravity="center" android:id="@id/view_city" android:background="@drawable/ok_city_item_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/global_dimens_small" android:button="@null" android:minHeight="@dimen/xxl_dp" android:layout_centerInParent="true" />
+</RelativeLayout>

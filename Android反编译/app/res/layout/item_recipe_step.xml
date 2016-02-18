@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/ll_category_item" android:background="@color/white" android:paddingLeft="@dimen/s_dp" android:paddingTop="@dimen/s_dp" android:paddingBottom="@dimen/s_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="44.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/global_font_large" android:textColor="@color/light_font_color" android:gravity="top" android:id="@id/tv_position" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/s_dp" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <TextView android:textSize="@dimen/global_font_normal" android:id="@id/tv_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/s_dp" android:layout_marginRight="@dimen/m_dp" android:layout_toLeftOf="@id/iv_show" android:layout_toRightOf="@id/tv_position" />
+    <ImageView android:id="@id/iv_show" android:layout_width="100.0dip" android:layout_height="80.0dip" android:layout_marginRight="@dimen/s_dp" android:scaleType="centerCrop" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

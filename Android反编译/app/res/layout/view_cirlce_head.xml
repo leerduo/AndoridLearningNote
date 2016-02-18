@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.boohee.widgets.CircularImage android:id="@id/iv_circle_thumb" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_margin="16.0dip" android:layout_centerVertical="true" />
+    <RelativeLayout android:gravity="center_vertical" android:orientation="vertical" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/iv_circle_thumb" android:layout_centerVertical="true">
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:gravity="center" android:id="@id/tv_circle_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:text="" />
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/tv_circle_members" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="" android:layout_toRightOf="@id/tv_circle_name" android:layout_alignBottom="@id/tv_circle_name" />
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/tv_circle_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_below="@id/tv_circle_name" android:layout_alignLeft="@id/accountLayout" />
+    </RelativeLayout>
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:src="@drawable/list_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

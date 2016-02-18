@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <RadioGroup android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RadioButton android:id="@id/rbtn_cooked" android:checked="true" android:text="@string/estimate_food_cooked" style="@style/style_estimate" />
+            <RadioButton android:id="@id/rbtn_noodles" android:text="@string/estimate_food_noodles" style="@style/style_estimate" />
+            <RadioButton android:id="@id/rbtn_mantou" android:text="@string/estimate_food_mantou" style="@style/style_estimate" />
+            <RadioButton android:id="@id/rbtn_baozi" android:text="@string/estimate_food_baozi" style="@style/style_estimate" />
+            <RadioButton android:id="@id/rbtn_bread" android:text="@string/estimate_food_bread" style="@style/style_estimate" />
+            <RadioButton android:id="@id/rbtn_cereal" android:text="@string/estimate_food_cereal" style="@style/style_estimate" />
+            <RadioButton android:id="@id/rbtn_rice" android:text="@string/estimate_food_rice" style="@style/style_estimate" />
+        </RadioGroup>
+    </ScrollView>
+    <ScrollView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="4.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </ScrollView>
+</LinearLayout>

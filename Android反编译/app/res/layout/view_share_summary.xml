@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:gravity="center" android:id="@id/tv_date" android:background="@color/white" android:padding="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ImageView android:id="@id/iv_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    <ImageView android:id="@id/iv_boohee_des" android:background="@drawable/ic_share_footer" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

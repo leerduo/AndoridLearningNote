@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="76.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/tv_signin" android:background="@drawable/listview_bg_selector" android:clickable="true" android:layout_width="0.0dip" android:layout_height="50.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/small_font" android:textColor="#ff1bd1a5" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="打卡" android:maxLines="1" android:singleLine="true" android:drawableRight="@drawable/arrow_right_selector" android:drawablePadding="4.0dip" android:drawableEnd="@drawable/arrow_right_selector" />
+    </LinearLayout>
+</LinearLayout>

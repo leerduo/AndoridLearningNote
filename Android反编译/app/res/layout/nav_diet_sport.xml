@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/ll_diet_sport_nav" android:background="#ff554743" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:id="@id/ll_nav_breakfast" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/least_font" android:textColor="@color/txt_1_selector" android:gravity="center" android:paddingBottom="@dimen/padding_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nav_break" android:drawableTop="@drawable/ic_calorie_breakfast_selector" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/ll_nav_lunch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/least_font" android:textColor="@color/txt_1_selector" android:gravity="center" android:paddingBottom="@dimen/padding_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nav_lunch" android:drawableTop="@drawable/ic_calorie_lunch_selector" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/ll_nav_dinner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/least_font" android:textColor="@color/txt_1_selector" android:gravity="center" android:paddingBottom="@dimen/padding_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nav_dinner" android:drawableTop="@drawable/ic_calorie_supper_selector" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/ll_nav_snacks" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/least_font" android:textColor="@color/txt_1_selector" android:gravity="center" android:paddingBottom="@dimen/padding_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nav_snacks" android:drawableTop="@drawable/ic_calorie_snack_selector" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/ll_nav_sport" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/least_font" android:textColor="@color/txt_1_selector" android:gravity="center" android:paddingBottom="@dimen/padding_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nav_sport" android:drawableTop="@drawable/ic_calorie_sport_selector" />
+    </LinearLayout>
+</LinearLayout>

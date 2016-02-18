@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_tool_cart" android:id="@id/action_cart" android:title="@string/cart" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_action_overflow" android:id="@id/action_more" android:title="@string/action_more" app:showAsAction="always">
+        <menu>
+            <item android:icon="@drawable/ic_order2" android:id="@id/action_order" android:title="@string/order" android:actionLayout="@layout/menu_badge" app:showAsAction="always" />
+            <item android:icon="@drawable/ic_discount" android:id="@id/action_coupon" android:title="优惠券" app:showAsAction="always" />
+            <item android:icon="@drawable/ic_tool_location" android:id="@id/action_address" android:title="收货地址" app:showAsAction="always" />
+            <item android:icon="@drawable/ic_about_shop" android:id="@id/action_about_shop" android:title="关于商店" app:showAsAction="always" />
+            <item android:icon="@drawable/ic_action_config" android:id="@id/action_config" android:title="@string/action_config" app:showAsAction="always" />
+            <item android:icon="@drawable/ic_action_logout" android:id="@id/action_login_status" android:title="@string/logout" app:showAsAction="always" />
+        </menu>
+    </item>
+</menu>

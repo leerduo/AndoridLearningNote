@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/consultor_layout" android:paddingLeft="@dimen/m_dp" android:paddingTop="36.0dip" android:paddingRight="@dimen/m_dp" android:paddingBottom="24.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <de.hdodenhof.circleimageview.CircleImageView android:layout_gravity="center_vertical" android:id="@id/iv_consultor_avatar" android:layout_width="40.0dip" android:layout_height="40.0dip" />
+    <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/tv_consultor_content" android:background="@drawable/ic_dialogue" android:padding="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:maxLines="2" android:layout_weight="1.0" />
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:background="@color/white" android:paddingLeft="10.0dip" android:paddingTop="20.0dip" android:paddingRight="10.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/ll_lesson_time" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/least_font2" android:textColor="@color/light_font_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_lesson_time" android:singleLine="true" />
+                <TextView android:textSize="@dimen/medium_font" android:textColor="@color/light_font_color" android:gravity="center" android:id="@id/tv_lesson_time" android:background="@drawable/bg_gray_circle" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0">
+                <TextView android:textSize="@dimen/main_font" android:textColor="@color/navbar_red" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_calory_tip" />
+                <TextView android:textSize="55.0dip" android:textColor="@color/navbar_red" android:gravity="center" android:id="@id/tv_lesson_calory" android:background="@drawable/bg_red_circle" android:layout_width="107.0dip" android:layout_height="107.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="\ 999" android:singleLine="true" android:maxLength="3" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/ll_lesson_number" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/least_font2" android:textColor="@color/light_font_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_lesson_number" android:singleLine="true" />
+                <TextView android:textSize="@dimen/medium_font" android:textColor="@color/light_font_color" android:gravity="center" android:id="@id/tv_lesson_number" android:background="@drawable/bg_gray_circle" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@id/iv_completed" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/completed_icon" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <TextView android:textColor="#ffd0d0d0" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="───        今日训练        ───" />
+</LinearLayout>

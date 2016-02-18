@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/layout_message" android:paddingLeft="@dimen/global_dimens_normal" android:paddingRight="@dimen/global_dimens_normal" android:paddingBottom="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/iv_post_type" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:gravity="center|left" android:layout_gravity="center" android:id="@id/tv_content" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_weight="1.0" />
+            <ImageView android:id="@id/iv_top" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <TextView android:textSize="@dimen/least_font" android:textColor="@color/light_font_color" android:gravity="right" android:id="@id/tv_create_at" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/global_dimens_large" />
+</LinearLayout>

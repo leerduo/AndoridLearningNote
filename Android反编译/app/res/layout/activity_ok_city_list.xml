@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@drawable/ok_white_stroke_shape" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/s_dp" android:layout_weight="1.0">
+        <ListView android:layout_gravity="center" android:id="@id/lv_city" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" />
+        <TextView android:textSize="60.0sp" android:textColor="@color/sky_blue_color" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_letter_dialog" android:background="@color/white" android:visibility="invisible" android:layout_width="80.0dip" android:layout_height="80.0dip" android:alpha="0.7" />
+        <com.boohee.one.onekey.widget.sortlistview.SideBar android:layout_gravity="center|right" android:id="@id/sidebar" android:layout_width="@dimen/l_dp" android:layout_height="fill_parent" android:layout_marginTop="@dimen/xxl_dp" android:layout_marginBottom="@dimen/xxl_dp" />
+    </FrameLayout>
+    <RelativeLayout android:id="@id/view_next" android:paddingTop="@dimen/s_dp" android:paddingBottom="@dimen/s_dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textColor="@color/common_white" android:id="@id/bt_next" android:background="@drawable/ok_button_blue_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_marginRight="@dimen/m_dp" android:text="@string/city_next" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

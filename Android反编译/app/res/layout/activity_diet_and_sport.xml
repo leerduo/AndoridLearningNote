@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_top_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/view_divide_line" />
+        <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:id="@id/ll_calory_distribute" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <LinearLayout android:orientation="vertical" android:id="@id/ll_record" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <include android:id="@id/ll_card_breakfast" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/view_card_detail" />
+                    <include android:id="@id/ll_card_snacks_breakfast" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/view_card_detail" />
+                    <include android:id="@id/ll_card_lunch" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/view_card_detail" />
+                    <include android:id="@id/ll_card_snacks_lunch" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/view_card_detail" />
+                    <include android:id="@id/ll_card_dinner" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/view_card_detail" />
+                    <include android:id="@id/ll_card_snacks_dinner" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/view_card_detail" />
+                    <include android:id="@id/ll_card_sport" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/view_card_detail" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_today_analysis" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <Button android:textSize="@dimen/main_font" android:textColor="@color/white" android:id="@id/btn_today_analysis" android:background="@drawable/btn_green_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/m_dp" android:text="完成记录，去看评分" />
+                    <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:paddingBottom="@dimen/m_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="完整记录三餐分析才准确" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_record_null" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:id="@id/tv_name" android:padding="@dimen/m_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/l_dp" android:text="@string/recod_null" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <include layout="@layout/nav_diet_sport" />
+    </LinearLayout>
+    <com.boohee.myview.DietPopView android:id="@id/diet_pop_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</FrameLayout>

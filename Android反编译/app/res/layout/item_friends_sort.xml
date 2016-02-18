@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:background="@color/white" android:paddingLeft="@dimen/m_dp" android:paddingRight="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:gravity="center|left" android:id="@id/tv_sort" android:paddingTop="@dimen/m_dp" android:paddingBottom="@dimen/m_dp" android:layout_width="33.0dip" android:layout_height="wrap_content" android:maxLength="5" />
+    <de.hdodenhof.circleimageview.CircleImageView android:id="@id/iv_photo" android:paddingTop="@dimen/m_dp" android:paddingBottom="@dimen/l_dp" android:layout_width="@dimen/list_item_avatar_width" android:layout_height="@dimen/list_item_avatar_height" android:layout_marginLeft="@dimen/s_dp" android:scaleType="centerCrop" />
+    <RelativeLayout android:layout_gravity="center_vertical" android:paddingTop="@dimen/l_dp" android:paddingBottom="@dimen/l_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_marginRight="@dimen/m_dp" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/main_font_size" android:textColor="@color/main_font_color" android:id="@id/tv_username" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:gravity="center_vertical" android:id="@id/tv_walk_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+        <ProgressBar android:id="@id/progressbar" android:layout_width="fill_parent" android:layout_height="@dimen/xs_dp" android:layout_marginTop="@dimen/s_dp" android:progressDrawable="@drawable/walking_step_progress_colors" android:layout_below="@id/tv_username" style="@android:style/Widget.ProgressBar.Horizontal" />
+    </RelativeLayout>
+    <FrameLayout android:layout_gravity="center_vertical" android:layout_width="50.0dip" android:layout_height="fill_parent">
+        <CheckBox android:textSize="@dimen/timeline_date" android:textColor="@color/normal_gray" android:gravity="start|center" android:layout_gravity="center" android:id="@id/cb_fav" android:paddingLeft="4.0dip" android:paddingTop="@dimen/mine_top_margin" android:paddingBottom="@dimen/mine_top_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:button="@drawable/fav_selector" android:text="\ 0" android:drawablePadding="4.0dip" />
+        <TextView android:layout_gravity="center|right|top" android:id="@id/iv_tag" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

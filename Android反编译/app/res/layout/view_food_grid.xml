@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/light_gray" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.100000024dip" android:layout_marginBottom="0.100000024dip">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/gridLayout1" android:background="@color/white" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="0.100000024dip" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:id="@id/title1" android:padding="@dimen/mine_top_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:id="@id/subTitle1" android:paddingLeft="@dimen/mine_top_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <ImageView android:layout_gravity="center" android:id="@id/image1" android:layout_width="160.0dip" android:layout_height="74.0dip" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/gridLayout2" android:background="@color/white" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:id="@id/title2" android:padding="@dimen/mine_top_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:id="@id/subTitle2" android:paddingLeft="@dimen/mine_top_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <ImageView android:layout_gravity="center" android:id="@id/image2" android:layout_width="160.0dip" android:layout_height="74.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="0.100000024dip">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/gridLayout3" android:background="@color/white" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="0.100000024dip" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:id="@id/title3" android:padding="@dimen/mine_top_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:id="@id/subTitle3" android:paddingLeft="@dimen/mine_top_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <ImageView android:layout_gravity="center" android:id="@id/image3" android:layout_width="160.0dip" android:layout_height="74.0dip" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/gridLayout4" android:background="@color/white" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:id="@id/title4" android:padding="@dimen/mine_top_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:id="@id/subTitle4" android:paddingLeft="@dimen/mine_top_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <ImageView android:layout_gravity="center" android:id="@id/image4" android:layout_width="160.0dip" android:layout_height="74.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

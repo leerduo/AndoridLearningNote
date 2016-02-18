@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/uchoice_main_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableLayout android:orientation="vertical" android:id="@id/order_infos" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TableRow android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/order_num" />
+                <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:id="@id/order_num_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:singleLine="true" />
+            </TableRow>
+            <TableRow android:gravity="right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/created_at" />
+                <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:id="@id/created_at_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:singleLine="true" />
+            </TableRow>
+        </TableRow>
+        <TableRow android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/order_state" />
+                <TextView android:textSize="@dimen/main_font" android:textColor="@color/navbar_red" android:id="@id/order_state_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:singleLine="true" />
+            </TableRow>
+            <TableRow android:gravity="right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/price_all" />
+                <TextView android:textSize="@dimen/main_font" android:textColor="@color/navbar_red" android:id="@id/price_all_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" />
+            </TableRow>
+        </TableRow>
+    </TableLayout>
+    <include layout="@layout/view_divide_line" />
+    <View android:background="@drawable/stripe_address" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="8.0dip" />
+    <RelativeLayout android:background="@color/white" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:id="@id/tv_real_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="收件人：" />
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:id="@id/tv_phone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="电话:" android:layout_alignBottom="@id/tv_real_name" android:layout_alignParentRight="true" />
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:id="@id/tv_address_details" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="收货地址：" android:layout_below="@id/tv_real_name" android:layout_alignLeft="@id/tv_real_name" />
+    </RelativeLayout>
+    <View android:background="@drawable/stripe_address" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginBottom="8.0dip" />
+    <include layout="@layout/view_divide_line" />
+</LinearLayout>

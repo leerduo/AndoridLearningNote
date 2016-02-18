@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/uchoice_list_selector" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/order_detail_items" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_shipment_info" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0dip">
+        <TextView android:textColor="@color/main_font_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/shipments" />
+        <TextView android:textColor="@color/navbar_red" android:id="@id/unshipped" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/unshipped" android:singleLine="true" />
+    </LinearLayout>
+    <View android:background="@color/view_divide_line" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</LinearLayout>

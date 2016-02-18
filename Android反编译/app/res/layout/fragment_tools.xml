@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.handmark.pulltorefresh.library.PullToRefreshScrollView android:orientation="vertical" android:id="@id/mine_refreshview" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fastScrollEnabled="false" app:ptrHeaderBackground="@color/global_main_bg" app:ptrHeaderTextColor="@android:color/darker_gray" app:ptrOverScroll="false" app:ptrAnimationStyle="flip" app:ptrScrollingWhileRefreshingEnabled="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/fl_top_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/loading_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+            <android.support.v4.view.ViewPager android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.viewpagerindicator.CirclePageIndicator android:layout_gravity="bottom|center" android:id="@id/indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" app:strokeWidth="0.0dip" app:fillColor="@color/white" app:pageColor="@color/twenty_percent_white" app:radius="@dimen/intro_indicator_radius" />
+            <include layout="@layout/fragment_tools_top_empty" />
+        </FrameLayout>
+        <com.balysv.materialripple.MaterialRippleLayout android:background="@color/white" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/GlobalRippleLayout">
+            <RelativeLayout android:id="@id/rl_diet_sport" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/iv_diet_sport" android:background="@drawable/ic_tool_calorie" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/mine_left_margin" android:layout_centerVertical="true" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/iv_diet_sport" android:layout_centerVertical="true">
+                    <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_activity_diet_and_sport" />
+                    <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:id="@id/tv_can_calory" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/xs_dp" android:text="记录日常饮食和运动" />
+                </LinearLayout>
+                <ImageView android:paddingRight="@dimen/m_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/list_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </com.balysv.materialripple.MaterialRippleLayout>
+        <View android:background="@color/divider_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="@dimen/xxxl_dp" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.balysv.materialripple.MaterialRippleLayout android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/GlobalRippleLayout">
+                <RelativeLayout android:id="@id/rl_weight" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/iv_weight" android:background="@drawable/ic_tool_weight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/mine_left_margin" android:layout_centerVertical="true" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/iv_weight" android:layout_centerVertical="true">
+                        <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mine_home_feature_weight" />
+                        <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:id="@id/tv_weight_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/xs_dp" android:text="@string/mine_home_weight_des" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+            <View android:background="@color/divider_line_color" android:layout_width="0.30000007dip" android:layout_height="fill_parent" android:layout_marginTop="@dimen/m_dp" android:layout_marginBottom="@dimen/m_dp" />
+            <com.balysv.materialripple.MaterialRippleLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/GlobalRippleLayout">
+                <RelativeLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/rl_add_weight" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/least_font" android:textColor="@color/light_gray" android:paddingLeft="@dimen/mine_left_margin" android:paddingRight="@dimen/mine_left_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add_weight" android:drawableTop="@drawable/ic_add_weight" android:layout_centerInParent="true" />
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+        </LinearLayout>
+        <View android:background="@color/divider_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="@dimen/xxxl_dp" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.balysv.materialripple.MaterialRippleLayout android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/GlobalRippleLayout">
+                <RelativeLayout android:id="@id/rl_measure" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/iv_measure" android:background="@drawable/ic_tool_dimension" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/mine_left_margin" android:layout_centerVertical="true" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/iv_measure" android:layout_centerVertical="true">
+                        <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mine_home_feature_girth" />
+                        <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:id="@id/tv_measure_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/xs_dp" android:text="@string/tools_measure_des" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+            <View android:background="@color/divider_line_color" android:layout_width="0.30000007dip" android:layout_height="fill_parent" android:layout_marginTop="@dimen/m_dp" android:layout_marginBottom="@dimen/m_dp" />
+            <com.balysv.materialripple.MaterialRippleLayout android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/GlobalRippleLayout">
+                <RelativeLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/rl_add_measure" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/least_font" android:textColor="@color/light_gray" android:paddingLeft="@dimen/m_dp" android:paddingRight="@dimen/m_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add_measure" android:drawableTop="@drawable/ic_add_dimension" android:layout_centerInParent="true" />
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+        </LinearLayout>
+        <View android:id="@id/divider_measure" android:background="@color/divider_line_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="@dimen/xxxl_dp" />
+        <com.balysv.materialripple.MaterialRippleLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/GlobalRippleLayout">
+            <RelativeLayout android:id="@id/rl_peroid" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip">
+                <ImageView android:id="@id/iv_peroid" android:background="@drawable/ic_tool_period" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/mine_left_margin" android:layout_centerVertical="true" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/iv_peroid" android:layout_centerVertical="true">
+                    <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tools_period" />
+                    <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:id="@id/tv_peroid_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tools_period_tip" />
+                </LinearLayout>
+                <ImageView android:paddingRight="@dimen/m_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/list_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </com.balysv.materialripple.MaterialRippleLayout>
+        <View style="@style/HorizontalWholeDivider" />
+        <View android:layout_marginTop="10.0dip" style="@style/HorizontalWholeDivider" />
+        <com.balysv.materialripple.MaterialRippleLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/GlobalRippleLayout">
+            <RelativeLayout android:id="@id/rl_search_food" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip">
+                <ImageView android:id="@id/iv_search" android:background="@drawable/ic_tool_food_search" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/mine_left_margin" android:layout_centerVertical="true" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/iv_search" android:layout_centerVertical="true">
+                    <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tools_search" />
+                    <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tools_search_tip" />
+                </LinearLayout>
+                <ImageView android:paddingRight="@dimen/m_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/list_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </com.balysv.materialripple.MaterialRippleLayout>
+        <View style="@style/HorizontalSectionDivider" />
+        <com.balysv.materialripple.MaterialRippleLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/GlobalRippleLayout">
+            <RelativeLayout android:id="@id/rl_my_food" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip">
+                <ImageView android:id="@id/iv_food" android:background="@drawable/ic_tool_food_manage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/mine_left_margin" android:layout_centerVertical="true" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/iv_food" android:layout_centerVertical="true">
+                    <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tools_my_food" />
+                    <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tools_my_food_tip" />
+                </LinearLayout>
+                <ImageView android:paddingRight="@dimen/m_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/list_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </LinearLayout>
+</com.handmark.pulltorefresh.library.PullToRefreshScrollView>

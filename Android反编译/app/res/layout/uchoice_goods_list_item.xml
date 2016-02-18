@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.balysv.materialripple.MaterialRippleLayout android:id="@id/ripple" android:layout_width="fill_parent" android:layout_height="wrap_content" app:mrl_rippleColor="@color/ripple_color" app:mrl_rippleOverlay="@bool/rippleOverlay" app:mrl_rippleAlpha="0.2" app:mrl_rippleHover="@bool/rippleHover" app:mrl_rippleDelayClick="@bool/rippleDelayClick"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="114.0dip">
+        <ImageView android:id="@id/default_photo" android:layout_width="137.0dip" android:layout_height="114.0dip" android:layout_marginLeft="@dimen/m_dp" android:layout_marginTop="@dimen/s_dp" android:layout_marginRight="@dimen/s_dp" android:layout_marginBottom="@dimen/s_dp" android:scaleType="centerInside" android:layout_centerVertical="true" />
+        <RelativeLayout android:paddingLeft="@dimen/s_dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/default_photo" android:layout_centerVertical="true">
+            <TextView android:textColor="@color/main_font_color" android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+            <TextView android:textSize="25.0dip" android:textColor="@color/navbar_red" android:gravity="center" android:id="@id/base_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/m_dp" android:maxLines="1" android:layout_below="@id/title" android:layout_alignLeft="@id/title" />
+            <TextView android:textColor="@color/gray" android:gravity="center" android:id="@id/market_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:maxLines="1" android:layout_toRightOf="@id/base_price" android:layout_alignBottom="@id/base_price" />
+        </RelativeLayout>
+    </RelativeLayout>
+</com.balysv.materialripple.MaterialRippleLayout>

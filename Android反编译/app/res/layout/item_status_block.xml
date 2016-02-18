@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="@dimen/s_dp" android:paddingBottom="@dimen/s_dp" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.balysv.materialripple.MaterialRippleLayout style="@style/RippleLayout"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_show_more" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:id="@id/tv_name" android:padding="16.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/medium_font" android:textColor="@color/light_font_color" android:gravity="right" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="更多" android:drawableRight="@drawable/arrow_right_normal" android:drawablePadding="@dimen/s_dp" />
+        </LinearLayout>
+    </com.balysv.materialripple.MaterialRippleLayout>
+    <com.balysv.materialripple.MaterialRippleLayout style="@style/RippleLayout"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/iv_banner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+</LinearLayout>

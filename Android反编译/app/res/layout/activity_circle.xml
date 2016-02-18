@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.boohee.myview.ViewPagerHeaderScroll.widget.TouchCallbackLayout android:id="@id/layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v4.view.ViewPager android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/tabs_height" />
+        <LinearLayout android:orientation="vertical" android:id="@id/header" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/include_circle_head" android:layout_width="fill_parent" android:layout_height="@dimen/viewpager_header_height" layout="@layout/view_cirlce_head" />
+            <View android:background="#99c3bdb0" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <com.boohee.myview.ViewPagerHeaderScroll.widget.SlidingTabLayout android:id="@id/tabs" android:layout_width="fill_parent" android:layout_height="@dimen/tabs_height" />
+            <View android:background="#99c3bdb0" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        </LinearLayout>
+    </com.boohee.myview.ViewPagerHeaderScroll.widget.TouchCallbackLayout>
+    <include android:layout_gravity="bottom|center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="24.0dip" layout="@layout/timeline_quick_layout" />
+</FrameLayout>

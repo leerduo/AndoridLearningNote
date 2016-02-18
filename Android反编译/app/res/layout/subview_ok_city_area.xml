@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_gravity="center_horizontal" android:id="@id/tv_area" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="8.0dip" android:drawableLeft="@drawable/ic_eographicalposition_coordinategreen" android:drawablePadding="8.0dip" />
+    <com.boohee.one.onekey.widget.ExpandGridView android:id="@id/view_content" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:numColumns="3" />
+</LinearLayout>

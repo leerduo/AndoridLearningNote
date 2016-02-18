@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center|right" android:orientation="horizontal" android:id="@id/carriage_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:id="@id/carriage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/carriage" />
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:id="@id/carriage_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" />
+    </LinearLayout>
+    <include layout="@layout/view_divide_line" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_coupon" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+        <include layout="@layout/view_divide_line" />
+        <LinearLayout android:orientation="horizontal" android:background="@color/white" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/coupon_group_title" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:id="@id/tv_coupon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </LinearLayout>
+        <include layout="@layout/view_divide_line" />
+    </LinearLayout>
+    <include layout="@layout/view_order_pay" />
+    <include layout="@layout/view_divide_line" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/supplement_layout" android:background="@color/white" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/home_container_font" android:id="@id/supplement" android:background="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/supplement" />
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/home_container_font" android:id="@id/supplement_value" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" />
+    </LinearLayout>
+    <View android:background="@color/view_divide_line" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginBottom="8.0dip" />
+</LinearLayout>

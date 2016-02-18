@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.boohee.widgets.BooheeListView android:id="@id/blv_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/view_operate" android:layout_alignParentTop="true" style="@style/BaseListView" />
+    <RelativeLayout android:id="@id/view_operate" android:paddingTop="@dimen/global_padding_small" android:paddingRight="@dimen/global_padding_normal" android:paddingBottom="@dimen/global_padding_small" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textSize="@dimen/global_font_large" android:textColor="@color/red" android:id="@id/tv_clear" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/collection_clear" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <Button android:textColor="@color/bg_white_selector" android:id="@id/bt_delete" android:background="@drawable/bg_red_round_selector" android:paddingLeft="@dimen/global_padding_large" android:paddingRight="@dimen/global_padding_large" android:layout_width="@dimen/collection_delete_button_width" android:layout_height="@dimen/global_item_height" android:text="@string/collection_delete" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/global_font_normal" android:textColor="@color/txt_color_selector" android:id="@id/tv_all" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/collection_all" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

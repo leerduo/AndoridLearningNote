@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/thumb_photo" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:id="@id/title" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:text="" android:layout_toRightOf="@id/thumb_photo" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/order_infos" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:id="@id/price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/price" android:layout_alignParentLeft="true" />
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:id="@id/price_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:singleLine="true" android:layout_toRightOf="@id/price" />
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:id="@id/quantity_uchoice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/quantity_uchoice" android:layout_toRightOf="@id/price_value" />
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:id="@id/quantity_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:singleLine="true" android:layout_toRightOf="@id/quantity_uchoice" />
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:id="@id/count_one_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="@string/count_one" android:layout_toLeftOf="@id/count_one_value" />
+    </RelativeLayout>
+    <include layout="@layout/view_divide_line" />
+</LinearLayout>

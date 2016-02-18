@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main_layout" android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_gravity="center_horizontal" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+                <RelativeLayout android:id="@id/rl_avatar_image" style="@style/UserProfileStyle">
+                    <TextView android:text="@string/avatar_image" style="@style/UserProfileTextNameStyle" />
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                        <de.hdodenhof.circleimageview.CircleImageView android:id="@id/avatar_image" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginTop="@dimen/s_dp" android:src="@drawable/default_avatar" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/list_arrow" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <View android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <RelativeLayout android:id="@id/rl_nickname" style="@style/UserProfileStyle">
+                    <TextView android:text="@string/nickname" style="@style/UserProfileTextNameStyle" />
+                    <TextView android:id="@id/txt_nickname" style="@style/UserProfileTextValueStyle" />
+                </RelativeLayout>
+                <View android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <RelativeLayout android:id="@id/rl_persional_statement" style="@style/UserProfileStyle">
+                    <TextView android:id="@id/txt_title_persional_statement" android:text="@string/persional_statement" style="@style/UserProfileTextNameStyle" />
+                    <TextView android:id="@id/txt_persional_statement" android:layout_marginLeft="20.0dip" android:layout_toRightOf="@id/txt_title_persional_statement" style="@style/UserProfileTextValueStyle" />
+                </RelativeLayout>
+                <View android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <RelativeLayout android:id="@id/cellphone_layout" style="@style/UserProfileStyle">
+                    <TextView android:text="@string/cellphone" style="@style/UserProfileTextNameStyle" />
+                    <TextView android:id="@id/cellphone_text" style="@style/UserProfileTextValueStyle" />
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+                <RelativeLayout android:id="@id/gender_layout" style="@style/UserProfileStyle">
+                    <TextView android:text="@string/gender" style="@style/UserProfileTextNameStyle" />
+                    <TextView android:id="@id/gender_text" style="@style/UserProfileTextValueStyle" />
+                </RelativeLayout>
+                <View android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <RelativeLayout android:id="@id/birthday_layout" style="@style/UserProfileStyle">
+                    <TextView android:text="@string/birthday" style="@style/UserProfileTextNameStyle" />
+                    <TextView android:id="@id/birthday_text" style="@style/UserProfileTextValueStyle" />
+                </RelativeLayout>
+                <View android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <RelativeLayout android:id="@id/height_layout" style="@style/UserProfileStyle">
+                    <TextView android:text="@string/height" style="@style/UserProfileTextNameStyle" />
+                    <TextView android:id="@id/height_text" style="@style/UserProfileTextValueStyle" />
+                </RelativeLayout>
+                <View android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <RelativeLayout android:id="@id/weight_layout" style="@style/UserProfileStyle">
+                    <TextView android:text="@string/begin_weight" style="@style/UserProfileTextNameStyle" />
+                    <TextView android:id="@id/weight_text" style="@style/UserProfileTextValueStyle" />
+                </RelativeLayout>
+                <View android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <LinearLayout android:orientation="vertical" android:id="@id/ll_mc" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:id="@id/mc_day_layout" style="@style/UserProfileStyle">
+                        <TextView android:text="@string/mc_days" style="@style/UserProfileTextNameStyle" />
+                        <TextView android:id="@id/mc_day_text" style="@style/UserProfileTextValueStyle" />
+                    </RelativeLayout>
+                    <View android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                    <RelativeLayout android:id="@id/mc_circle_layout" style="@style/UserProfileStyle">
+                        <TextView android:text="@string/mc_circle" style="@style/UserProfileTextNameStyle" />
+                        <TextView android:id="@id/mc_circle_text" style="@style/UserProfileTextValueStyle" />
+                    </RelativeLayout>
+                    <View android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/ll_target" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:id="@id/target_weight_layout" style="@style/UserProfileStyle">
+                        <TextView android:text="@string/target_weight" style="@style/UserProfileTextNameStyle" />
+                        <TextView android:id="@id/target_weight_text" style="@style/UserProfileTextValueStyle" />
+                    </RelativeLayout>
+                    <View android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                    <RelativeLayout android:id="@id/target_date_layout" style="@style/UserProfileStyle">
+                        <TextView android:text="@string/target_date" style="@style/UserProfileTextNameStyle" />
+                        <TextView android:id="@id/target_date_text" style="@style/UserProfileTextValueStyle" />
+                    </RelativeLayout>
+                    <View android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                </LinearLayout>
+                <RelativeLayout android:id="@id/weight_mode_switch_layout" style="@style/UserProfileStyle">
+                    <TextView android:text="@string/weight_mode" style="@style/UserProfileTextNameStyle" />
+                    <TextView android:id="@id/weight_mode_switch" style="@style/UserProfileTextValueStyle" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

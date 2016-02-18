@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:id="@id/card_view_guide" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="5.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/global_font_normal" android:textColor="@color/main_font_color" android:gravity="center" android:id="@id/tv_guide" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/m_dp" android:text="减肥有问题？减肥不顺利？\n找个专业顾问带你减！" android:layout_below="@id/iv_guide" android:lineSpacingMultiplier="1.4" />
+        <ImageView android:id="@id/iv_guide" android:background="@drawable/img_service_welcome" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/m_dp" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/global_font_normal" android:textColor="@color/primary_color" android:gravity="center" android:id="@id/tv_guide_jump" android:paddingLeft="@dimen/m_dp" android:paddingRight="@dimen/m_dp" android:layout_width="wrap_content" android:layout_height="58.0dip" android:text="获得减肥顾问" android:singleLine="true" android:layout_below="@id/tv_guide" android:layout_centerHorizontal="true" />
+        <ImageView android:background="@drawable/img_service_welcome_free" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

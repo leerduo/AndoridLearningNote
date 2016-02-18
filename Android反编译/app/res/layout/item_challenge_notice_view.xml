@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/s_dp"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:gravity="center" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="35.0dip" android:layout_marginLeft="@dimen/s_dp" />
+        <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <Button android:textSize="@dimen/small_font" android:textColor="@color/mine_report_red" android:id="@id/btn_history" android:background="@drawable/challenge_notice_btn_selector" android:layout_width="55.0dip" android:layout_height="26.0dip" android:layout_marginRight="@dimen/s_dp" android:text="历史" />
+    </LinearLayout>
+    <include layout="@layout/view_divide_line" />
+</LinearLayout>

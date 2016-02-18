@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/bg_button_selector" android:paddingLeft="@dimen/global_padding_normal" android:paddingTop="@dimen/global_padding_normal" android:paddingBottom="@dimen/global_padding_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/global_listview_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <de.hdodenhof.circleimageview.CircleImageView android:id="@id/civ_icon" android:layout_width="@dimen/global_icon_width" android:layout_height="@dimen/global_icon_height" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <RelativeLayout android:id="@id/view_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/global_margin_normal" android:layout_toLeftOf="@id/view_operate" android:layout_toRightOf="@id/civ_icon" android:layout_centerVertical="true">
+        <TextView android:textSize="@dimen/global_font_normal" android:textColor="@color/main_font_color" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxEms="12" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        <TextView android:textSize="@dimen/global_font_small" android:textColor="@color/red" android:id="@id/tv_calory" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/tv_name" android:layout_alignParentLeft="true" />
+        <TextView android:textSize="@dimen/global_font_small" android:textColor="@color/main_font_color" android:id="@id/tv_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/food_calory_per_gram" android:layout_toRightOf="@id/tv_calory" android:layout_below="@id/tv_name" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/view_operate" android:layout_width="@dimen/collection_checkbox_width" android:layout_height="@dimen/collection_checkbox_width" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <ImageView android:id="@id/iv_light" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <CheckBox android:id="@id/cb_select" android:background="@drawable/bg_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" />
+    </LinearLayout>
+</RelativeLayout>

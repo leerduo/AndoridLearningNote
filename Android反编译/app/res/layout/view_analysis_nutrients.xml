@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_analysis_nutrients" android:background="@color/global_main_bg" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="260.0dip" android:layout_marginTop="@dimen/xxl_dp">
+        <lecho.lib.hellocharts.view.PieChartView android:layout_gravity="center" android:id="@id/pie_nutrients" android:layout_width="240.0dip" android:layout_height="240.0dip" />
+    </FrameLayout>
+    <include layout="@layout/view_divide_line" />
+    <RelativeLayout android:background="@color/white" android:padding="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="三大营养元素提供热量比例" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:gravity="center" android:id="@id/tv_nurients_knowledge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="营养分布知识" android:drawableLeft="@drawable/tips_icon" android:drawablePadding="@dimen/s_dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <include layout="@layout/view_divide_line" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:background="@color/white" android:padding="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/carbohydrate" android:drawableLeft="@drawable/ic_analysis_grass_green" android:drawablePadding="@dimen/s_dp" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <com.boohee.myview.risenumber.RiseNumberTextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:id="@id/tv_carbohydrate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/iv_carbohydrate_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/tv_carbohydrate_state" android:layout_alignParentRight="false" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:id="@id/tv_carbohydrate_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/xs_dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <include layout="@layout/view_divide_line" />
+        <RelativeLayout android:background="@color/white" android:padding="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fat" android:drawableLeft="@drawable/ic_analysis_orange" android:drawablePadding="@dimen/s_dp" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <com.boohee.myview.risenumber.RiseNumberTextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:id="@id/tv_fat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/iv_fat_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/xs_dp" android:layout_toLeftOf="@id/tv_fat_state" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:id="@id/tv_fat_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <include layout="@layout/view_divide_line" />
+        <RelativeLayout android:gravity="center" android:background="@color/white" android:padding="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:gravity="center" android:id="@id/tv_protein_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/protein" android:drawableLeft="@drawable/ic_analysis_yellow" android:drawablePadding="@dimen/s_dp" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <com.boohee.myview.risenumber.RiseNumberTextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:id="@id/tv_protein" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/iv_protein_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/xs_dp" android:layout_toLeftOf="@id/tv_protein_state" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:id="@id/tv_protein_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <include layout="@layout/view_divide_line" />
+    </LinearLayout>
+</LinearLayout>

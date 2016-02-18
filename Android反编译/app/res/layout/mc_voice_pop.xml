@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@drawable/mc_voice_pop_bg" android:padding="20.0dip" android:layout_width="180.0dip" android:layout_height="190.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/mc_voice_pop_iv" android:background="@drawable/mc_voice_pop_mic_0" android:layout_width="78.5dip" android:layout_height="90.0dip" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/mc_voice_pop_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="speak" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

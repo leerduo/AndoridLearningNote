@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/bigger_font" android:textColor="@color/black" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/budget_heat" />
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:background="@drawable/numbercontainer" android:layout_width="160.0dip" android:layout_height="40.0dip">
+        <TextView android:textSize="@dimen/bigger_font" android:textColor="@color/red" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/target_calory_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="\ 1234" />
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/red" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="@string/kcal" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/dark_gold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/recommended_calories" />
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:id="@id/recommend_calory_range" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@drawable/inputstatus" android:layout_width="fill_parent" android:layout_height="78.0dip" android:layout_marginTop="10.0dip">
+        <TextView android:textSize="@dimen/least_font" android:textColor="@color/dark_gold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="60.0dip" android:text="@string/eating_too_little" />
+        <TextView android:textSize="@dimen/least_font" android:textColor="@color/dark_gold" android:gravity="center" android:layout_width="41.0dip" android:layout_height="wrap_content" android:layout_marginLeft="50.0dip" android:layout_marginBottom="8.0dip" android:text="@string/healthy_and_slim" />
+        <TextView android:textSize="@dimen/least_font" android:textColor="@color/dark_gold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="@string/up_flesh" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/small_font" android:textColor="@color/dark_gold" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/budget_heat_info" />
+</LinearLayout>

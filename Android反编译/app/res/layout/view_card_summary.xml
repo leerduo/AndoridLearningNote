@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/view_divide_line" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:id="@id/tv_time_type" android:paddingLeft="@dimen/m_dp" android:paddingTop="@dimen/s_dp" android:layout_width="100.0dip" android:layout_height="fill_parent" android:singleLine="true" />
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:id="@id/tv_des" android:padding="@dimen/s_dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </LinearLayout>
+</LinearLayout>

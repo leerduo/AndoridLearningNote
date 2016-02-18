@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:id="@id/tv_level" android:layout_width="fill_parent" android:layout_height="50.0dip" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/doing_layout" android:layout_width="fill_parent" android:layout_height="180.0dip" android:layout_marginTop="-9.0dip" android:layout_below="@id/recycler_view">
+            <com.balysv.materialripple.MaterialRippleLayout style="@style/RippleLayout">
+                <ImageView android:id="@id/iv_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+            </com.balysv.materialripple.MaterialRippleLayout>
+            <TextView android:textSize="@dimen/global_font_large" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" />
+            <TextView android:textSize="@dimen/global_font_small" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_des" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_below="@id/tv_title" />
+            <ImageView android:id="@id/iv_status" android:background="@drawable/ic_status_done" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/m_dp" android:layout_below="@id/tv_des" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="@dimen/global_font_small" android:textColor="@color/white" android:id="@id/tv_btn" android:background="@drawable/bg_white_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/m_dp" android:text="进入课程" android:layout_below="@id/tv_des" android:layout_centerHorizontal="true" />
+            <TextView android:textColor="@color/light_font_color" android:id="@id/tv_story" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/m_dp" android:text="看看别人的运动故事>>" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <android.support.v7.widget.RecyclerView android:id="@id/recycler_view" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="98.0dip" />
+    </RelativeLayout>
+</LinearLayout>

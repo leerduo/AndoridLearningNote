@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="12.0sp" android:textColor="@color/light_gray" android:id="@id/friendTipText" android:paddingLeft="@dimen/mine_left_margin" android:paddingTop="@dimen/mine_top_margin" android:paddingRight="@dimen/mine_left_margin" android:paddingBottom="@dimen/mine_top_margin" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="是朋友邀请你来的薄荷的吗？" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/friendAccountLayout" android:background="@color/white" android:paddingLeft="@dimen/mine_left_margin" android:paddingTop="@dimen/mine_top_margin" android:paddingRight="@dimen/mine_left_margin" android:paddingBottom="@dimen/mine_top_margin" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="32.0dip">
+        <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_account_phone" />
+        <EditText android:textSize="16.0sp" android:textColor="@color/dark_gray" android:textColorHint="@color/light_gray" android:gravity="center_vertical" android:id="@id/friendPhoneNumber" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/mine_left_margin" android:hint="邀请人的手机号（可不填）" android:singleLine="true" android:maxLength="11" android:inputType="number" />
+    </LinearLayout>
+    <TextView android:textSize="16.0sp" android:textColor="@color/navbar_red" android:gravity="center" android:id="@id/skipTipText" android:paddingLeft="@dimen/mine_left_margin" android:paddingRight="@dimen/mine_left_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mine_left_margin" android:layout_marginBottom="@dimen/mine_left_margin" android:text="没有被邀请？可跳过" />
+</LinearLayout>

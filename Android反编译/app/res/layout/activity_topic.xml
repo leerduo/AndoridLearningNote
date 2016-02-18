@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.boohee.myview.ViewPagerHeaderScroll.widget.TouchCallbackLayout android:id="@id/layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/frame_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="vertical" android:id="@id/header_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/iv_top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+            <android.support.design.widget.TabLayout android:id="@id/view_tabs" android:layout_width="fill_parent" android:layout_height="@dimen/tabs_height" app:tabIndicatorColor="@color/navbar_red" app:tabIndicatorHeight="1.0dip" app:tabBackground="@android:color/white" app:tabMode="fixed" app:tabGravity="fill" app:tabTextColor="@color/gray" app:tabSelectedTextColor="@color/navbar_red" />
+            <include layout="@layout/view_divide_line" />
+        </LinearLayout>
+    </com.boohee.myview.ViewPagerHeaderScroll.widget.TouchCallbackLayout>
+    <android.support.design.widget.FloatingActionButton android:layout_gravity="bottom|center|right" android:id="@id/fab_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/m_dp" android:layout_marginBottom="@dimen/m_dp" android:src="@drawable/ic_add_post_big" app:elevation="2.0dip" app:fabSize="normal" app:pressedTranslationZ="8.0dip" app:backgroundTint="@color/primary_color" xmlns:app="http://schemas.android.com/apk/res-auto" />
+</FrameLayout>

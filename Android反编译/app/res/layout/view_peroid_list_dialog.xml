@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/corner_white_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.balysv.materialripple.MaterialRippleLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:mrl_rippleColor="@color/ripple_color" app:mrl_rippleOverlay="@bool/rippleOverlay" app:mrl_rippleAlpha="0.2" app:mrl_rippleHover="@bool/rippleHover" app:mrl_rippleDelayClick="@bool/rippleDelayClick"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <TextView android:textSize="@dimen/bigger_font" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/date_taoday" android:padding="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+    <include layout="@layout/view_divide_line" />
+    <com.balysv.materialripple.MaterialRippleLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:mrl_rippleColor="@color/ripple_color" app:mrl_rippleOverlay="@bool/rippleOverlay" app:mrl_rippleAlpha="0.2" app:mrl_rippleHover="@bool/rippleHover" app:mrl_rippleDelayClick="@bool/rippleDelayClick"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <TextView android:textSize="@dimen/bigger_font" android:textColor="@color/main_font_color" android:gravity="center" android:id="@id/mc_coming" android:padding="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/mc_coming" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+    <include layout="@layout/view_divide_line" />
+    <com.balysv.materialripple.MaterialRippleLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:mrl_rippleColor="@color/ripple_color" app:mrl_rippleOverlay="@bool/rippleOverlay" app:mrl_rippleAlpha="0.2" app:mrl_rippleHover="@bool/rippleHover" app:mrl_rippleDelayClick="@bool/rippleDelayClick"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <TextView android:textSize="@dimen/bigger_font" android:textColor="@color/main_font_color" android:gravity="center" android:id="@id/mc_leave" android:padding="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/mc_leave" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+    <include layout="@layout/view_divide_line" />
+    <com.balysv.materialripple.MaterialRippleLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:mrl_rippleColor="@color/ripple_color" app:mrl_rippleOverlay="@bool/rippleOverlay" app:mrl_rippleAlpha="0.2" app:mrl_rippleHover="@bool/rippleHover" app:mrl_rippleDelayClick="@bool/rippleDelayClick"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <TextView android:textSize="@dimen/bigger_font" android:textColor="@color/navbar_red" android:gravity="center" android:id="@id/delete_mc" android:padding="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/delete_item" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+    <include layout="@layout/view_divide_line" />
+    <com.balysv.materialripple.MaterialRippleLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:mrl_rippleColor="@color/ripple_color" app:mrl_rippleOverlay="@bool/rippleOverlay" app:mrl_rippleAlpha="0.2" app:mrl_rippleHover="@bool/rippleHover" app:mrl_rippleDelayClick="@bool/rippleDelayClick"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <TextView android:textSize="@dimen/bigger_font" android:textColor="@color/main_font_color" android:gravity="center" android:id="@id/cancel_dialog" android:padding="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cancel" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/order_detail_sent_items" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0dip">
+        <TextView android:textColor="@color/main_font_color" android:id="@id/shipment" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/shipments" android:layout_centerVertical="true" />
+        <TextView android:textColor="@color/main_font_color" android:id="@id/shipment_corp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_toRightOf="@id/shipment" android:layout_centerVertical="true" />
+        <TextView android:textColor="@color/main_font_color" android:id="@id/comma" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/comma" android:singleLine="true" android:layout_toRightOf="@id/shipment_corp" android:layout_centerVertical="true" />
+        <TextView android:textColor="@color/main_font_color" android:id="@id/shipment_no" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:singleLine="true" android:layout_toRightOf="@id/comma" android:layout_centerVertical="true" />
+        <Button android:textSize="@dimen/small_font" android:textColor="@color/white" android:gravity="center" android:id="@id/shipment_details" android:background="@drawable/global_red_btn_selector" android:layout_width="wrap_content" android:layout_height="30.0dip" android:text="@string/shipment_details" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View android:background="@color/view_divide_line" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</LinearLayout>

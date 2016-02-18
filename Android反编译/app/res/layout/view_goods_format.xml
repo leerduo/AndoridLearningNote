@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/mask" android:background="#99000000" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/ll_content" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView android:id="@id/iv_avatar" android:layout_width="80.0dip" android:layout_height="80.0dip" android:layout_margin="@dimen/m_dp" android:src="@drawable/login_weixin" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/s_dp" android:layout_toLeftOf="@id/txt_calory" android:layout_toRightOf="@id/iv_avatar" android:layout_alignTop="@id/iv_avatar">
+                <TextView android:textSize="21.0sp" android:textStyle="bold" android:textColor="@color/primary_color" android:ellipsize="end" android:id="@id/txt_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/xs_dp" android:text="￥103.98" android:singleLine="true" />
+                <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:id="@id/txt_tips" android:paddingLeft="@dimen/xs_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <ImageView android:id="@id/iv_closed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_curve_close" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <include layout="@layout/view_divide_line" />
+        <ScrollView android:id="@id/sv_format" android:layout_width="fill_parent" android:layout_height="200.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:id="@id/ll_format" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_edit" android:padding="@dimen/m_dp" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/main_font" android:textColor="@color/home_container_font" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="购买数量" android:layout_weight="1.0" />
+                    <Button android:enabled="false" android:id="@id/btn_decrease" android:background="@drawable/uchoice_minus_btn_selector" android:layout_width="38.0dip" android:layout_height="30.0dip" />
+                    <TextView android:textSize="@dimen/large_font" android:textStyle="bold" android:textColor="@color/main_font_color" android:gravity="center" android:id="@id/tv_goods_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_marginRight="@dimen/m_dp" android:text="\ 1" />
+                    <Button android:id="@id/btn_increase" android:background="@drawable/uchoice_plus_btn_selector" android:layout_width="38.0dip" android:layout_height="30.0dip" />
+                </LinearLayout>
+                <View android:id="@id/view_divide" android:background="@color/view_divide_line" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginBottom="@dimen/s_dp" />
+            </LinearLayout>
+        </ScrollView>
+        <Button android:enabled="false" android:textSize="@dimen/large_font" android:textColor="@color/white" android:gravity="center" android:id="@id/btn_cart_add" android:background="@drawable/btn_add_cart_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="加入购物车" />
+    </LinearLayout>
+</FrameLayout>

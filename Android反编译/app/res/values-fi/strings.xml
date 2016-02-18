@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abc_action_bar_home_description">Siirry etusivulle</string>
+    <string name="abc_action_bar_up_description">Siirry ylös</string>
+    <string name="abc_action_menu_overflow_description">Lisää</string>
+    <string name="abc_action_mode_done">Valmis</string>
+    <string name="abc_activity_chooser_view_see_all">Näytä kaikki</string>
+    <string name="abc_activitychooserview_choose_application">Valitse sovellus</string>
+    <string name="abc_searchview_description_clear">Tyhjennä kysely</string>
+    <string name="abc_searchview_description_query">Hakulauseke</string>
+    <string name="abc_searchview_description_search">Haku</string>
+    <string name="abc_searchview_description_submit">Lähetä kysely</string>
+    <string name="abc_searchview_description_voice">Puhehaku</string>
+    <string name="abc_shareactionprovider_share_with">Jakaminen:</string>
+    <string name="abc_shareactionprovider_share_with_application">Jakaminen: %s</string>
+    <string name="mdtp_day_picker_description">Päiväruudukko kuukausittain</string>
+    <string name="mdtp_deleted_key">%1$s poistettiin</string>
+    <string name="mdtp_done_label">Valmis</string>
+    <string name="mdtp_hour_picker_description">Tuntien ympyränmuotoinen liukusäädin</string>
+    <string name="mdtp_item_is_selected">%1$s on valittu</string>
+    <string name="mdtp_minute_picker_description">Minuuttien ympyränmuotoinen liukusäädin</string>
+    <string name="mdtp_select_day">Valitse kuukausi ja päivä</string>
+    <string name="mdtp_select_hours">Valitse tunnit</string>
+    <string name="mdtp_select_minutes">Valitse minuutit</string>
+    <string name="mdtp_select_year">Valitse vuosi</string>
+    <string name="mdtp_year_picker_description">Vuosiluettelo</string>
+    <string name="pull_to_refresh_pull_label">Päivitä vetämällä alas…</string>
+    <string name="pull_to_refresh_refreshing_label">Päivitetään…</string>
+    <string name="pull_to_refresh_release_label">Päivitä vapauttamalla…</string>
+    <string name="pull_to_refresh_from_bottom_pull_label">Päivitä vetämällä ylös…</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">@string/pull_to_refresh_refreshing_label</string>
+    <string name="pull_to_refresh_from_bottom_release_label">@string/pull_to_refresh_release_label</string>
+</resources>

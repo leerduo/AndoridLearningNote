@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="40.0dip" />
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/userNameLayout" android:background="@color/white" android:padding="@dimen/mine_left_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_account_name" />
+                <EditText android:textSize="16.0sp" android:textColor="@color/dark_gray" android:textColorHint="@color/light_gray" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/userName" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/mine_left_margin" android:hint="昵称" android:singleLine="true" />
+            </LinearLayout>
+            <View android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="52.0dip" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/passWordLayout" android:background="@color/white" android:paddingLeft="@dimen/mine_left_margin" android:paddingRight="@dimen/mine_left_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_account_password" />
+                <EditText android:textSize="16.0sp" android:textColor="@color/dark_gray" android:textColorHint="@color/light_gray" android:gravity="center_vertical" android:id="@id/passWord" android:background="@color/transparent" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/mine_left_margin" android:layout_marginTop="@dimen/mine_left_margin" android:layout_marginBottom="@dimen/mine_left_margin" android:hint="密码 (至少6位) " android:layout_weight="1.0" android:inputType="textPassword" />
+            </LinearLayout>
+            <View android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/mine_left_margin" android:paddingRight="@dimen/mine_left_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <CheckBox android:textSize="13.0sp" android:textColor="@color/light_gray" android:layout_gravity="start|center" android:id="@id/checkBox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="我同意" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/mine_report_red" android:gravity="end" android:layout_gravity="center_vertical" android:id="@id/userDeal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_deal_private" android:layout_weight="1.0" />
+        </LinearLayout>
+        <Button android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/loginBtn" android:background="@drawable/global_red_btn_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/mine_left_margin" android:text="@string/register" />
+    </LinearLayout>
+</ScrollView>

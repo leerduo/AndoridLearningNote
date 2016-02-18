@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/age_background" android:layout_width="300.0dip" android:layout_height="300.0dip" android:src="@drawable/age_background" />
+        <com.boohee.myview.BooheeCircleProgressBar android:layout_gravity="center" android:id="@id/mine_report_body_age_progressBar" android:layout_width="192.0dip" android:layout_height="192.0dip" />
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/bigger_font" android:textColor="@color/brown" android:paddingTop="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/body_age" />
+            <RelativeLayout android:gravity="center" android:orientation="horizontal" android:layout_width="160.0dip" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/mine_report_font" android:textColor="@color/mine_report_red" android:id="@id/mine_report_body_age_textView" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textSize="@dimen/large_font" android:textColor="@android:color/darker_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginTop="5.0dip" android:text="@string/age" android:layout_toRightOf="@id/mine_report_body_age_textView" />
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/mine_report_whatis_body_age_area" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginBottom="15.0dip">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:src="@drawable/tips_icon" android:contentDescription="问号图标" />
+        <TextView android:textSize="@dimen/medium_font" android:textColor="@android:color/darker_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="什么是身体年龄？" />
+    </LinearLayout>
+</LinearLayout>

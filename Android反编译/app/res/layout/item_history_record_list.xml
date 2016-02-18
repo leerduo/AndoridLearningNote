@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/view_content" android:paddingLeft="@dimen/m_dp" android:paddingTop="@dimen/s_dp" android:paddingRight="@dimen/m_dp" android:paddingBottom="@dimen/s_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/btn_copy" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:gravity="center_vertical" android:id="@id/tv_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" />
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:gravity="center_vertical" android:id="@id/tv_week" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/xs_dp" android:layout_toRightOf="@id/tv_date" />
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:ellipsize="end" android:id="@id/tv_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/tv_date" android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+    <Button android:textSize="@dimen/small_font" android:textColor="@color/white" android:id="@id/btn_copy" android:background="@drawable/btn_follow_selector" android:layout_width="54.0dip" android:layout_height="36.0dip" android:layout_marginRight="@dimen/m_dp" android:text="@string/copy" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

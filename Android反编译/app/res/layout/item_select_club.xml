@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_small" android:layout_marginRight="@dimen/padding_small"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.boohee.widgets.SquareImageView android:id="@id/view_cover" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:textSize="@dimen/large_font" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_name" android:background="@drawable/bg_select_club_title" android:layout_width="fill_parent" android:layout_height="@dimen/select_item_name_height" />
+    <TextView android:textSize="@dimen/main_font" android:textColor="@color/gray" android:gravity="center" android:id="@id/tv_title" android:paddingTop="@dimen/padding_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

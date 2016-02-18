@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/view_store_operate" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/uchoice_buy_bar_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:paddingTop="0.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <com.balysv.materialripple.MaterialRippleLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" app:mrl_rippleColor="@color/ripple_color" app:mrl_rippleOverlay="@bool/rippleOverlay" app:mrl_rippleAlpha="0.2" app:mrl_rippleHover="@bool/rippleHover" app:mrl_rippleDelayClick="@bool/rippleDelayClick" xmlns:app="http://schemas.android.com/apk/res-auto">
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/ll_store_order" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@id/iv_store_order" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_shop_order" />
+                <TextView android:textColor="@color/gray" android:gravity="center" android:id="@id/txt_store_order" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/order" />
+            </LinearLayout>
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </LinearLayout>
+    <View android:background="@color/divider" android:layout_width="1.0px" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center" android:paddingTop="0.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <com.balysv.materialripple.MaterialRippleLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" app:mrl_rippleColor="@color/ripple_color" app:mrl_rippleOverlay="@bool/rippleOverlay" app:mrl_rippleAlpha="0.2" app:mrl_rippleHover="@bool/rippleHover" app:mrl_rippleDelayClick="@bool/rippleDelayClick" xmlns:app="http://schemas.android.com/apk/res-auto">
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/ll_store_cart" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@id/iv_store_cart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_shop_cart" />
+                <TextView android:textColor="@color/gray" android:gravity="center" android:id="@id/txt_store_cart" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/cart" />
+            </LinearLayout>
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/main_font" android:textColor="@color/gray" android:gravity="center_horizontal" android:id="@id/tv_no_coupon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_coupon" android:drawableTop="@drawable/ic_no_coupon" android:drawablePadding="15.0dip" android:layout_centerInParent="true" />
+    <ListView android:id="@id/lv_coupon" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/mine_left_margin" android:layout_marginRight="@dimen/mine_left_margin" android:divider="@color/transparent" android:dividerHeight="@dimen/mine_left_margin" />
+</RelativeLayout>

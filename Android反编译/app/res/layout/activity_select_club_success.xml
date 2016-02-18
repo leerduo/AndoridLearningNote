@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/select_success_bg" android:paddingLeft="@dimen/l_dp" android:paddingRight="@dimen/l_dp" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/xl_dp" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/small_font" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@id/tv_alert" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/m_dp" android:layout_above="@id/bt_submit" />
+    <Button android:textSize="@dimen/bigger_font" android:textColor="@color/selector_select_club_submit" android:layout_gravity="center" android:id="@id/bt_submit" android:background="@drawable/select_club_success_submit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="32.0dip" android:text="@string/select_club_success_submit" android:layout_alignParentBottom="true" android:onClick="onClick" />
+</RelativeLayout>

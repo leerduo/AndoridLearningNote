@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/mine_record_date" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="2013-03-21" android:singleLine="true" android:layout_weight="1.0" />
+    <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/mine_record_eat" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="\ 123" android:singleLine="true" android:layout_weight="1.0" />
+    <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/mine_record_consume" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="\ 123" android:singleLine="true" android:layout_weight="1.0" />
+    <ImageView android:layout_gravity="end|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/list_arrow" />
+</LinearLayout>

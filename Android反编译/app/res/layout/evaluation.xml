@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="270.0dip" layout="@layout/bmi_layout" />
+            <include layout="@layout/healthy_weight" />
+            <include layout="@layout/mine_report_budget_hot" />
+            <include layout="@layout/mine_report_body_age" />
+            <include layout="@layout/mine_report_body_fat_rate" />
+            <include layout="@layout/heart_rate" />
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="@string/report_explain" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

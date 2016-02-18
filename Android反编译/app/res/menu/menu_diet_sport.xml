@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_action_overflow" android:id="@id/action_more" android:title="@string/action_more" app:showAsAction="always">
+        <menu>
+            <item android:id="@id/action_diet_chart" android:title="@string/diet_chart_title" app:showAsAction="always" />
+            <item android:id="@id/action_copy_history" android:title="@string/copy_history" app:showAsAction="always" />
+            <item android:id="@id/action_summary" android:title="@string/title_activity_summary" app:showAsAction="always" />
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_gravity="center_horizontal" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/view_user_setting_header" />
+        <View android:layout_marginTop="10.0dip" style="@style/HorizontalWholeDivider" />
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.balysv.materialripple.MaterialRippleLayout style="@style/RippleLayout">
+                <com.boohee.myview.CommonLineView android:id="@id/clv_health_report" android:layout_width="fill_parent" android:layout_height="wrap_content" app:clvIcon="@drawable/ic_report" app:clvTitle="@string/health_report" />
+            </com.balysv.materialripple.MaterialRippleLayout>
+            <View style="@style/HorizontalSectionDivider" />
+            <com.balysv.materialripple.MaterialRippleLayout style="@style/RippleLayout">
+                <com.boohee.myview.CommonLineView android:id="@id/clv_account_setting" android:layout_width="fill_parent" android:layout_height="wrap_content" app:clvIcon="@drawable/ic_account_config" app:clvTitle="@string/account_setting" />
+            </com.balysv.materialripple.MaterialRippleLayout>
+            <View style="@style/HorizontalSectionDivider" />
+            <com.balysv.materialripple.MaterialRippleLayout style="@style/RippleLayout">
+                <com.boohee.myview.CommonLineView android:id="@id/clv_my_favorite" android:layout_width="fill_parent" android:layout_height="wrap_content" app:clvIcon="@drawable/ic_heart" app:clvTitle="@string/block_collect" />
+            </com.balysv.materialripple.MaterialRippleLayout>
+            <View style="@style/HorizontalSectionDivider" />
+            <com.balysv.materialripple.MaterialRippleLayout style="@style/RippleLayout">
+                <com.boohee.myview.CommonLineView android:id="@id/clv_diamond" android:layout_width="fill_parent" android:layout_height="wrap_content" app:clvIcon="@drawable/ic_diamond" app:clvTitle="@string/diamond_exchange" />
+            </com.balysv.materialripple.MaterialRippleLayout>
+            <View style="@style/HorizontalSectionDivider" />
+            <com.balysv.materialripple.MaterialRippleLayout style="@style/RippleLayout">
+                <com.boohee.myview.CommonLineView android:id="@id/clv_clean_cache" android:layout_width="fill_parent" android:layout_height="wrap_content" app:clvIcon="@drawable/ic_clean_cache" app:clvTitle="@string/clear_cache" />
+            </com.balysv.materialripple.MaterialRippleLayout>
+        </LinearLayout>
+        <View style="@style/HorizontalWholeDivider" />
+        <View android:layout_marginTop="10.0dip" style="@style/HorizontalWholeDivider" />
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.balysv.materialripple.MaterialRippleLayout style="@style/RippleLayout">
+                <com.boohee.myview.CommonLineView android:id="@id/clv_score" android:layout_width="fill_parent" android:layout_height="wrap_content" app:clvIcon="@drawable/ic_favour" app:clvTitle="@string/score_us" />
+            </com.balysv.materialripple.MaterialRippleLayout>
+            <View style="@style/HorizontalSectionDivider" />
+            <com.balysv.materialripple.MaterialRippleLayout style="@style/RippleLayout">
+                <com.boohee.myview.CommonLineView android:id="@id/clv_share" android:layout_width="fill_parent" android:layout_height="wrap_content" app:clvIcon="@drawable/ic_share" app:clvTitle="@string/recommend_friends" />
+            </com.balysv.materialripple.MaterialRippleLayout>
+            <View style="@style/HorizontalSectionDivider" />
+            <com.balysv.materialripple.MaterialRippleLayout style="@style/RippleLayout">
+                <com.boohee.myview.CommonLineView android:id="@id/clv_about_boohee" android:layout_width="fill_parent" android:layout_height="wrap_content" app:clvIcon="@drawable/ic_about" app:clvTitle="@string/title_about_us" />
+            </com.balysv.materialripple.MaterialRippleLayout>
+        </LinearLayout>
+        <View style="@style/HorizontalWholeDivider" />
+        <Button android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/logoutBtn" android:background="@drawable/global_red_btn_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/mine_left_margin" android:text="@string/logout_title" />
+    </LinearLayout>
+</ScrollView>

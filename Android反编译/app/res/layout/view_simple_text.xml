@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.balysv.materialripple.MaterialRippleLayout style="@style/RippleLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/main_font_size" android:textColor="@color/light_gray" android:gravity="center" android:id="@id/simple_text" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginRight="@dimen/m_dp" android:drawableRight="@drawable/list_arrow" />
+</com.balysv.materialripple.MaterialRippleLayout>

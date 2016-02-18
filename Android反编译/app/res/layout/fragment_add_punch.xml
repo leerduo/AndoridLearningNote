@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/view_pop_punch_top" />
+    <include layout="@layout/view_divide_line" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="160.0dip" android:layout_weight="6.0">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <FrameLayout android:id="@id/fl_camara" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <de.hdodenhof.circleimageview.CircleImageView android:layout_gravity="center" android:id="@id/iv_weight" android:layout_width="80.0dip" android:layout_height="80.0dip" android:src="@drawable/img_weight_camera" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                    <ImageView android:layout_gravity="center|right|top" android:id="@id/iv_delete_camera" android:visibility="gone" android:layout_width="15.0dip" android:layout_height="15.0dip" android:src="@drawable/ic_delete_camera" />
+                </FrameLayout>
+                <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:id="@id/txt_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/xs_dp" android:text="无图无真相" android:layout_below="@id/iv_weight" android:layout_centerHorizontal="true" />
+            </LinearLayout>
+        </RelativeLayout>
+        <include layout="@layout/view_divide_line" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_number_keyboard" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="180.0dip" android:layout_weight="4.0">
+            <com.booheee.view.keyboard.NumberKeyboard android:id="@id/number_keyboard" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

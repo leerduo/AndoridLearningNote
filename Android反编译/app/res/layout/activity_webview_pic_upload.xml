@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/shape_bg_tab" android:layout_width="fill_parent" android:layout_height="@dimen/xxl_dp" android:layout_margin="@dimen/m_dp">
+        <EditText android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:gravity="start|center" android:id="@id/et_current_weight" android:background="@color/transparent" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:hint="填写你目前的体重" android:minEms="5" android:singleLine="true" android:maxLength="5" android:layout_weight="1.0" android:inputType="numberDecimal" />
+        <View android:background="@color/view_divide_line" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="@dimen/s_dp" android:layout_marginBottom="@dimen/s_dp" />
+        <TextView android:textSize="@dimen/main_font" android:textStyle="bold" android:textColor="@color/light_font_color" android:gravity="center" android:paddingLeft="@dimen/m_dp" android:paddingRight="@dimen/m_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="kg" />
+    </LinearLayout>
+    <View android:background="@color/divider_color" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:orientation="horizontal" android:padding="@dimen/s_dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/s_dp">
+                <ImageView android:id="@id/iv_example" android:layout_width="fill_parent" android:layout_height="80.0dip" android:src="@drawable/ic_weight_example" />
+            </FrameLayout>
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="示意照" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/s_dp">
+                <ImageView android:id="@id/iv_weight" android:layout_width="fill_parent" android:layout_height="80.0dip" android:src="@drawable/ic_pic_add" />
+                <ImageView android:layout_gravity="center|right|top" android:id="@id/iv_weight_delete" android:paddingLeft="@dimen/s_dp" android:paddingBottom="@dimen/s_dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_delete_camera" />
+            </FrameLayout>
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="称重照" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/s_dp">
+                <ImageView android:id="@id/iv_whole" android:layout_width="fill_parent" android:layout_height="80.0dip" android:src="@drawable/ic_pic_add" />
+                <ImageView android:layout_gravity="center|right|top" android:id="@id/iv_whole_delete" android:paddingLeft="@dimen/s_dp" android:paddingBottom="@dimen/s_dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_delete_camera" />
+            </FrameLayout>
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="正面全身照" />
+        </LinearLayout>
+    </LinearLayout>
+    <CheckBox android:textColor="@color/main_font_color" android:id="@id/cb_sync_post" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_marginTop="@dimen/m_dp" android:checked="true" android:text="@string/sync_to_status" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_marginTop="@dimen/m_dp" android:layout_marginRight="@dimen/m_dp">
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="正面全身照：" />
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/s_dp" android:text="正对镜头+写有薄荷昵称的纸片，可挡脸" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_marginTop="@dimen/m_dp" android:layout_marginRight="@dimen/m_dp">
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="称重照：" />
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/s_dp" android:text="俯拍称重照+体重数字需清晰+写有薄荷昵称的纸片" />
+    </LinearLayout>
+    <Button android:textSize="@dimen/main_font" android:textColor="@color/white" android:id="@id/btn_commit" android:background="@drawable/submit_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_marginTop="@dimen/m_dp" android:layout_marginRight="@dimen/m_dp" android:text="@string/submit" />
+    <TextView android:textSize="@dimen/least_font" android:textColor="@color/light_font_color" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_marginTop="@dimen/m_dp" android:layout_marginRight="@dimen/m_dp" android:text="@string/du_shou_page_tips" />
+</LinearLayout>

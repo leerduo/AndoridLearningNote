@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/color_divider" android:layout_width="fill_parent" android:layout_height="200.0dip" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0px" android:layout_weight="1.0">
+        <Button android:id="@id/btn1" android:tag="@string/keyboard_one" android:layout_marginRight="1.0px" android:text="@string/keyboard_one" style="@style/style_diet_keyboard_button" />
+        <Button android:id="@id/btn2" android:tag="@string/keyboard_two" android:layout_marginRight="1.0px" android:text="@string/keyboard_two" style="@style/style_diet_keyboard_button" />
+        <Button android:id="@id/btn3" android:tag="@string/keyboard_three" android:text="@string/keyboard_three" style="@style/style_diet_keyboard_button" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0px" android:layout_weight="1.0">
+        <Button android:id="@id/btn4" android:tag="@string/keyboard_four" android:layout_marginRight="1.0px" android:text="@string/keyboard_four" style="@style/style_diet_keyboard_button" />
+        <Button android:id="@id/btn5" android:tag="@string/keyboard_five" android:layout_marginRight="1.0px" android:text="@string/keyboard_five" style="@style/style_diet_keyboard_button" />
+        <Button android:id="@id/btn6" android:tag="@string/keyboard_six" android:text="@string/keyboard_six" style="@style/style_diet_keyboard_button" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0px" android:layout_weight="1.0">
+        <Button android:id="@id/btn7" android:tag="@string/keyboard_seven" android:layout_marginRight="1.0px" android:text="@string/keyboard_seven" style="@style/style_diet_keyboard_button" />
+        <Button android:id="@id/btn8" android:tag="@string/keyboard_eight" android:layout_marginRight="1.0px" android:text="@string/keyboard_eight" style="@style/style_diet_keyboard_button" />
+        <Button android:id="@id/btn9" android:tag="@string/keyboard_nine" android:text="@string/keyboard_nine" style="@style/style_diet_keyboard_button" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0px" android:layout_weight="1.0">
+        <Button android:id="@id/btn_dot" android:tag="@string/keyboard_dot" android:layout_marginRight="1.0px" android:text="@string/keyboard_dot" style="@style/style_diet_keyboard_button" />
+        <Button android:id="@id/btn0" android:tag="@string/keyboard_zero" android:layout_marginRight="1.0px" android:text="@string/keyboard_zero" style="@style/style_diet_keyboard_button" />
+        <Button android:id="@id/btn_back" android:background="@drawable/btn_delete_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_marginTop="10.0dip" style="@style/HorizontalWholeDivider" />
+    <com.balysv.materialripple.MaterialRippleLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/GlobalRippleLayout">
+        <RelativeLayout android:id="@id/rl_collect_food" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/mine_left_margin" android:layout_centerVertical="true">
+                <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/food_my_collect" />
+                <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/food_my_collect_tip" />
+            </LinearLayout>
+            <TextView android:id="@id/tv_collect_food" android:layout_marginRight="@dimen/m_dp" style="@style/MyFoodTextValueStyle" />
+        </RelativeLayout>
+    </com.balysv.materialripple.MaterialRippleLayout>
+    <View style="@style/SixteenHorizontalDivider" />
+    <com.balysv.materialripple.MaterialRippleLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/GlobalRippleLayout">
+        <RelativeLayout android:id="@id/rl_custom_food" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/mine_left_margin" android:layout_centerVertical="true">
+                <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/food_my_custom" />
+                <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/food_my_custom_tip" />
+            </LinearLayout>
+            <TextView android:id="@id/tv_custom_food" android:layout_marginRight="@dimen/m_dp" style="@style/MyFoodTextValueStyle" />
+        </RelativeLayout>
+    </com.balysv.materialripple.MaterialRippleLayout>
+    <View style="@style/SixteenHorizontalDivider" />
+    <com.balysv.materialripple.MaterialRippleLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/GlobalRippleLayout">
+        <RelativeLayout android:id="@id/rl_upload_food" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/mine_left_margin" android:layout_centerVertical="true">
+                <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/food_my_upload" />
+                <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/food_my_upload_tip" />
+            </LinearLayout>
+            <TextView android:id="@id/tv_upload_food" android:layout_marginRight="@dimen/m_dp" style="@style/MyFoodTextValueStyle" />
+        </RelativeLayout>
+    </com.balysv.materialripple.MaterialRippleLayout>
+    <View style="@style/HorizontalWholeDivider" />
+    <Button android:textSize="16.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/upload_btn" android:background="@drawable/btn_blue_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/mine_left_margin" android:text="@string/food_upload_food" />
+</LinearLayout>

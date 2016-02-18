@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.balysv.materialripple.MaterialRippleLayout android:id="@id/ripple" android:layout_width="fill_parent" android:layout_height="wrap_content" app:mrl_rippleColor="@color/ripple_color" app:mrl_rippleOverlay="@bool/rippleOverlay" app:mrl_rippleAlpha="0.2" app:mrl_rippleHover="@bool/rippleHover" app:mrl_rippleDelayClick="@bool/rippleDelayClick"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/main_group_item_layout" android:paddingLeft="@dimen/m_dp" android:paddingRight="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="75.0dip" android:paddingStart="@dimen/m_dp" android:paddingEnd="@dimen/m_dp">
+            <com.boohee.widgets.CircularImage android:id="@id/main_group_iv" android:layout_width="@dimen/list_item_avatar_width" android:layout_height="@dimen/list_item_avatar_height" android:scaleType="centerCrop" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_weight="1.0" android:layout_marginStart="@dimen/m_dp">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:id="@id/main_group_item_name_tv" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                    <TextView android:textSize="@dimen/least_font" android:textColor="@color/white" android:id="@id/tv_recommend" android:background="@drawable/circle_tag_checked_selector" android:paddingLeft="@dimen/s_dp" android:paddingTop="@dimen/xs_dp" android:paddingRight="@dimen/s_dp" android:paddingBottom="@dimen/xs_dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/s_dp" android:text="推荐" />
+                </LinearLayout>
+                <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:id="@id/main_group_item_title_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:singleLine="true" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:id="@id/tv_right_state" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="代付款" />
+        </LinearLayout>
+        <View android:id="@id/v_divider_line" android:background="@color/divider_color" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="@dimen/m_dp" android:layout_marginRight="@dimen/m_dp" android:layout_below="@id/main_group_item_layout" android:layout_marginStart="@dimen/m_dp" android:layout_marginEnd="@dimen/m_dp" />
+    </RelativeLayout>
+</com.balysv.materialripple.MaterialRippleLayout>

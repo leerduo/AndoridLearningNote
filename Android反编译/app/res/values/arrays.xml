@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="all_days">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </integer-array>
+    <string-array name="category_titles">
+        <item>食物分类</item>
+        <item>菜肴分类</item>
+    </string-array>
+    <array name="eat_chartlet_resids">
+        <item>@drawable/afraid</item>
+        <item>@drawable/booger</item>
+        <item>@drawable/diamond</item>
+        <item>@drawable/full</item>
+        <item>@drawable/hula_hoop</item>
+        <item>@drawable/shit</item>
+        <item>@drawable/smile</item>
+        <item>@drawable/wall</item>
+        <item>@drawable/angry</item>
+        <item>@drawable/cry</item>
+        <item>@drawable/faint</item>
+        <item>@drawable/happy</item>
+        <item>@drawable/sad</item>
+        <item>@drawable/sigh</item>
+        <item>@drawable/superman</item>
+        <item>@drawable/weightlifting</item>
+    </array>
+    <array name="encourage_chartlet_resids">
+        <item>@drawable/afraid</item>
+        <item>@drawable/booger</item>
+        <item>@drawable/diamond</item>
+        <item>@drawable/full</item>
+        <item>@drawable/hula_hoop</item>
+        <item>@drawable/shit</item>
+        <item>@drawable/smile</item>
+        <item>@drawable/wall</item>
+        <item>@drawable/angry</item>
+        <item>@drawable/cry</item>
+        <item>@drawable/faint</item>
+        <item>@drawable/happy</item>
+        <item>@drawable/sad</item>
+        <item>@drawable/sigh</item>
+        <item>@drawable/superman</item>
+        <item>@drawable/weightlifting</item>
+    </array>
+    <string-array name="key_words">
+        <item>饮食</item>
+        <item>运动</item>
+        <item>生理期</item>
+        <item>睡眠</item>
+        <item>美容护肤</item>
+        <item>减肥</item>
+    </string-array>
+    <string-array name="lib_titles">
+        <item>食物库</item>
+        <item>运动库</item>
+    </string-array>
+    <string-array name="msg_category">
+        <item>提到我的</item>
+        <item>评论</item>
+        <item>收到的钻石</item>
+        <item>新粉丝</item>
+        <item>推荐</item>
+        <item>广播</item>
+        <item>联系客服</item>
+    </string-array>
+    <string-array name="my_boohee_category">
+        <item>个人资料</item>
+        <item>30天减重计划</item>
+        <item>我的主页</item>
+        <item>好友与粉丝</item>
+    </string-array>
+    <string-array name="pay_type">
+        <item>支付宝支付</item>
+        <item>微信支付</item>
+    </string-array>
+    <array name="qute_chartlet_resids">
+        <item>@drawable/afraid</item>
+        <item>@drawable/booger</item>
+        <item>@drawable/diamond</item>
+        <item>@drawable/full</item>
+        <item>@drawable/hula_hoop</item>
+        <item>@drawable/shit</item>
+        <item>@drawable/smile</item>
+        <item>@drawable/wall</item>
+        <item>@drawable/angry</item>
+        <item>@drawable/cry</item>
+        <item>@drawable/faint</item>
+        <item>@drawable/happy</item>
+        <item>@drawable/sad</item>
+        <item>@drawable/sigh</item>
+        <item>@drawable/superman</item>
+        <item>@drawable/weightlifting</item>
+    </array>
+    <string-array name="qute_chartlet_strings">
+        <item>怕怕</item>
+        <item>挖鼻屎</item>
+        <item>喷钻石</item>
+        <item>吃饱了</item>
+        <item>呼啦圈</item>
+        <item>恩恩</item>
+        <item>笑</item>
+        <item>面壁</item>
+        <item>怒摔</item>
+        <item>哭</item>
+        <item>崩溃</item>
+        <item>嘚瑟</item>
+        <item>伤心</item>
+        <item>唉</item>
+        <item>变身</item>
+        <item>举重</item>
+    </string-array>
+    <string-array name="recipe_tab_titles">
+        <item>说明</item>
+        <item>饮食结构</item>
+        <item>今日食谱</item>
+        <item>明日食谱</item>
+        <item>历史食谱</item>
+    </string-array>
+    <string-array name="recipe_time_types">
+        <item>早餐</item>
+        <item>午餐</item>
+        <item>下午加餐</item>
+        <item>晚餐</item>
+    </string-array>
+    <string-array name="record_names_female">
+        <item>饮食</item>
+        <item>运动</item>
+        <item>体重</item>
+        <item>围度</item>
+        <item>大姨妈</item>
+        <item>睡眠钟</item>
+    </string-array>
+    <string-array name="record_names_male">
+        <item>饮食</item>
+        <item>运动</item>
+        <item>体重</item>
+        <item>围度</item>
+        <item>睡眠钟</item>
+    </string-array>
+    <string-array name="record_titles">
+        <item>常用食物</item>
+        <item>我的收藏</item>
+    </string-array>
+    <string-array name="remind_titles">
+        <item>早餐贴士</item>
+        <item>午餐贴士</item>
+        <item>晚餐贴士</item>
+        <item>薄荷提醒</item>
+    </string-array>
+    <string-array name="select_photos">
+        <item>最后拍摄</item>
+        <item>立即拍照</item>
+        <item>本地图片</item>
+    </string-array>
+    <string-array name="serach_friends_titles">
+        <item>活跃用户</item>
+        <item>在我附近</item>
+        <item>情况相似</item>
+    </string-array>
+    <string-array name="service_titles">
+        <item>NICE食谱</item>
+        <item>NICE服务</item>
+    </string-array>
+    <string-array name="share">
+        <item>分享到动态</item>
+        <item>分享到第三方</item>
+    </string-array>
+    <string-array name="sports_category">
+        <item>常用</item>
+        <item>分类</item>
+    </string-array>
+    <string-array name="title">
+        <item>为减肥找一个理由，你会更容易成功！为了不再被卖衣服的欧巴桑翻白眼，为了2个月后给TA一个惊喜，为了穿上美美的婚纱……</item>
+        <item>如果你想减肥又不知道该吃多少，最简单的办法就是“只吃8分饱”——感觉到饱了，但是还能再吃一些，这时候就放下筷子吧。</item>
+        <item>零食嘛，多吃无益。蛋糕、巧克力、饼干、薯片、糖果，冰淇淋……虽然这些真的很诱人，巴特，女人就是要对自己狠一点！</item>
+    </string-array>
+    <string-array name="upload_food_state_value">
+        <item>等待审核</item>
+        <item>审核通过</item>
+        <item>审核未通过</item>
+    </string-array>
+    <string-array name="week_days">
+        <item>星期日</item>
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+        <item>星期六</item>
+    </string-array>
+    <integer-array name="work_days">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </integer-array>
+</resources>

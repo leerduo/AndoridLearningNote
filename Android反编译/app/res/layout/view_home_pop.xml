@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_centerInParent="true" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_download_share" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/iv_wallpaper" android:paddingLeft="@dimen/m_dp" android:paddingTop="@dimen/m_dp" android:paddingRight="@dimen/m_dp" android:paddingBottom="@dimen/s_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_wallpaper" android:scaleType="center" />
+        <ImageView android:id="@id/iv_share" android:paddingLeft="@dimen/m_dp" android:paddingTop="@dimen/s_dp" android:paddingRight="@dimen/m_dp" android:paddingBottom="@dimen/s_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_share_photo" android:scaleType="center" />
+        <ImageView android:id="@id/iv_download" android:paddingLeft="@dimen/m_dp" android:paddingTop="@dimen/s_dp" android:paddingRight="@dimen/m_dp" android:paddingBottom="@dimen/m_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_download_photo" android:scaleType="center" />
+    </LinearLayout>
+</RelativeLayout>

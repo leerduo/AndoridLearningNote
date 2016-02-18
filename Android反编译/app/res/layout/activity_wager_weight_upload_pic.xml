@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="@dimen/s_dp" android:paddingBottom="@dimen/s_dp" android:layout_width="fill_parent" android:layout_height="46.0dip" android:layout_marginLeft="@dimen/m_dp" android:layout_marginRight="@dimen/m_dp">
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:gravity="center" android:layout_gravity="start" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/ic_weight" android:drawablePadding="@dimen/xs_dp" />
+        <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <EditText android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:gravity="end|center" android:id="@id/ed_current_weight" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="  0" android:minEms="5" android:singleLine="true" android:maxLength="5" android:inputType="numberDecimal" />
+            <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" kg" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/divider_color" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <GridView android:gravity="center" android:id="@id/gv_pic" android:scrollbars="none" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_marginTop="@dimen/m_dp" android:layout_marginRight="@dimen/s_dp" android:listSelector="@color/transparent" android:cacheColorHint="@color/transparent" android:horizontalSpacing="@dimen/s_dp" android:verticalSpacing="@dimen/s_dp" android:numColumns="3" android:layout_weight="1.0" />
+        <ImageView android:id="@id/iv_add_pic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/m_dp" android:layout_marginRight="@dimen/m_dp" android:src="@drawable/ic_pic_add" android:scaleType="centerCrop" />
+    </LinearLayout>
+    <CheckBox android:textColor="@color/main_font_color" android:id="@id/cb_sync" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/s_dp" android:layout_marginTop="@dimen/m_dp" android:checked="true" android:text="@string/sync_to_status" />
+    <Button android:textSize="@dimen/main_font" android:textColor="@color/white" android:id="@id/btn_commit" android:background="@drawable/submit_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/s_dp" android:layout_marginTop="@dimen/m_dp" android:layout_marginRight="@dimen/s_dp" android:text="@string/submit" />
+    <TextView android:textSize="@dimen/least_font" android:textColor="@color/light_font_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_marginTop="@dimen/s_dp" android:layout_marginRight="@dimen/m_dp" android:text="@string/du_shou_page_tips" />
+</LinearLayout>

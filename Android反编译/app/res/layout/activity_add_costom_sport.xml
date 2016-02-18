@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/view_divide_line" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="@dimen/xl_dp" />
+    <LinearLayout android:orientation="horizontal" android:background="@color/white" android:padding="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:gravity="start" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="运动名称" android:hint="@string/can_be_choice" android:layout_weight="0.3" />
+        <EditText android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:gravity="end" android:id="@id/et_food_name" android:background="@color/transparent" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="如：跑步、健身操" android:layout_weight="0.7" />
+    </LinearLayout>
+    <include layout="@layout/view_divide_line" />
+    <LinearLayout android:orientation="horizontal" android:background="@color/white" android:padding="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:gravity="start" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/food_num" android:hint="@string/can_be_choice" android:layout_weight="0.3" />
+        <EditText android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:gravity="end" android:id="@id/et_food_num" android:background="@color/transparent" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="如：1" android:layout_weight="0.7" android:inputType="numberDecimal" />
+    </LinearLayout>
+    <include layout="@layout/view_divide_line" />
+    <LinearLayout android:orientation="horizontal" android:background="@color/white" android:padding="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:gravity="start" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/food_unit" android:hint="@string/can_be_choice" android:layout_weight="0.3" />
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:gravity="end" android:id="@id/tv_food_unit" android:background="@color/transparent" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="如：个、组" android:layout_weight="0.7" />
+    </LinearLayout>
+    <include layout="@layout/view_divide_line" />
+    <LinearLayout android:orientation="horizontal" android:background="@color/white" android:padding="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:gravity="start" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/all_hot" android:hint="@string/must_choice" android:layout_weight="0.3" />
+        <EditText android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:gravity="end" android:id="@id/et_food_calory" android:background="@color/transparent" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="如：100" android:layout_weight="0.7" android:inputType="number" />
+    </LinearLayout>
+    <include layout="@layout/view_divide_line" />
+</LinearLayout>

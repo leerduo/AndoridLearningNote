@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_action_overflow" android:id="@id/action_more" android:title="@string/action_more" app:showAsAction="always">
+        <menu>
+            <item android:id="@id/action_directory" android:visible="false" android:title="@string/directory" app:showAsAction="always" />
+            <item android:id="@id/action_share" android:visible="false" android:title="@string/share" app:showAsAction="always" />
+            <item android:id="@id/add_favorite" android:visible="true" android:title="@string/add_favorite" app:showAsAction="always" />
+            <item android:id="@id/delete_favorite" android:visible="false" android:title="@string/delete_favorite" app:showAsAction="always" />
+        </menu>
+    </item>
+</menu>

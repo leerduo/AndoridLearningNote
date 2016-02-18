@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include layout="@layout/view_lesson_detail_header" />
+            <TextView android:textSize="@dimen/least_font" android:textColor="@color/light_font_color" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/m_dp" android:layout_marginBottom="@dimen/m_dp" android:text="@string/sport_des" />
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:id="@id/tv_mention_des" android:background="@color/white" android:paddingLeft="@dimen/m_dp" android:paddingRight="@dimen/m_dp" android:paddingBottom="@dimen/xl_dp" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <include layout="@layout/view_divide_line" />
+            <TextView android:textSize="@dimen/least_font" android:textColor="@color/light_font_color" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/m_dp" android:layout_marginBottom="@dimen/m_dp" android:text="课程内容" />
+            <TextView android:id="@id/tv_warm_up" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:text="热身运动" />
+            <android.support.v7.widget.RecyclerView android:id="@id/recycler_view_warm_up" android:background="@color/white" android:paddingLeft="@dimen/s_dp" android:paddingTop="@dimen/s_dp" android:paddingRight="@dimen/s_dp" android:layout_width="fill_parent" android:layout_height="150.0dip" />
+            <TextView android:id="@id/tv_train" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:text="训练" />
+            <android.support.v7.widget.RecyclerView android:id="@id/recycler_view_train" android:background="@color/white" android:paddingLeft="@dimen/s_dp" android:paddingTop="@dimen/s_dp" android:paddingRight="@dimen/s_dp" android:layout_width="fill_parent" android:layout_height="150.0dip" />
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout android:id="@id/bottom_layout" android:background="@drawable/bg_video_green_corner" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_margin="@dimen/m_dp">
+        <TextView android:textSize="@dimen/large_font" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_start" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="@string/start_right_now" />
+        <ProgressBar android:id="@id/progress_bar_download" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="4.0dip" android:layout_marginLeft="@dimen/m_dp" android:layout_marginRight="@dimen/s_dp" android:progressDrawable="@drawable/progress_white" android:layout_toLeftOf="@id/tv_download_status" android:layout_centerVertical="true" style="?android:attr/progressBarStyleHorizontal" />
+        <TextView android:textSize="@dimen/least_font" android:textColor="@color/white" android:id="@id/tv_download_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/m_dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

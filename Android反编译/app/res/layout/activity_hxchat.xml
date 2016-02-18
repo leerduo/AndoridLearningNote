@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.boohee.myview.CustomInsetLayout android:orientation="vertical" android:id="@id/root_layout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_alignParentTop="true">
+        <ProgressBar android:id="@id/pb_load_more" android:visibility="gone" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_centerHorizontal="true" />
+        <android.support.v4.widget.SwipeRefreshLayout android:id="@id/chat_swipe_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ListView android:scrollbarStyle="outsideOverlay" android:id="@id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="#00000000" android:transcriptMode="normal" android:cacheColorHint="#00000000" android:divider="@null" android:dividerHeight="5.0dip" android:layout_below="@id/pb_load_more" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/bar_bottom" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <include layout="@layout/view_divide_line" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/rl_bottom" android:background="#aaffffff" android:paddingTop="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/btn_set_mode_voice" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginLeft="6.0dip" android:onClick="setModeVoice" />
+            <Button android:id="@id/btn_set_mode_keyboard" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginLeft="6.0dip" android:onClick="setModeKeyboard" />
+            <RelativeLayout android:gravity="bottom" android:id="@id/edittext_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip" android:layout_weight="1.0">
+                <com.boohee.one.easemob.widget.PasteEditText android:textSize="18.0sp" android:id="@id/et_sendmessage" android:background="@drawable/shape_message" android:paddingLeft="3.0dip" android:paddingTop="3.0dip" android:paddingRight="3.0dip" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginRight="35.0dip" android:layout_marginBottom="5.0dip" android:minHeight="40.0dip" android:maxLines="3" android:onClick="editClick" />
+                <ImageView android:layout_gravity="center|right" android:id="@id/iv_emoticons_normal" android:visibility="visible" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_margin="1.0dip" android:src="@drawable/chatting_biaoqing_btn_normal" android:scaleType="fitCenter" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <ImageView android:layout_gravity="center|right" android:id="@id/iv_emoticons_checked" android:visibility="invisible" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_margin="1.0dip" android:src="@drawable/chatting_biaoqing_btn_enable" android:scaleType="fitCenter" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <Button android:id="@id/btn_more" android:background="@drawable/type_select_btn" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginLeft="4.0dip" android:layout_marginRight="10.0dip" android:onClick="toggleMore" />
+            <Button android:textSize="16.0sp" android:textColor="#ff999999" android:id="@id/btn_send" android:background="@drawable/chat_send_btn_selector" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="32.0dip" android:layout_marginRight="4.0dip" android:text="@string/send" android:onClick="onClick" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/more" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/ll_face_container" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="150.0dip">
+                <android.support.v4.view.ViewPager android:id="@id/vPager" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/ll_btn_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="4.0dip" android:weightSum="4.0">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <RelativeLayout android:layout_width="64.0dip" android:layout_height="64.0dip">
+                            <ImageView android:id="@id/btn_take_picture" android:background="@drawable/chat_takepic_selector" android:clickable="true" android:layout_width="56.0dip" android:layout_height="56.0dip" android:scaleType="fitCenter" android:layout_centerInParent="true" android:onClick="onClick" />
+                        </RelativeLayout>
+                        <TextView android:textColor="#ff727171" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="拍照" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <RelativeLayout android:layout_width="64.0dip" android:layout_height="64.0dip">
+                            <ImageView android:id="@id/btn_picture" android:background="@drawable/chat_image_selector" android:clickable="true" android:layout_width="56.0dip" android:layout_height="56.0dip" android:scaleType="fitCenter" android:layout_centerInParent="true" android:onClick="onClick" />
+                        </RelativeLayout>
+                        <TextView android:textColor="#ff727171" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="图片" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.boohee.myview.CustomInsetLayout>

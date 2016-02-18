@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/global_font_normal" android:textColor="@color/main_font_color" android:id="@id/tv_light_introduce_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/light_introduce_title" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/l_dp">
+            <ImageView android:id="@id/iv_green" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/m_dp" android:src="@drawable/img_food_light_green" />
+            <TextView android:id="@id/tv_green" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/iv_green" />
+            <ImageView android:id="@id/iv_green_example" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/s_dp" android:src="@drawable/img_food_light_example_green" android:layout_toRightOf="@id/iv_green" android:layout_below="@id/tv_green" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/l_dp">
+            <ImageView android:id="@id/iv_yellow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/m_dp" android:src="@drawable/img_food_light_yellow" />
+            <TextView android:id="@id/tv_yellow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/iv_yellow" />
+            <ImageView android:id="@id/iv_yellow_example" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/s_dp" android:src="@drawable/img_food_light_example_yellow" android:layout_toRightOf="@id/iv_yellow" android:layout_below="@id/tv_yellow" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/l_dp">
+            <ImageView android:id="@id/iv_red" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/m_dp" android:src="@drawable/img_food_light_red" />
+            <TextView android:id="@id/tv_red" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/iv_red" />
+            <ImageView android:id="@id/iv_red_example" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/s_dp" android:src="@drawable/img_food_light_example_red" android:layout_toRightOf="@id/iv_red" android:layout_below="@id/tv_red" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

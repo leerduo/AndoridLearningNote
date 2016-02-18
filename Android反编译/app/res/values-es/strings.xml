@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abc_action_bar_home_description">Ir a la pantalla de inicio</string>
+    <string name="abc_action_bar_up_description">Desplazarse hacia arriba</string>
+    <string name="abc_action_menu_overflow_description">Más opciones</string>
+    <string name="abc_action_mode_done">Listo</string>
+    <string name="abc_activity_chooser_view_see_all">Ver todo</string>
+    <string name="abc_activitychooserview_choose_application">Seleccionar una aplicación</string>
+    <string name="abc_searchview_description_clear">Borrar consulta</string>
+    <string name="abc_searchview_description_query">Consulta</string>
+    <string name="abc_searchview_description_search">Buscar</string>
+    <string name="abc_searchview_description_submit">Enviar consulta</string>
+    <string name="abc_searchview_description_voice">Búsqueda por voz</string>
+    <string name="abc_shareactionprovider_share_with">Compartir con</string>
+    <string name="abc_shareactionprovider_share_with_application">Compartir con %s</string>
+    <string name="mdtp_day_picker_description">Cuadrícula mensual de días</string>
+    <string name="mdtp_deleted_key">%1$s eliminado</string>
+    <string name="mdtp_done_label">Listo</string>
+    <string name="mdtp_hour_picker_description">Control deslizante circular de horas</string>
+    <string name="mdtp_item_is_selected">%1$s seleccionado</string>
+    <string name="mdtp_minute_picker_description">Control deslizante circular de minutos</string>
+    <string name="mdtp_select_day">Seleccionar mes y día</string>
+    <string name="mdtp_select_hours">Seleccionar horas</string>
+    <string name="mdtp_select_minutes">Seleccionar minutos</string>
+    <string name="mdtp_select_year">Seleccionar año</string>
+    <string name="mdtp_year_picker_description">Lista de años</string>
+    <string name="pull_to_refresh_pull_label">Tirar para actualizar…</string>
+    <string name="pull_to_refresh_refreshing_label">Cargando…</string>
+    <string name="pull_to_refresh_release_label">Soltar para actualizar…</string>
+</resources>

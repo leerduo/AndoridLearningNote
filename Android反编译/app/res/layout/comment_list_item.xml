@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.boohee.widgets.RoundedCornersImage android:id="@id/iv_avatar" android:layout_width="@dimen/list_item_avatar_width" android:layout_height="@dimen/list_item_avatar_height" android:layout_marginRight="10.0dip" android:src="@drawable/default_avatar" />
+    <RelativeLayout android:orientation="horizontal" android:id="@id/rl_top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/iv_avatar" android:layout_alignTop="@id/iv_avatar">
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/timeline_nickname" android:ellipsize="end" android:id="@id/tv_nickname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textSize="@dimen/least_font" android:textColor="@color/timeline_date" android:ellipsize="end" android:gravity="right" android:id="@id/tv_post_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:text="6分钟前" android:singleLine="true" android:layout_alignTop="@id/nickname" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/xs_dp" android:layout_toRightOf="@id/avatar_image" android:layout_below="@id/rl_top" android:layout_alignLeft="@id/rl_top">
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/timeline_body" android:id="@id/tv_comment_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_comment" android:background="@drawable/ic_comment_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/m_dp" />
+    </LinearLayout>
+</RelativeLayout>

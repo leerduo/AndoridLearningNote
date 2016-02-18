@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.balysv.materialripple.MaterialRippleLayout android:id="@id/empty_ripple" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/GlobalRippleLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/rl_empty" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/image" android:background="@color/actionbar_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+        <com.boohee.widgets.CircularProgressBar android:id="@id/progress_bar" android:layout_width="180.0dip" android:layout_height="180.0dip" android:layout_centerInParent="true" app:cpbProgressBackground="@color/twenty_percent_white" app:cpbIsCapRound="true" app:cpbStrokeWidth="5.0dip" />
+        <RelativeLayout android:layout_width="210.0dip" android:layout_height="210.0dip" android:layout_centerInParent="true">
+            <TextView android:textSize="@dimen/large_font" android:textColor="@color/white" android:id="@id/tv_score" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="完善个人资料" android:layout_centerInParent="true" />
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/white" android:id="@id/tv_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="暂无数据,请先" android:layout_above="@id/tv_score" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</com.balysv.materialripple.MaterialRippleLayout>

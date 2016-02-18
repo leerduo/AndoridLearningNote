@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/main_font" android:textColor="@color/light_font_color" android:id="@id/tv_letter" android:background="@color/global_main_bg" android:paddingLeft="@dimen/m_dp" android:paddingTop="@dimen/s_dp" android:paddingBottom="@dimen/s_dp" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:id="@id/view_divide" android:background="@color/view_divide_line" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <RelativeLayout android:id="@id/rl_title" android:paddingLeft="@dimen/m_dp" android:paddingTop="@dimen/s_dp" android:paddingRight="@dimen/m_dp" android:paddingBottom="@dimen/s_dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:layout_gravity="center_vertical" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <View android:layout_gravity="center_vertical" android:id="@id/view_selected" android:background="@drawable/ic_city_selected" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="@dimen/m_dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <include layout="@layout/view_divide_line" />
+</LinearLayout>

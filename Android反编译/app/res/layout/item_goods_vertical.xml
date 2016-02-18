@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.balysv.materialripple.MaterialRippleLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" app:mrl_rippleColor="@color/ripple_color" app:mrl_rippleOverlay="@bool/rippleOverlay" app:mrl_rippleAlpha="0.2" app:mrl_rippleHover="@bool/rippleHover" app:mrl_rippleDelayClick="@bool/rippleDelayClick"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <LinearLayout android:orientation="vertical" android:id="@id/view_goods_1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/iv_photo_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitXY" android:minHeight="150.0dip" android:layout_centerVertical="true" />
+                <ImageView android:id="@id/iv_flag_1" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginTop="@dimen/m_dp" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/least_font" android:textColor="@color/main_font_color" android:ellipsize="end" android:gravity="center|left|top" android:id="@id/tv_title_1" android:paddingLeft="12.0dip" android:paddingTop="6.0dip" android:paddingRight="12.0dip" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="2" />
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/small_font" android:textStyle="bold" android:textColor="@color/navbar_red" android:id="@id/tv_base_price_1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textSize="@dimen/small_font" android:textStyle="bold" android:textColor="@color/gray" android:id="@id/tv_market_price_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.balysv.materialripple.MaterialRippleLayout>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/primary_color" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:textSize="@dimen/main_font" android:textColor="@color/white" android:textColorHint="@color/white_70" android:layout_gravity="center_vertical" android:id="@id/et_search" android:background="@drawable/search_edit_style" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/m_dp" android:hint="@string/search_hint_sport" android:singleLine="true" android:layout_weight="1.0" android:imeOptions="actionSearch" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_clear" android:background="@drawable/ic_clear" android:visibility="gone" android:layout_width="@dimen/xxl_dp" android:layout_height="@dimen/xxl_dp" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_search" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:src="@drawable/ic_scan_default_white" />
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/pic_iv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="center" android:adjustViewBounds="true" />
+    <RelativeLayout android:id="@id/save_btn" android:background="@drawable/mc_save_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginBottom="30.0dip" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true">
+        <ImageView android:background="@drawable/mc_save_nor" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/chat_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+        <ImageView android:id="@id/chat_back_iv" android:layout_width="10.0dip" android:layout_height="20.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/mc_back" android:layout_centerVertical="true" />
+        <TextView android:textSize="18.0sp" android:textColor="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="返回" android:layout_toRightOf="@id/chat_back_iv" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

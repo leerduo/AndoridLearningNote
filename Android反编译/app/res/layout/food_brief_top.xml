@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="76.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/food_thumb" android:background="@drawable/no_food_image" android:padding="2.0dip" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginLeft="10.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_toRightOf="@id/food_thumb" android:layout_centerVertical="true">
+        <HorizontalScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="24.0dip">
+            <TextView android:textSize="@dimen/large_font" android:textColor="@color/main_font_color" android:ellipsize="marquee" android:id="@id/food_name" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/loading" android:lines="1" />
+        </HorizontalScrollView>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/main_font" android:textColor="@color/navbar_red" android:id="@id/food_calory_title" android:layout_width="wrap_content" android:layout_height="24.0dip" android:layout_marginTop="4.0dip" />
+            <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:gravity="center" android:id="@id/calories" android:layout_width="wrap_content" android:layout_height="24.0dip" android:layout_marginTop="4.0dip" android:text="@string/calory_per_gram" />
+            <TextView android:textSize="@dimen/main_font" android:textColor="@color/light_gray" android:layout_width="wrap_content" android:layout_height="24.0dip" android:layout_marginTop="4.0dip" android:text="@string/eating_part" />
+        </LinearLayout>
+    </LinearLayout>
+    <ToggleButton android:id="@id/favour_btn" android:background="@drawable/whitefavfood" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="50.0dip" android:textOn="" android:textOff="" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

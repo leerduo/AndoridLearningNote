@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/user_home_header_hight">
+        <ImageView android:id="@id/iv_avatar" android:layout_width="@dimen/global_avatar_normal" android:layout_height="@dimen/global_avatar_normal" android:layout_marginTop="@dimen/global_dimens_normal" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <TextView android:gravity="center" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/global_dimens_normal" android:layout_below="@id/iv_avatar" android:layout_centerHorizontal="true" />
+        <Button android:textColor="@color/common_white" android:id="@id/bt_start" android:background="@drawable/ok_button_blue_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/global_dimens_large" android:layout_marginRight="@dimen/global_dimens_large" android:layout_marginBottom="@dimen/global_dimens_normal" android:text="@string/user_home_service" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <TextView android:gravity="center_vertical" android:id="@id/tv_start" android:background="@android:color/white" android:paddingLeft="@dimen/global_dimens_normal" android:layout_width="fill_parent" android:layout_height="@dimen/global_item_normal" android:text="@string/user_home_result" android:drawableLeft="@drawable/ic_button_evaluation" android:drawableRight="@drawable/ic_button_viewdetails" android:drawablePadding="@dimen/global_dimens_small" />
+</LinearLayout>

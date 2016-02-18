@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" layout="@layout/global_list_view" />
+    <LinearLayout android:id="@id/clear_gps_bar" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/header_avatar_height">
+        <Button android:textColor="@color/white" android:id="@id/clear_gps" android:background="@drawable/global_red_btn_selector" android:layout_width="fill_parent" android:layout_height="@dimen/navbar_height" android:layout_margin="8.0dip" android:text="@string/clear_gps" />
+    </LinearLayout>
+</LinearLayout>

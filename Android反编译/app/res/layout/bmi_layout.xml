@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="380.0dip" android:layout_marginTop="-160.0dip">
+        <ImageView android:id="@id/bmi_wheel" android:layout_width="500.0dip" android:layout_height="fill_parent" android:src="@drawable/bmiwheel" />
+        <ImageView android:layout_width="500.0dip" android:layout_height="fill_parent" android:src="@drawable/bmipointer" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="220.0dip">
+            <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gold" android:gravity="center" android:id="@id/last_updated" android:background="@drawable/numbercontainer" android:layout_width="fill_parent" android:layout_height="34.0dip" android:text="@string/last_updated" />
+            <TextView android:textSize="@dimen/bigger_font" android:textColor="@color/black" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/your_bmi" />
+            <TextView android:textSize="@dimen/bigger_font" android:textColor="@color/red" android:gravity="center" android:id="@id/bmi_text" android:background="@drawable/numbercontainer" android:layout_width="140.0dip" android:layout_height="40.0dip" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/dark_gold" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bmi_info" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/mine_report_whatis_bmi_area" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginBottom="15.0dip">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:src="@drawable/tips_icon" android:contentDescription="问号图标" />
+            <TextView android:textColor="@android:color/darker_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="什么是BMI？" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="12.0sp" android:textColor="@color/light_font_color" android:layout_gravity="center" android:id="@id/timestamp" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+        <RelativeLayout android:id="@id/layout_user_header" android:layout_width="@dimen/list_item_avatar_width" android:layout_height="@dimen/list_item_avatar_height" android:layout_marginRight="@dimen/s_dp" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+            <de.hdodenhof.circleimageview.CircleImageView android:id="@id/iv_userhead" android:layout_width="@dimen/list_item_avatar_width" android:layout_height="@dimen/list_item_avatar_height" android:src="@drawable/default_avatar" />
+            <ImageView android:id="@id/iv_consultor_type" android:background="@drawable/ic_consultor" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@id/iv_teamleader_type" android:background="@drawable/ic_teamleader" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_picture" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_toLeftOf="@id/layout_user_header" android:layout_below="@id/tv_userid">
+            <ImageView android:id="@id/iv_sendPicture" android:background="@drawable/blue_up_buble" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="15.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/default_image_for_feed" android:scaleType="fitCenter" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_loading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <ProgressBar android:id="@id/progressBar" android:visibility="visible" android:layout_width="28.0dip" android:layout_height="28.0dip" style="?android:attr/progressBarStyleSmall" />
+                <TextView android:textColor="@android:color/black" android:id="@id/percentage" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0%" />
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/least_font" android:gravity="center" android:id="@id/tv_userid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/m_dp" android:layout_toLeftOf="@id/layout_user_header" />
+        <ImageView android:id="@id/msg_status" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/msg_state_fail_resend" android:layout_toLeftOf="@id/rl_picture" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/mc_display_layout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/small_font" android:textColor="@color/gray" android:gravity="bottom|center|left" android:paddingLeft="16.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/navbar_height" android:text="@string/mc_settings" android:drawableBottom="@color/divider" />
+    <TextView android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/mc_days_click" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/navbar_height">
+            <TextView android:gravity="left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/mc_days" android:layout_weight="1.0" style="@style/MainText" />
+            <TextView android:ellipsize="end" android:gravity="center|right" android:id="@id/mc_days" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/please_input" android:singleLine="true" android:drawableRight="@drawable/list_arrow" android:drawablePadding="5.0dip" android:layout_weight="1.0" style="@style/MainTextGray" />
+        </LinearLayout>
+        <TextView android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="16.0dip" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/mc_circle_click" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/navbar_height">
+            <TextView android:gravity="left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/mc_circle" android:layout_weight="1.0" style="@style/MainText" />
+            <TextView android:ellipsize="end" android:gravity="center|right" android:id="@id/mc_circle" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/please_input" android:singleLine="true" android:drawableRight="@drawable/list_arrow" android:drawablePadding="5.0dip" android:layout_weight="1.0" style="@style/MainTextGray" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:background="@color/divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/rl_category" android:background="@drawable/listview_bg_selector" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/iv_category" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/shop_category_selector" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_category" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginRight="@dimen/xs_dp" android:text="分类" android:layout_below="@id/iv_category" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <View android:background="@color/view_divide_line" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_marginTop="@dimen/m_dp" android:layout_marginBottom="@dimen/m_dp" />
+        <RelativeLayout android:id="@id/rl_cart" android:background="@drawable/listview_bg_selector" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/iv_cart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/shop_cart_selector" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:gravity="center" android:id="@id/tv_cart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="购物车" android:layout_below="@id/iv_cart" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="@dimen/least_font" android:id="@id/tv_badge_cart" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/xs_dp" android:layout_marginTop="@dimen/xs_dp" android:layout_toRightOf="@id/tv_cart" android:layout_alignParentTop="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <View android:background="@color/view_divide_line" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_marginTop="@dimen/m_dp" android:layout_marginBottom="@dimen/m_dp" />
+        <RelativeLayout android:id="@id/fl_order" android:background="@drawable/listview_bg_selector" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/iv_order" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/shop_order_selector" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:gravity="center" android:id="@id/tv_order" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="订单" android:layout_below="@id/iv_order" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="@dimen/least_font" android:id="@id/tv_badge_order" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/xs_dp" android:layout_marginTop="@dimen/xs_dp" android:layout_toRightOf="@id/tv_order" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <include layout="@layout/view_divide_line" />
+</LinearLayout>

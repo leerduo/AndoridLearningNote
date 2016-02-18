@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/view_body" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/global_font_small" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/m_dp" android:text="@string/city_location_gps" />
+    <TextView android:textSize="@dimen/global_font_normal" android:textColor="@color/global_blue" android:gravity="center" android:id="@id/tv_gps" android:background="@drawable/ok_blue_stroke_shape" android:layout_width="fill_parent" android:layout_height="@dimen/global_button_normal" android:layout_marginLeft="@dimen/global_dimens_large" android:layout_marginTop="@dimen/global_dimens_normal" android:layout_marginRight="@dimen/global_dimens_large" />
+    <TextView android:textSize="@dimen/global_font_small" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_marginTop="@dimen/global_dimens_normal" android:layout_marginBottom="@dimen/s_dp" android:text="@string/city_hot" />
+    <com.boohee.one.onekey.widget.ExpandGridView android:id="@id/gv_hot" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/s_dp" android:layout_marginRight="@dimen/l_dp" android:numColumns="3" />
+</LinearLayout>

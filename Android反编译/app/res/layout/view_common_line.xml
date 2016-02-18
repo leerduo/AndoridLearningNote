@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_marginTop="@dimen/s_dp" android:layout_marginBottom="@dimen/s_dp" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/main_font" android:textColor="@color/dark_gray" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_toRightOf="@id/iv_icon" android:layout_centerVertical="true" />
+    <TextView android:id="@id/tv_text" android:layout_marginRight="@dimen/m_dp" style="@style/UserProfileTextValueStyle" />
+</merge>

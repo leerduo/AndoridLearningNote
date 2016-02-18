@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_white_selector" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_meal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ToggleButton android:id="@id/tb_meal" android:background="@drawable/toggle_address_selector" android:clickable="false" android:layout_width="23.0dip" android:layout_height="23.0dip" android:layout_marginLeft="@dimen/m_dp" android:layout_marginRight="@dimen/m_dp" android:textOn="" android:textOff="" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:ellipsize="end" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="鸡蛋、鸡蛋、鸡蛋、鸡蛋、鸡蛋、鸡蛋、鸡蛋、鸡蛋、鸡蛋、" android:singleLine="true" android:layout_toLeftOf="@id/tv_calory" android:layout_toRightOf="@id/tb_meal" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:id="@id/tv_calory" android:padding="@dimen/m_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="374 千卡" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:id="@id/view_divide" android:background="@color/view_divide_line" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</LinearLayout>

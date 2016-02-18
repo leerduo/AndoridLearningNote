@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <WebView android:id="@id/wv_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ProgressBar android:id="@id/progress_bar" android:layout_width="fill_parent" android:layout_height="2.0dip" android:progressDrawable="@drawable/webview_progress_color" style="?android:attr/progressBarStyleHorizontal" />
+    </FrameLayout>
+    <include layout="@layout/view_divide_line" />
+    <com.balysv.materialripple.MaterialRippleLayout style="@style/RippleLayout">
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:gravity="center" android:layout_gravity="center" android:id="@id/challenge_exit" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/navbar_height" android:text="退出挑战" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+</LinearLayout>

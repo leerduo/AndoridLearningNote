@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip">
+        <TextView android:textSize="@dimen/bigger_font" android:textColor="@color/main_font_color" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/light_score" android:layout_centerVertical="true" />
+        <Button android:id="@id/explain_btn" android:background="@drawable/explain_button_selector" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginRight="5.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:background="#33000000" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="8.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="8.0dip" />
+    <RelativeLayout android:background="@color/alph_white" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="121.0dip" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip">
+        <ImageView android:id="@id/main_light" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_margin="5.0dip" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/main_light" android:layout_centerVertical="true">
+            <LinearLayout android:orientation="horizontal" android:id="@id/fir_eutrophy" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <LinearLayout android:background="#33000000" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/sec_eutrophy" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:background="#33000000" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" />
+</LinearLayout>

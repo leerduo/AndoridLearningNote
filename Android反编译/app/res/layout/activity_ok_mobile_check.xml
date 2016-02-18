@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/img_background_flower" android:layout_alignParentBottom="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_top" android:background="@drawable/ok_white_stroke_shape" android:padding="@dimen/global_dimens_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/global_dimens_small" android:layout_alignParentTop="true">
+        <TextView android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/global_dimens_small" android:text="@string/mobile_check_alert" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <EditText android:id="@id/et_mobile" android:background="@drawable/ok_light_blue_bg_shape" android:paddingLeft="@dimen/s_dp" android:layout_width="fill_parent" android:layout_height="@dimen/global_item_normal" android:layout_marginTop="@dimen/global_dimens_small" android:layout_marginBottom="@dimen/global_dimens_normal" android:hint="@string/mobile_check_phone_hint" android:inputType="phone" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/global_item_normal">
+                <EditText android:id="@id/et_captcha" android:background="@drawable/ok_light_blue_bg_shape" android:paddingLeft="@dimen/s_dp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="@dimen/global_dimens_small" android:hint="@string/mobile_check_captcha_hint" android:layout_weight="1.0" android:inputType="number" />
+                <Button android:textColor="@color/ok_captcha_text_selector" android:id="@id/bt_captcha" android:background="@drawable/ok_captcha_selector" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/mobile_check_captcha" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/global_dimens_small">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mobile_check_voice_captcha_alert" />
+                <TextView android:textColor="@color/global_blue" android:id="@id/tv_voice_captcha" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mobile_check_voice_captcha" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/view_next" android:padding="@dimen/global_dimens_small" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/ll_top" android:layout_alignParentBottom="true">
+        <Button android:textColor="@color/common_white" android:id="@id/bt_next" android:background="@drawable/ok_button_blue_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_marginRight="@dimen/m_dp" android:text="@string/city_next" />
+    </RelativeLayout>
+</RelativeLayout>

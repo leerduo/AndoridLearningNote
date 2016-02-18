@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:id="@id/txt_tag_name" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="用户姓名" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <View android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_alignParentBottom="true" />
+</RelativeLayout>

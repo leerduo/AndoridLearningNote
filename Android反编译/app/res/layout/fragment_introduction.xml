@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/view_main" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_main" android:layout_width="0.0dip" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_weight="1.0" />
+    </LinearLayout>
+    <Button android:textColor="@color/white" android:id="@id/bt_start" android:background="@drawable/btn_orange_selector" android:visibility="gone" android:layout_width="@dimen/intro_start_width" android:layout_height="@dimen/intro_start_height" android:layout_marginBottom="60.0dip" android:text="@string/introduction_start" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

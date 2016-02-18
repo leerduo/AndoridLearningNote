@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/toolbar_padding_top" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <RadioGroup android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RadioButton android:id="@id/rbtn_curve_weight" android:checked="true" android:text="@string/curve_weight" style="@style/style_curve" />
+            <RadioButton android:id="@id/rbtn_curve_waist" android:text="@string/curve_waist" style="@style/style_curve" />
+            <RadioButton android:id="@id/rbtn_curve_brass" android:text="@string/curve_brass" style="@style/style_curve" />
+            <RadioButton android:id="@id/rbtn_curve_hip" android:text="@string/curve_hip" style="@style/style_curve" />
+            <RadioButton android:id="@id/rbtn_curve_arm" android:text="@string/curve_arm" style="@style/style_curve" />
+            <RadioButton android:id="@id/rbtn_curve_thigh" android:text="@string/curve_thigh" style="@style/style_curve" />
+            <RadioButton android:id="@id/rbtn_curve_shank" android:text="@string/curve_shank" style="@style/style_curve" />
+        </RadioGroup>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_curve" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    <Button android:id="@id/btn_curve_back" android:background="@drawable/btn_curve_close" android:layout_width="40.0dip" android:layout_height="40.0dip" android:onClick="onClick" />
+</LinearLayout>

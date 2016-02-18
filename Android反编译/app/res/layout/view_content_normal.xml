@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.RecyclerView android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="100.0dip" />
+    <ImageView android:id="@id/iv_bg_doing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/bg_home_top" android:scaleType="centerCrop" android:layout_below="@id/recycler_view" />
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/listview_bg_selector" android:paddingLeft="@dimen/m_dp" android:paddingTop="@dimen/s_dp" android:paddingBottom="@dimen/s_dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/xxxl_dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <de.hdodenhof.circleimageview.CircleImageView android:id="@id/civ_icon" android:layout_width="45.0dip" android:layout_height="45.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <RelativeLayout android:id="@id/view_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_toLeftOf="@id/iv_light" android:layout_toRightOf="@id/civ_icon" android:layout_centerVertical="true">
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxEms="12" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/primary_color" android:id="@id/tv_calory" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/tv_name" android:layout_alignParentLeft="true" />
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:id="@id/tv_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/tv_calory" android:layout_below="@id/tv_name" />
+    </RelativeLayout>
+    <ImageView android:id="@id/iv_light" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="@dimen/m_dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

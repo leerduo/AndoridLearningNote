@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v4.view.ViewPager android:id="@id/vp_banner" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <include layout="@layout/view_line_indicator" />
+    </FrameLayout>
+    <include layout="@layout/view_divide_line" />
+    <include layout="@layout/nav_shop_main" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_header_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:background="@color/view_divide_line" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="@dimen/ten_dp" />
+    <LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="36.0dip">
+        <View android:layout_gravity="center_vertical" android:background="@color/view_divide_line" android:layout_width="0.0dip" android:layout_height="1.0px" android:layout_weight="1.0" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/main_font_color" android:layout_gravity="center_vertical" android:id="@id/tv_shop_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ten_dp" android:layout_marginRight="@dimen/ten_dp" />
+        <View android:layout_gravity="center_vertical" android:background="@color/view_divide_line" android:layout_width="0.0dip" android:layout_height="1.0px" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="false" android:state_selected="false" android:drawable="@drawable/ic_man_normal" />
+    <item android:drawable="@drawable/ic_man_selected" />
+</selector>

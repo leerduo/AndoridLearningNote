@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/select_club_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.RecyclerView android:id="@id/rv_content" android:paddingLeft="@dimen/padding_small" android:paddingRight="@dimen/padding_small" android:paddingBottom="@dimen/padding_normal" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/view_bottom" android:layout_alignParentTop="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/view_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <include layout="@layout/view_divide_line" />
+        <Button android:textSize="@dimen/bigger_font" android:textColor="@color/selector_select_club_submit" android:layout_gravity="center" android:id="@id/bt_submit" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/select_club_submit" />
+    </LinearLayout>
+</RelativeLayout>

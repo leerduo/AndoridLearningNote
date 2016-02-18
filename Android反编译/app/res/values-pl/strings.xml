@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abc_action_bar_home_description">Przejdź do strony głównej</string>
+    <string name="abc_action_bar_up_description">Przejdź wyżej</string>
+    <string name="abc_action_menu_overflow_description">Więcej opcji</string>
+    <string name="abc_action_mode_done">Gotowe</string>
+    <string name="abc_activity_chooser_view_see_all">Zobacz wszystkie</string>
+    <string name="abc_activitychooserview_choose_application">Wybierz aplikację</string>
+    <string name="abc_searchview_description_clear">Wyczyść zapytanie</string>
+    <string name="abc_searchview_description_query">Wyszukiwane hasło</string>
+    <string name="abc_searchview_description_search">Szukaj</string>
+    <string name="abc_searchview_description_submit">Wyślij zapytanie</string>
+    <string name="abc_searchview_description_voice">Wyszukiwanie głosowe</string>
+    <string name="abc_shareactionprovider_share_with">Udostępnij dla</string>
+    <string name="abc_shareactionprovider_share_with_application">Udostępnij dla %s</string>
+    <string name="mdtp_day_picker_description">Siatka miesięczna z dniami</string>
+    <string name="mdtp_deleted_key">%1$s usunięte</string>
+    <string name="mdtp_done_label">Gotowe</string>
+    <string name="mdtp_hour_picker_description">Kołowy suwak godzin</string>
+    <string name="mdtp_item_is_selected">Wybrałeś %1$s</string>
+    <string name="mdtp_minute_picker_description">Kołowy suwak minut</string>
+    <string name="mdtp_select_day">Wybierz miesiąc i dzień</string>
+    <string name="mdtp_select_hours">Wybierz godziny</string>
+    <string name="mdtp_select_minutes">Wybierz minuty</string>
+    <string name="mdtp_select_year">Wybierz rok</string>
+    <string name="mdtp_year_picker_description">Lista lat</string>
+    <string name="pull_to_refresh_pull_label">Pociągnij, aby odświeżyć…</string>
+    <string name="pull_to_refresh_refreshing_label">Wczytywanie…</string>
+    <string name="pull_to_refresh_release_label">Puść, aby odświeżyć…</string>
+</resources>

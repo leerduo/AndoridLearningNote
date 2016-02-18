@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="15.0dip" />
+    <include layout="@layout/view_divide_line" />
+    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/header_comment_top" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView android:id="@id/iv_avatar" android:layout_width="@dimen/list_item_avatar_width" android:layout_height="@dimen/list_item_avatar_width" android:layout_margin="@dimen/m_dp" app:border_color="@color/black" xmlns:app="http://schemas.android.com/apk/res-auto" />
+        <ImageView android:id="@id/iv_avatar_tag" android:visibility="gone" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_alignRight="@id/iv_avatar" android:layout_alignBottom="@id/iv_avatar" />
+        <ProgressBar android:id="@id/pb_active" android:visibility="gone" android:layout_width="@dimen/list_item_avatar_width" android:layout_height="12.0dip" android:layout_marginTop="@dimen/xs_dp" android:indeterminateDrawable="@drawable/light_frame" android:layout_alignLeft="@id/iv_avatar" />
+        <TextView android:textSize="@dimen/main_font" android:textColor="@color/navbar_red" android:id="@id/tv_username" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/s_dp" android:layout_toRightOf="@id/iv_avatar" android:layout_alignTop="@id/iv_avatar" />
+        <View android:layout_width="0.0dip" android:layout_height="@dimen/list_item_avatar_height" android:layout_weight="1.0" />
+        <ImageView android:gravity="center" android:id="@id/tv_del" android:paddingLeft="@dimen/m_dp" android:paddingRight="@dimen/m_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_trash_selector" android:layout_toLeftOf="@id/tv_date" android:layout_alignTop="@id/tv_date" />
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:gravity="center" android:id="@id/tv_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/m_dp" android:layout_alignTop="@id/tv_username" android:layout_alignParentRight="true" />
+        <ImageView android:id="@id/iv_tag" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/main_font" android:id="@id/tv_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_marginBottom="@dimen/m_dp" />
+    <com.boohee.myview.NineGridLayout android:id="@id/iv_post_grid" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_marginRight="@dimen/m_dp" android:layout_marginBottom="@dimen/m_dp" />
+    <include layout="@layout/view_divide_line" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <CheckBox android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:gravity="center" android:layout_gravity="center" android:id="@id/cb_fav" android:paddingLeft="4.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:checked="false" android:button="@drawable/fav_selector" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_font_color" android:gravity="center" android:id="@id/tv_comment" android:layout_width="wrap_content" android:layout_height="fill_parent" android:drawableLeft="@drawable/ic_comment_selector" android:drawablePadding="5.0dip" android:drawableStart="@drawable/ic_comment_selector" />
+        </LinearLayout>
+        <ImageView android:id="@id/iv_share" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_share_selector" android:scaleType="center" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

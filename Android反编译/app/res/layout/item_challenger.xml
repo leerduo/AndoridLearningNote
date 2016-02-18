@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.balysv.materialripple.MaterialRippleLayout style="@style/RippleLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <de.hdodenhof.circleimageview.CircleImageView android:layout_gravity="center" android:id="@id/challenger_thumd" android:layout_width="@dimen/list_item_avatar_width" android:layout_height="@dimen/list_item_avatar_height" android:layout_marginLeft="@dimen/m_dp" android:layout_marginTop="@dimen/s_dp" android:layout_marginBottom="@dimen/s_dp" />
+        <TextView android:textSize="@dimen/small_font" android:textColor="@color/main_font_color" android:layout_gravity="center" android:id="@id/challenger_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" />
+        <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="right" android:id="@id/iv_mine" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/m_dp" android:src="@drawable/ic_challenge_label_me" />
+    </LinearLayout>
+</com.balysv.materialripple.MaterialRippleLayout>

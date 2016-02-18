@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textColor="@color/main_font_color" android:id="@id/tv_title" android:background="@drawable/shape_goods_format_default" android:paddingLeft="@dimen/m_dp" android:paddingTop="@dimen/s_dp" android:paddingRight="@dimen/m_dp" android:paddingBottom="@dimen/s_dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/s_dp" android:layout_marginRight="@dimen/s_dp" android:layout_marginBottom="@dimen/s_dp" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.balysv.materialripple.MaterialRippleLayout style="@style/RippleLayout">
+        <RelativeLayout android:id="@id/layout" android:paddingBottom="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/iv_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+            <TextView android:textSize="@dimen/global_font_large" android:textColor="@color/white" android:id="@id/tv_train_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_marginTop="50.0dip" />
+            <TextView android:textSize="@dimen/global_font_small" android:textColor="@color/white" android:id="@id/tv_train_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_marginTop="@dimen/m_dp" android:maxLength="15" android:layout_below="@id/tv_train_name" />
+            <TextView android:textSize="@dimen/global_font_small" android:textColor="@color/light_font_color" android:id="@id/tv_calory" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_marginTop="@dimen/s_dp" android:layout_below="@id/tv_train_des" />
+            <TextView android:textSize="@dimen/global_font_small" android:textColor="@color/light_font_color" android:id="@id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_marginTop="@dimen/s_dp" android:layout_toRightOf="@id/tv_calory" android:layout_below="@id/tv_train_des" />
+            <TextView android:textSize="@dimen/global_font_small" android:textColor="@color/light_font_color" android:id="@id/tv_person_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/m_dp" android:layout_marginBottom="@dimen/m_dp" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@id/iv_is_joined" android:background="@drawable/ic_joined" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </com.balysv.materialripple.MaterialRippleLayout>
+</RelativeLayout>

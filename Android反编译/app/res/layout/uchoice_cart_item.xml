@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_cart_item" android:background="@drawable/uchoice_main_list_selector" android:padding="8.0dip" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ToggleButton android:gravity="center" android:id="@id/tb_cart" android:background="@drawable/toggle_address_selector" android:visibility="visible" android:clickable="false" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginRight="8.0dip" android:textOn="" android:textOff="" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:orientation="horizontal" android:id="@id/rl_title" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/iv_goods" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_margin="8.0dip" android:layout_centerVertical="true" />
+            <TextView android:textColor="@color/home_container_font" android:id="@id/tv_goods_title" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:layout_toRightOf="@id/iv_goods" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/home_container_font" android:id="@id/tv_price_value" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textColor="@color/navbar_red" android:id="@id/tv_goods_state" android:padding="8.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_edit" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                <TextView android:textColor="@color/home_container_font" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="@string/quantity_uchoice" />
+                <Button android:enabled="false" android:id="@id/btn_decrease" android:background="@drawable/uchoice_minus_btn_selector" android:clickable="false" android:layout_width="30.0dip" android:layout_height="24.0dip" />
+                <TextView android:textSize="@dimen/main_font" android:gravity="center" android:id="@id/tv_goods_num" android:layout_width="40.0dip" android:layout_height="wrap_content" />
+                <Button android:id="@id/btn_increase" android:background="@drawable/uchoice_plus_btn_selector" android:layout_width="30.0dip" android:layout_height="24.0dip" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.balysv.materialripple.MaterialRippleLayout android:id="@id/ripple" android:layout_width="fill_parent" android:layout_height="wrap_content" app:mrl_rippleColor="@color/ripple_color" app:mrl_rippleOverlay="@bool/rippleOverlay" app:mrl_rippleAlpha="0.2" app:mrl_rippleHover="@bool/rippleHover" app:mrl_rippleDelayClick="@bool/rippleDelayClick"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/main_group_item_layout" android:paddingLeft="@dimen/m_dp" android:paddingRight="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="75.0dip" android:paddingStart="@dimen/m_dp" android:paddingEnd="@dimen/m_dp">
+            <com.joooonho.SelectableRoundedImageView android:id="@id/main_group_iv" android:layout_width="@dimen/partner_little_img_width" android:layout_height="@dimen/partner_little_img_height" android:scaleType="centerCrop" style="@style/style_round_image" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/m_dp" android:layout_weight="1.0" android:layout_marginStart="@dimen/m_dp">
+                <TextView android:textSize="@dimen/main_font" android:textColor="@color/main_font_color" android:id="@id/main_group_item_name_tv" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="@dimen/small_font" android:textColor="@color/light_gray" android:id="@id/main_group_item_title_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:singleLine="true" />
+            </LinearLayout>
+            <TextView android:layout_gravity="center_vertical" style="@style/UserProfileTextValueStyle" />
+        </LinearLayout>
+        <View android:id="@id/v_divider_line" style="@style/HorizontalSectionDivider" />
+        <View android:id="@id/v_bottom_line" android:visibility="gone" android:layout_below="@id/main_group_item_layout" style="@style/HorizontalWholeDivider" />
+    </RelativeLayout>
+</com.balysv.materialripple.MaterialRippleLayout>

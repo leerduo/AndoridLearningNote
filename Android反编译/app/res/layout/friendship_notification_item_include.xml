@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@dimen/main_font" android:textColor="@color/timeline_body" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="关注了你" android:lineSpacingMultiplier="1.2"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

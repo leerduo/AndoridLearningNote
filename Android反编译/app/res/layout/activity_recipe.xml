@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:background="@color/white" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:background="@color/global_main_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/iv_recipe" android:layout_width="fill_parent" android:layout_height="200.0dip" android:scaleType="centerCrop" />
+            <include layout="@layout/view_divide_line" />
+            <TextView android:textSize="@dimen/global_font_small" android:textColor="@color/light_font_color" android:gravity="bottom|center|left" android:background="@color/global_main_bg" android:paddingLeft="@dimen/m_dp" android:paddingBottom="@dimen/s_dp" android:layout_width="fill_parent" android:layout_height="45.0dip" android:text="@string/recipe_condiments" />
+            <LinearLayout android:orientation="vertical" android:id="@id/ll_condiments" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <include layout="@layout/view_divide_line" />
+            <TextView android:textSize="@dimen/global_font_small" android:textColor="@color/light_font_color" android:gravity="bottom|center|left" android:background="@color/global_main_bg" android:paddingLeft="@dimen/m_dp" android:paddingBottom="@dimen/s_dp" android:layout_width="fill_parent" android:layout_height="45.0dip" android:text="@string/recipe_steps" />
+            <LinearLayout android:orientation="vertical" android:id="@id/ll_steps" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <include layout="@layout/view_divide_line" />
+            <TextView android:textSize="@dimen/global_font_small" android:textColor="@color/light_font_color" android:gravity="bottom|center|left" android:background="@color/global_main_bg" android:paddingLeft="@dimen/m_dp" android:paddingBottom="@dimen/s_dp" android:layout_width="fill_parent" android:layout_height="45.0dip" android:text="@string/recipe_tips" />
+            <include layout="@layout/view_divide_line" />
+            <TextView android:textSize="@dimen/global_font_normal" android:textColor="@color/main_font_color" android:gravity="center|left|top" android:id="@id/tv_tips" android:background="@color/white" android:padding="@dimen/m_dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="6.0dip" />
+            <include layout="@layout/view_divide_line" />
+            <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="45.0dip">
+                <TextView android:textSize="@dimen/global_font_normal" android:textColor="@color/light_font_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/recipe_data_from" />
+                <TextView android:textSize="@dimen/global_font_normal" android:textColor="#ff59b700" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/recipe_data_from_douguo" android:drawableLeft="@drawable/img_douguo" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

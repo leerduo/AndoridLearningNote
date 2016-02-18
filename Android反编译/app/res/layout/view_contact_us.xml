@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.FloatingActionButton android:id="@id/fab_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/m_dp" android:layout_marginBottom="@dimen/m_dp" android:src="@drawable/ic_consultant_service" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" app:elevation="2.0dip" app:fabSize="normal" app:pressedTranslationZ="8.0dip" app:backgroundTint="@color/white"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

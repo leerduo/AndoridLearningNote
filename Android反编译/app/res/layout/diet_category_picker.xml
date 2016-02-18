@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.boohee.record.DietCategoryPicker android:gravity="center" android:layout_gravity="bottom" android:id="@id/diet_category_picker" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableRow>
+        <RadioButton android:id="@id/breakfast" android:background="@drawable/choose_diet_selector1" android:paddingBottom="10.0dip" android:text="@string/breakfast" style="@style/MealTypeGroupStyle" />
+        <RadioButton android:id="@id/lunch" android:background="@drawable/choose_diet_selector2" android:paddingBottom="10.0dip" android:text="@string/lunch" style="@style/MealTypeGroupStyle" />
+        <RadioButton android:id="@id/supper" android:background="@drawable/choose_diet_selector3" android:paddingBottom="10.0dip" android:text="@string/supper" style="@style/MealTypeGroupStyle" />
+    </TableRow>
+    <TableRow>
+        <RadioButton android:id="@id/breakfast_snack" android:background="@drawable/choose_diet_selector4" android:paddingBottom="10.0dip" android:text="@string/breakfast_snack" style="@style/MealTypeGroupStyle" />
+        <RadioButton android:id="@id/lunch_snack" android:background="@drawable/choose_diet_selector5" android:paddingBottom="10.0dip" android:text="@string/lunch_snack" style="@style/MealTypeGroupStyle" />
+        <RadioButton android:id="@id/supper_snack" android:background="@drawable/choose_diet_selector6" android:paddingBottom="10.0dip" android:text="@string/supper_snack" style="@style/MealTypeGroupStyle" />
+    </TableRow>
+</com.boohee.record.DietCategoryPicker>
